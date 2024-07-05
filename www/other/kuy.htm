@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Centered101 – Class Schedule</title>
+  <!-- เมตาแท็กหลัก -->
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="description" content="Centered101/ตารางเรียน" />
+  <meta name="keywords" content="HTML,CSS,XML,JavaScript,Centered101" />
+  <meta name="author" content="Centered101" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://centered101-webfollow.web.app/" />
+  <meta property="og:url" content="https://centered101-webfollow.firebaseapp.com/" />
+  <meta property="og:title" content="Centered101/ตารางเรียน" />
+  <meta property="og:description" content="Centered101/ตารางเรียน" />
+  <meta property="og:image" content="/graphic/img/icon/Tes-D.png" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://centered101-webfollow.web.app/" />
+  <meta property="twitter:url" content="https://centered101-webfollow.firebaseapp.com/" />
+  <meta property="twitter:title" content="Centered101/ตารางเรียน" />
+  <meta property="twitter:description" content="Centered101/ตารางเรียน" />
+  <meta property="twitter:image" content="/graphic/img/icon/Tes-D.png" />
+
+  <!-- รูปโปรไฟร์หัวข้อหน้าเว็บ รูปแแบบ external -->
+  <link rel="icon" type="image/png" href="/images/icon/เว็บไซต์1200x1200.png" />
+</head>
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree&display=swap");
+
+  body {
+    font-family: "Bai Jamjuree", sans-serif;
+    margin: 0;
+    padding: 5px;
+  }
+
+  body,
+  input,
+  button {
+    font-size: 1%;
+  }
+
+  @media screen and (max-width: 768px) {
+
+    body,
+    input,
+    button {
+      font-size: 1%;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+
+    body,
+    input,
+    button {
+      font-size: 1%;
+    }
+  }
+
+  .light_mode_time .container_time {
+    background: linear-gradient(40deg, #ff7070, #e8d600 70%);
+  }
+
+  .dark_mode_time .container_time {
+    background: rgb(17, 4, 134);
+    background: -webkit-gradient(linear,
+        left top,
+        right top,
+        from(rgb(20, 30, 48)),
+        to(rgb(36, 59, 85)));
+    background: linear-gradient(to right, rgb(20, 30, 48), rgb(36, 59, 85));
+  }
+
+  .container_time {
+    user-select: none;
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 15px;
+    padding: 0 0 10px 0;
+    border: solid #000000 1px;
+    border-radius: 7px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: #ffffff;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: relative;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+  }
+
+  .container_time #time {
+    font-size: 34px;
+    margin-left: 15px;
+    font-weight: bold;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+  }
+
+  .container_time p,
+  #day {
+    font-size: 16px;
+    margin-top: 10px;
+    margin-left: 15px;
+    font-weight: 100;
+  }
+
+  .container_time .icon {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .container_time:hover>.icon {
+    width: 30px;
+    height: 30px;
+    transform: scale(1.1);
+  }
+
+  .container_time .sun,
+  .container_time .moon {
+    display: none;
+  }
+
+  .light_mode_time .container_time .sun {
+    animation: หมุน 1s infinite;
+    display: block;
+  }
+
+  .dark_mode_time .container_time .moon {
+    display: block;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+  }
+
+  .container>td:hover {
+    background: #000000;
+  }
+
+  h1 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  th,
+  td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+
+  th {
+    background-color: #f2f2f2;
+  }
+
+  td {
+    vertical-align: top;
+    width: 50px;
+  }
+
+  .break {
+    background-color: #e6f7ff;
+    font-weight: 100;
+    text-align: center;
+    height: 100px;
+  }
+
+  .empty {
+    background-color: #f9f9f9;
+  }
+
+  td:hover,
+  th:hover {
+    background: #333333;
+    color: #cccccc;
+  }
+
+  td:hover>p {
+    color: #ffffff;
+  }
+
+  th {
+    font-weight: 100;
+  }
+
+  p {
+    font-weight: bold;
+  }
+
+  small {
+    font-size: 10px;
+    color: #ff0000;
+  }
+</style>
+
+<body>
+  <div class="container_time">
+    <p id="time">—</p>
+    <p id="day">—</p>
+    <img src="/images/icon-img/sun.png" alt="" class="icon sun" />
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="icon moon">
+      <path
+        d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" />
+      <path
+        d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z" />
+    </svg>
+  </div>
+  <div class="container">
+    <h1>ตารางเรียน</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>เวลา</th>
+          <th>จันทร์</th>
+          <th>อังคาร<br /><small>ชุดพละ</small></th>
+          <th>พุธ</th>
+          <th>พฤหัสบดี<br /><small>ชุดลูกเสือเนตรนารี</small></th>
+          <th>ศุกร์</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="break">7:50 - 8:15</td>
+          <td colspan="5" class="break">กิจกรรมหน้าเสาธง</td>
+        </tr>
+
+        <tr>
+          <td class="break">8:15 - 9:15</td>
+          <td rowspan="2">
+            จันทร์<br />20000-1501
+            <p>หน้าที่พลเมืองและศีลธรรม</p>
+            SSB<br />อ.จื่อผิง
+          </td>
+          <td rowspan="2">
+            อังคาร<br />20000-1222
+            <p>ภาษาจีนเพื่อการสื่อสารในชีวิตประจำวัน</p>
+            216<br />อ.วงเดือน
+          </td>
+          <td rowspan="2">
+            พุธ<br />20000-1101
+            <p>ภาษาไทยเพื่อการสื่อสาร</p>
+            211<br />อ.นงคราญ
+          </td>
+          <td rowspan="4">
+            พฤหัสบดี<br />20701-2022
+            <p>เครื่องดื่มและการผสมเครืองดื่ม</p>
+            ห้องการโรงแรม<br />อ.อาภาพร
+          </td>
+          <td rowspan="4">
+            ศุกร์<br />20001-1005
+            <p>การใช้เทคโนโลยีดิจิตอลเพื่ออาชีพ</p>
+            ห้องคอม 3<br />อ.พรนภา
+          </td>
+        </tr>
+
+        <tr>
+          <td class="break">9:15 - 10:15</td>
+        </tr>
+
+        <tr>
+          <td class="break">10:15 - 11:15</td>
+          <td rowspan="2">
+            จันทร์<br />20000-1401
+            <p>คณิตศาสตร์พื้นฐานอาชีพ ทฤษฏีช่างยนต์ 1</p>
+            อ.พรนภา
+          </td>
+          <td rowspan="2">
+            อังคาร<br />20000-1201
+            <p>ภาษาอังกฤษเพิ่มการสื่อสาร</p>
+            211<br />อ.ฐิตารีย์
+          </td>
+          <td rowspan="1">
+            พุธ<br />20000-1602
+            <p>เพศวิถีศึกษา<br />211</p>
+            อ.นงคราญ
+          </td>
+        </tr>
+
+        <tr>
+          <td class="break">11:15 - 12:15</td>
+          <td>
+            พุธ<br />20001-1002
+            <p>การพัฒนาอย่างยั่งยืน</p>
+            223<br />อ.กรองกานต์
+          </td>
+        </tr>
+
+        <tr>
+          <td class="break">12:15 - 13:15</td>
+          <td colspan="5" class="break">พักกลางวัน</td>
+        </tr>
+
+        <tr>
+          <td class="break">13:15 - 14:15</td>
+          <td rowspan="3">
+            จันทร์<br />21910-0001
+            <p>พื้นฐานธุรกิจดิจิทัล</p>
+            ห้องคอม 2<br />อ.อรุณสวัสดิ์
+          </td>
+          <td rowspan="3">
+            อังคาร<br />20001-1003
+            <p>ธุรกิจเบื้องต้น</p>
+            223<br />อ.กององกานต์
+          </td>
+          <td rowspan="2">
+            พุธ<br />20001-1002
+            <p>การพัฒนาอย่างยั่งยืน</p>
+            223<br />อ.กรองกานต์
+          </td>
+          <td rowspan="2">
+            พฤหัสบดี<br />20001-1002
+            <p>ลูกเสสือวิสามัญ 1</p>
+            ลานธรรม<br />อ.ฤทัย
+          </td>
+          <td rowspan="2">
+            ศุกร์<br />20200-0004
+            <p>พิทพ์ไทยดิจิทัล</p>
+            221<br />อ.สุทัตรา
+          </td>
+        </tr>
+
+        <tr>
+          <td class="break">14:15 - 15:15</td>
+        </tr>
+
+        <tr>
+          <td class="break">15:15 - 16:15</td>
+          <td class="empty">โฮมลูม</td>
+          <td class="empty">โฮมลูม</td>
+          <td class="empty">โฮมลูม</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <script type="text/javascript" charset="utf-8">
+    function updateTime() {
+      const now = new Date();
+
+      const hours = now.getHours();
+      const minutes = now.getMinutes();
+      const isPM = hours >= 12;
+      const formattedHours = hours % 12 || 12;
+      const formattedMinutes = minutes < 10 ? "0" + minutes : minutes;
+      const timeString = `${formattedHours}:${formattedMinutes} ${isPM ? "PM" : "AM"
+        }`;
+
+      function replaceZeroWithHeart(time) {
+        return time
+          .toString()
+          .replace(/1/g, "1")
+          .replace(/2/g, "2")
+          .replace(/3/g, "3")
+          .replace(/4/g, "4")
+          .replace(/5/g, "5")
+          .replace(/6/g, "6")
+          .replace(/7/g, "7")
+          .replace(/8/g, "8")
+          .replace(/9/g, "9")
+          .replace(/0/g, "♡");
+      }
+
+      const days = [
+        "วันอาทิตย์",
+        "วันจันทร์",
+        "วันอังคาร",
+        "วันพุธ",
+        "วันพฤหัสบดี",
+        "วันศุกร์",
+        "วันเสาร์",
+      ];
+      const months = [
+        "มกราคม",
+        "กุมภาพันธ์",
+        "มีนาคม",
+        "เมษายน",
+        "พฤษภาคม",
+        "มิถุนายน",
+        "กรกฎาคม",
+        "สิงหาคม",
+        "กันยายน",
+        "ตุลาคม",
+        "พฤศจิกายน",
+        "ธันวาคม",
+      ];
+
+      const day = days[now.getDay()];
+      const month = months[now.getMonth()];
+      const date = now.getDate();
+      const year = now.getFullYear();
+      const dayString = `${day}, ${month} ${date}, ${year}`;
+
+      document.getElementById("time").textContent =
+        replaceZeroWithHeart(timeString);
+      document.getElementById("day").textContent = dayString;
+
+      if (hours >= 6 && hours < 19) {
+        document.body.classList.add("light_mode_time");
+        document.body.classList.remove("dark_mode_time");
+      } else {
+        document.body.classList.add("dark_mode_time");
+        document.body.classList.remove("light_mode_time");
+      }
+    }
+
+    setInterval(updateTime, 1000);
+    updateTime();
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,1367 @@
+<!-- ########  ########  ###   ##  ########  ########  #######   ########  #######   ##  ########  ## -->
+<!-- ##        ##        ## #  ##     ##     ##        ##    ##  ##        ##    ##  ##  ##    ##  ## -->
+<!-- ##        ######    ##  # ##     ##     ######    #######   ######    ##    ##  ##  ##    ##  ## -->
+<!-- ##        ##        ##   ###     ##     ##        ##   ##   ##        ##    ##  ##  ##    ##  ## -->
+<!-- ########  ########  ##    ##     ##     ########  ##    ##  ########  #######   ##  ########  ## -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- สวัสดี วัยสะรุ้น Hello, World! ครับ/ค่ะ -->
+
+<head>
+
+    <title>Centered101 – Main</title>
+    <!-- เมตาแท็กหลัก -->
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="Centered101 – Main" />
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript,Centered101" />
+    <meta name="author" content="Centered101" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://centered101-webfollow.web.app/" />
+    <meta property="og:url" content="https://centered101-webfollow.firebaseapp.com/" />
+    <meta property="og:title" content="Centered101" />
+    <meta property="og:description" content="Centered101 – Main" />
+    <meta property="og:image" content="//images/icon/Tes-D.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://centered101-webfollow.web.app/" />
+    <meta property="twitter:url" content="https://centered101-webfollow.firebaseapp.com/" />
+    <meta property="twitter:title" content="Centered101" />
+    <meta property="twitter:description" content="Centered101 – Main" />
+    <meta property="twitter:image" content="/images/icon/Tes-D.png" />
+
+    <!-- รูปโปรไฟร์หัวข้อหน้าเว็บ รูปแแบบ external -->
+    <link rel="icon" type="image/png" href="/images/icon/เว็บไซต์1200x1200.png">
+
+    <link rel="stylesheet" href="/www/style.css" type="text/css" media="all" />
+    <script src="/www/script.js" type="text/javascript" charset="utf-8"></script>
+
+    <script src="/www/countdow.js" type="text/javascript" charset="utf-8"></script>
+
+    <!-- เพิ่มอิลิเมนต์ audio -->
+    <audio id="welcomeSound">
+        <source src="#" type="audio/mp3">
+    </audio>
+
+    <!-- HTML สำหรับแสดง Player เสียง -->
+    <audio id="birthdaySound">
+        <source src="/graphic/Music/วันเกิดฉันปีนี้ (HBD to me).mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="audio" src="/graphic/Audio/sus.mp3"></audio>
+
+</head>
+
+<style type="text/css" media="all">
+    @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree&display=swap');
+
+    ::-moz-selection {
+        background-color: #000000B3;
+        color: #1ED760;
+    }
+
+    ::selection {
+        background-color: #000000B3;
+        color: #1ED760;
+    }
+
+    /* width */
+    ::-webkit-scrollbar {
+        width: 20px;
+    }
+
+    ::-webkit-scrollbar-button {
+        background-color: #333333;
+        border: 5px solid #333333;
+        height: 40px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background-color: linear-gradient(320deg, #1ED760, #409EFE);
+        border: #000000 solid 5px;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background-color: #409EFE;
+        border: #000000B3 solid 5px;
+        border-radius: 10px;
+        box-shadow: -3px -3px 8px 3px #84D4FA, 3px 3px 8px 3px #84D4FA;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: #FE4040;
+        box-shadow: -3px -3px 8px 3px #FF7070, 3px 3px 8px 3px #FF7070;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border: 5px solid #000000B3;
+        border-radius: 360px;
+        box-shadow: -3px -3px 8px 3px #84D4FA, 3px 3px 8px 3px #84D4FA;
+    }
+
+
+    body {
+        font-family: 'Bai Jamjuree', sans-serif;
+        font-weight: bold;
+        transition: background-color 1s;
+    }
+
+    /* -profile-------------------------------------------------------------------------------------------- */
+
+    .main_content_profile {
+        display: none;
+        user-select: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        justify-content: center;
+        margin: auto;
+        width: 350px;
+        padding: 20px;
+    }
+
+    .main_content_profile .container_profile {
+        margin: 30px 30px 0px 30px;
+        padding: 20px;
+        background-color: #409EFE;
+        border: solid 0px #FFFFFF;
+        border-radius: 50%;
+        transition: all .5s ease-in-out .2s, z-index .5s ease-in-out .2s;
+    }
+
+    .main_content_profile .container_profile:hover {
+        transform: scale(1.2);
+        border: solid 5px #FFFFFF;
+        border-radius: 7px 7px 100px 7px;
+        margin-bottom: 50px;
+        transition: all .5s ease-in-out 0s;
+    }
+
+    .main_content_profile .container_profile .profile {
+        user-select: none;
+        background-color: #F5F5F5B3;
+        border: solid 5px #FFFFFF80;
+        border-radius: 5px;
+        cursor: pointer;
+        height: 230px;
+        width: 230px;
+        object-fit: cover;
+        object-position: 0px -180px;
+        transition: all .5s ease-in-out 0s;
+    }
+
+    .main_content_profile .container_profile:hover .profile {
+        border: solid 5px #FFFFFF;
+        object-position: 0px 0px;
+    }
+
+    .main_content_profile .container_profile p {
+        position: absolute;
+        margin-top: -2px;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: .5s;
+    }
+
+    .main_content_profile .container_profile:hover>p {
+        background-color: #000000B3;
+        color: #00CC4F;
+        padding: 5px;
+        border-radius: 3px;
+        margin-top: 30px;
+        font-size: 18px;
+    }
+
+    .main_content_profile .icon_profile_pic {
+        user-select: none;
+        animation: บิน 60s infinite;
+        cursor: pointer;
+        position: absolute;
+        margin-left: -50px;
+        margin: 0;
+        padding: 0;
+        opacity: 1;
+        width: 15px;
+        z-index: 1;
+    }
+
+    /* ---------------------------------------------------------------------------------------------------- */
+
+        .container_muteButton {
+        --color: #666666;
+        --size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        cursor: pointer;
+        font-size: var(--size);
+        user-select: none;
+        fill: var(--color);
+        margin-left: 300px;
+        margin-top: 350px;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .container_muteButton .mute_muteButton {
+        position: absolute;
+        animation: keyframes-fill .5s;
+    }
+
+    .container_muteButton .voice_muteButton {
+        position: absolute;
+        display: none;
+        animation: keyframes-fill .5s;
+    }
+
+    /* ------ On check event ------ */
+    .container_muteButton input:checked~.mute_muteButton {
+        display: none;
+    }
+
+    .container_muteButton input:checked~.voice_muteButton {
+        display: block;
+    }
+
+    /* ------ Hide the default checkbox ------ */
+    .container_muteButton input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+
+    /* ---------------------------------------------------------------------------------------------------- */
+
+    nav {
+        display: flex;
+        justify-content: center;
+        margin: 50px 0 30px 0;
+    }
+
+    nav div {
+        position: relative;
+        width: fit-content;
+        height: fit-content;
+    }
+
+    nav div:before {
+        content: "";
+        position: absolute;
+        width: calc(100% + 0.5em);
+        height: 50%;
+        left: -0.3em;
+        top: -0.3em;
+        border: 1px solid #0E1822;
+        border-bottom: 0px;
+    }
+
+    nav div:after {
+        content: "";
+        position: absolute;
+        width: calc(100% + 0.5em);
+        height: 50%;
+        left: -0.3em;
+        bottom: -0.3em;
+        border: 1px solid #0E1822;
+        border-top: 0;
+    }
+
+    nav div button {
+        user-select: none;
+        font-family: 'Ropa Sans', sans-serif;
+        /* font-family: 'Valorant', sans-serif; */
+        color: #ffffff;
+        cursor: pointer;
+        font-size: 13px;
+        font-weight: bold;
+        letter-spacing: 0.05rem;
+        border: 1px solid #0E1822;
+        padding: 0.8rem 3.1rem;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 531.28 200'%3E%3Cdefs%3E%3Cstyle%3E .shape %7B fill: %23FF4655 /* fill: %230E1822; */ %7D %3C/style%3E%3C/defs%3E%3Cg id='Layer_2' data-name='Layer 2'%3E%3Cg id='Layer_1-2' data-name='Layer 1'%3E%3Cpolygon class='shape' points='415.81 200 0 200 115.47 0 531.28 0 415.81 200' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+        background-color: #0E1822;
+        background-size: 200%;
+        background-position: 200%;
+        background-repeat: no-repeat;
+        transition: 0.3s ease-in-out;
+        transition-property: background-position, border, color;
+        position: relative;
+    }
+
+    nav div button:hover {
+        border: 1px solid #FF4655;
+        color: #ffffff;
+        background-position: 40%;
+    }
+
+    nav div button:before {
+        content: "";
+        position: absolute;
+        background-color: #0E1822;
+        width: 0.2rem;
+        height: 0.2rem;
+        top: -1px;
+        left: -1px;
+        transition: background-color 0.15s ease-in-out;
+    }
+
+    nav div button:hover:before {
+        background-color: #ffffff;
+    }
+
+    nav div button:hover:after {
+        background-color: #ffffff;
+    }
+
+    nav div button:after {
+        content: "";
+        position: absolute;
+        background-color: #FF4655;
+        width: 0.3rem;
+        height: 0.3rem;
+        bottom: -1px;
+        right: -1px;
+        transition: background-color 0.15s ease-in-out;
+    }
+
+    /* ---------------------------------------------------------------------------------------------------- */
+
+    .main {
+        display: flex;
+        flex-flow: wrap;
+        justify-content: center;
+        margin-bottom: 80px;
+    }
+
+    /* ---------------------------------------------------------------------------------------------------- */
+
+
+    .light_mode_time .container_time {
+        background: linear-gradient(to right, #FF7070, #E8D600);
+    }
+
+    .dark_mode_time .container_time {
+        background: linear-gradient(to right, #141e30, #243b55);
+    }
+
+    .container_time {
+        user-select: none;
+        width: 440px;
+        margin: 10px 20px;
+        padding: 0 0 10px 0;
+        border: solid #000000 1px;
+        border-radius: 7px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        color: #ffffff;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        position: relative;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        cursor: pointer;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        overflow: hidden
+    }
+
+    .container_time #time {
+        font-size: 34px;
+        margin-left: 15px;
+        font-weight: bold;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .container_time p,
+    #day {
+        font-size: 16px;
+        margin-top: 10px;
+        margin-left: 15px;
+        font-weight: 100;
+    }
+
+    .container_time .icon {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        transition: all .2s ease-in-out;
+    }
+
+    .container_time:hover>.icon {
+        width: 40px;
+        height: 40px;
+        transform: scale(1.1);
+    }
+
+    .container_time .sun,
+    .container_time .moon {
+        display: none;
+    }
+
+    .light_mode_time .container_time .sun {
+        animation: หมุน 1s infinite;
+        display: block;
+    }
+
+    .light_mode_time .container_time:hover>.sun {
+        animation: หมุน .1s infinite;
+        display: block;
+    }
+
+    .dark_mode_time .container_time .moon {
+        display: block;
+    }
+
+    .dark_mode_time .container_time:hover>.moon {
+        display: block;
+    }
+
+    /* -HBD------------------------------------------------------------------------------------------------ */
+
+    .container_hbd {
+        user-select: none;
+        border: solid #000000 1px;
+        border-radius: 7px;
+        margin: auto;
+        margin: 10px 20px;
+        padding: 20px;
+        text-align: center;
+        width: 400px;
+    }
+
+    .container_hbd {
+        --color: #cccccc;
+        background-color: #ffffff;
+        background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%, transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%, transparent),
+            linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%, transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%, transparent);
+        background-size: 55px 55px;
+    }
+
+    .container_hbd div h1 {
+        border: solid #000000 1px;
+        color: #926AFF;
+        border-radius: 3px;
+        margin-top: 10px;
+        padding: 10px;
+    }
+
+    .container_hbd section .all_box_time {
+        background-color: #999999;
+        border: solid #000000 1px;
+        border-radius: 5px;
+        display: flex;
+        font-family: 'Press Start 2P', system-ui;
+        justify-content: center;
+        padding: 5px;
+        box-shadow: 4px 4px 8px 4px #000000B3;
+        margin: 20px 0 30px 0;
+    }
+
+    .container_hbd section .all_box_time .box_time {
+        box-shadow: inset 2px 5px 10px #000000;
+        text-shadow: 5px 5px 1px #000000;
+        display: inline;
+        margin: 5px;
+        background-color: #666666;
+        border-radius: 5px;
+        transition: .5s;
+        width: 100%;
+    }
+
+    .container_hbd section .all_box_time .box_time:hover {
+        box-shadow: 4px 4px 8px 4px #000000B3;
+        text-shadow: 10px 10px 3px #000000;
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+
+    .container_hbd section .all_box_time .box_time .time {
+        animation: ไฟแดนซ์ 1s infinite;
+        color: #00CC4F;
+        font-size: 18px;
+        margin: 20px 0px;
+        text-align: center;
+    }
+
+    .box_time:hover>.time {
+        transform: scale(1.2);
+    }
+
+    .container_hbd section subsection div {
+        border: solid #000000 1px;
+        border-radius: 3px;
+        padding: 10px;
+        margin: 20px 0;
+    }
+
+    .container_hbd section #countdown {
+        color: #409EFE;
+        animation: ตีกลับ 2s infinite;
+        font-size: 10px;
+        transition: all 1.8s cubic-bezier(0.68, 0.55, 0.265, 1.55);
+        margin: 0 0 20px 0;
+        letter-spacing: 3px;
+    }
+
+    .container_hbd section #countbown:hover {
+        transform: rotate(360deg);
+    }
+
+    .container_hbd section #birthdayImage {
+        animation: ไฟแดนซ์ 1ms infinite;
+        max-height: 550px;
+        max-width: 350px;
+        background-color: #00CC4FB3;
+        border-radius: 7px;
+        padding: 10px;
+        color: #FE4040;
+        cursor: pointer;
+        transition: all 1.8s cubic-bezier(0.68, 0.55, 0.265, 1.55);
+    }
+
+    .container_hbd section #birthdayImage:hover {
+        box-shadow: -50px -50px 100px 50px #409EFE, 50px 50px 100px 50px #FE4040;
+    }
+
+    .container_hbd h5 {
+        border: solid #000000 1px;
+        border-radius: 3px;
+        background-color: #ffffff;
+        padding: 10px;
+        margin: 0 0 10 0;
+        letter-spacing: 3px;
+    }
+
+    .container_hbd h5 p {
+        margin: 0;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    /* -skill---------------------------------------------------------------------------------------------- */
+
+    .container_skill {
+        position: relative;
+        width: 800px;
+        margin: 10px 20px;
+        padding: 10px 20px;
+        border: solid #000000 1px;
+        border-radius: 7px;
+        background-image: linear-gradient(#ffffff 1.1rem, #cccccc 1.2rem);
+        background-size: 100% 1.2rem;
+    }
+
+    .container_skill h1,
+    summary {
+        cursor: pointer;
+    }
+
+    .container_skill .skill_box {
+        width: 100%;
+        margin: 25px 0;
+    }
+
+    .container_skill .skill_box span {
+        user-select: all;
+        display: block;
+        font-size: 14px;
+        font-weight: 600;
+        color: #333333;
+    }
+
+    .container_skill .skill_box div {
+        height: 8px;
+        width: 100%;
+        border-radius: 6px;
+        margin-top: 6px;
+        background-color: #cccccc;
+    }
+
+    .container_skill .skill_box div .skill_per {
+        position: relative;
+        display: block;
+        height: 100%;
+        border-radius: 6px;
+        background-color: #409EFE;
+        animation: progress .4s ease-in-out forwards;
+        opacity: 0;
+        transition: width 1s;
+    }
+
+    .container_skill .skill_box div .skill_per.html {
+        animation-delay: 1s;
+    }
+
+    .container_skill .skill_box div .skill_per.css {
+        animation-delay: 1s;
+    }
+
+    .container_skill .skill_box div .skill_per.javascript {
+        animation-delay: 1.2s;
+    }
+
+    .container_skill .skill_box div .skill_per.nodejs {
+        animation-delay: 1.4s;
+    }
+
+    .container_skill .skill_box div .skill_per.python {
+        animation-delay: .2s;
+    }
+
+    .container_skill .skill_box div .skill_per.c {
+        animation-delay: .2s;
+    }
+
+    .container_skill .skill_box div .skill_per.cpp {
+        animation-delay: .4s;
+    }
+
+    .container_skill .skill_box div .skill_per.go {
+        animation-delay: .6s;
+    }
+
+    .container_skill .skill_box div .skill_per.java {
+        animation-delay: .8s;
+    }
+
+    .container_skill .skill_box div .skill_per.php {
+        animation-delay: 1s;
+    }
+
+    .container_skill .skill_box div .skill_per.sql {
+        animation-delay: 1.2s;
+    }
+
+    .container_skill .skill_box div .skill_per.ruby {
+        animation-delay: 1.4s;
+    }
+
+    .container_skill .skill_box div .skill_per.swift {
+        animation-delay: 1.6s;
+    }
+
+    @keyframes progress {
+        0% {
+            width: 0;
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .container_skill .skill_box div .skill_per .tooltip {
+        position: absolute;
+        right: -14px;
+        top: -28px;
+        font-size: 9px;
+        font-weight: 500;
+        color: #ffffff;
+        padding: 2px 6px;
+        border-radius: 3px;
+        background-color: #409EFE;
+        animation: ตีกลับ 1s infinite;
+    }
+
+    .container_skill .skill_box div .skill_per .tooltip::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: -2px;
+        height: 10px;
+        width: 10px;
+        z-index: -1;
+        background-color: #409EFE;
+        transform: translateX(-50%) rotate(45deg);
+    }
+
+    .container_skill section {
+        display: flex;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+
+    .container_skill section div h1 {
+        font-size: px;
+        margin-bottom: 10px;
+    }
+
+    .container_skill section div:nth-of-type(1) {
+        flex-grow: 1;
+        border: solid #00CC4F 1px;
+        border-radius: 3px;
+        margin: 0 5px 0 0;
+        padding: 10px;
+
+    }
+
+    .container_skill section div:nth-of-type(2) {
+        flex-grow: 1;
+        border: solid #FF7070 1px;
+        border-radius: 3px;
+        margin: 0 0 0 5px;
+        padding: 10px;
+    }
+
+    .container_skill section ul li::marker {
+        content: "- ";
+    }
+
+    .container_skill section ul li {
+        margin: 0 0 0 10px;
+        color: #333333;
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    /* -สูตรคูณ---------------------------------------------------------------------------------------- */
+
+    .container_multiplication {
+        width: 800px;
+        margin: 10px 20px;
+        padding: 20px;
+        border: 1px solid #000000;
+        border-radius: 7px;
+        font-weight: bold;
+    }
+
+    .container_multiplication {
+        /* background style */
+        --color: #CCCCCC;
+        background-color: #ffffff;
+        background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%, transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%, transparent),
+            linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%, transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%, transparent);
+        background-size: 55px 55px;
+    }
+
+    .container_multiplication div h1 {
+        border: solid 1px #000000;
+        border-radius: 3px;
+        padding: 10px;
+        margin: 10px 0;
+    }
+
+    .container_multiplication div h1 a {
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 3px solid #00CC4FB3;
+        animation: typeAndDelete 6s steps(16) infinite, blinkCursor .5s step-end infinite alternate;
+    }
+
+    @keyframes typeAndDelete {
+
+        0%,
+        10% {
+            width: 0;
+        }
+
+        45%,
+        55% {
+            width: 10em;
+        }
+
+        90%,
+        100% {
+            width: 0;
+        }
+    }
+
+    .container_multiplication section input[type="number"],
+    .container_multiplication section button {
+        border: solid 1px #000000;
+        background-color: none;
+        caret-color: #00CC4FB3;
+        cursor: pointer;
+        letter-spacing: 5px;
+        width: 100%;
+        padding: 10px;
+        border-radius: 3px;
+        font-family: "Bai Jamjuree", sans-serif;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .container_multiplication section input[type="number"] {
+        width: 100%;
+        margin-right: 20px;
+    }
+
+    .container_multiplication section button[type="submit"] {
+        background-color: #00CC4FB3;
+        letter-spacing: 1px;
+    }
+
+    .container_multiplication section button[type="reset"] {
+        background-color: #FF7070B3;
+        letter-spacing: 1px;
+    }
+
+    .container_multiplication section div {
+        background-color: #ffffff;
+        border: solid 1px #000000;
+        letter-spacing: 5px;
+        border-radius: 1px;
+    }
+
+    .container_multiplication section div h4 {
+        padding: 10px 10px 10px 60px;
+        background-color: #f1f1f1;
+        background-image: linear-gradient(90deg, transparent 50px, #ffb4b8 50px, #ffb4b8 52px, transparent 52px),
+            linear-gradient(#e1e1e1 0.1em, transparent 0.1em);
+        background-size: 100% 30px;
+    }
+</style>
+
+<body id="color_change">
+
+    <header>
+        <a class="baning" onclick="resetWindow()">
+            <img class="img-baning" src="/images/icon/เว็บไซต์1200x1200.png">
+            Centered101
+        </a>
+        <label class="switch">
+            <input type="checkbox" id="modeSwitch" onclick="toggleMode()">
+            <span class="slider"></span>
+        </label>
+    </header>
+
+    <div class="progress">
+        <progress id="welcomeProgress" value="0" max="1"></progress>
+        <progress id="audioProgress" value="0" max="1"></progress>
+        <progress id="birthdayProgress" value="0" max="1"></progress>
+    </div>
+
+    <div class="main_content_profile">
+        <a href="/www/login/login.html" onclick="displayMessage('กำลังไปหน้าถัดไป...')">
+            <img class="icon_profile_pic" src="/images/icon-img/plane.svg" alt="">
+        </a>
+        <div class="container_profile">
+            <img class="profile" src="/images/Tes-Dee.png" alt="Tes-D1200x1200">
+            <p>Centered101</p>
+        </div>
+        <label class="container_muteButton">
+            <input id="muteButton" checked="checked_muteButton" type="checkbox">
+            <svg viewBox="0 0 576 512" height="1em" xmlns="http://www.w3.org/2000/svg" class="mute_muteButton">
+                <path
+                    d="M301.1 34.8C312.6 40 320 51.4 320 64V448c0 12.6-7.4 24-18.9 29.2s-25 3.1-34.4-5.3L131.8 352H64c-35.3 0-64-28.7-64-64V224c0-35.3 28.7-64 64-64h67.8L266.7 40.1c9.4-8.4 22.9-10.4 34.4-5.3zM425 167l55 55 55-55c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-55 55 55 55c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-55-55-55 55c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l55-55-55-55c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z">
+                </path>
+            </svg>
+            <svg viewBox="0 0 448 512" height="1em" xmlns="http://www.w3.org/2000/svg" class="voice_muteButton">
+                <path
+                    d="M301.1 34.8C312.6 40 320 51.4 320 64V448c0 12.6-7.4 24-18.9 29.2s-25 3.1-34.4-5.3L131.8 352H64c-35.3 0-64-28.7-64-64V224c0-35.3 28.7-64 64-64h67.8L266.7 40.1c9.4-8.4 22.9-10.4 34.4-5.3zM412.6 181.5C434.1 199.1 448 225.9 448 256s-13.9 56.9-35.4 74.5c-10.3 8.4-25.4 6.8-33.8-3.5s-6.8-25.4 3.5-33.8C393.1 284.4 400 271 400 256s-6.9-28.4-17.7-37.3c-10.3-8.4-11.8-23.5-3.5-33.8s23.5-11.8 33.8-3.5z">
+                </path>
+            </svg>
+        </label>
+
+    </div>
+
+    <nav>
+        <div>
+            <a href="www/website_and_social_links/website_and_social_links.html"
+                onclick="displayMessage('กำลังไปหน้าถัดไป...')">
+                <button> อะต่อไปปป
+                </button>
+            </a>
+        </div>
+    </nav>
+
+    <div class="main">
+
+        <!-- -time----------------------------------------------------------------------------------------------- -->
+
+        <div class="container_time">
+            <p id="time">
+                –
+            </p>
+            <p id="day">
+                –
+            </p>
+            <img src="/images/icon-img/sun.png" alt="" class="icon sun" />
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="icon moon">
+                <path
+                    d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" />
+                <path
+                    d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z" />
+            </svg>
+        </div>
+
+        <!-- -HBD------------------------------------------------------------------------------------------------ -->
+
+        <div class="container_hbd">
+
+            <div>
+                <h1>
+                    <script>
+                        document.write("Happy My Birthday: " + (new Date().getFullYear()) + ";")
+                    </script>
+                </h1>
+            </div>
+            <section>
+                <div class="all_box_time">
+                    <div class="box_time">
+                        <p class="time" id="countdownDays">
+                            –
+                        </p>
+                    </div>
+                    <div class="box_time">
+                        <p class="time" id="countdownHours">
+                            –
+                        </p>
+                    </div>
+                    <div class="box_time">
+                        <p class="time" id="countdownMinutes">
+                            –
+                        </p>
+                    </div>
+                    <div class="box_time">
+                        <p class="time" id="countdownSeconds">
+                            –
+                        </p>
+                    </div>
+                </div>
+                <subsection>
+                    <div>
+                        <!-- HTML สำหรับแสดง Countdown Timer -->
+                        <h6 id="countdown">–</h6>
+                        <!-- HTML สำหรับแสดงรูปภาพ -->
+                        <img id="birthdayImage" src="" alt="รูปก่อนวันเกิด">
+                    </div>
+                </subsection>
+            </section>
+            <h5>
+                <p id="daysSinceBirthday">
+                    –
+                </p>
+                <br />
+                <p id="all_day_hbd">
+                    –
+                </p>
+            </h5>
+
+            <!-- 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥 -->
+
+            <!-- Content HBD by: yok_3124; -->
+            <!-- Modify by: Centered101; -->
+            <!-- yok_3124 👇 -->
+            <!-- <a href="https://www.instagram.com/yok_3124?igsh=MWd4NWF4dGI0eTFjbw=="></a> -->
+            <!-- Centered101 👇 -->
+            <!-- <a href="https://instagram.com/centered101?igshid=YmMyMTA2M2Y="></a> -->
+
+            <!-- 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥 -->
+
+        </div>
+
+        <!-- -skill---------------------------------------------------------------------------------------------- -->
+
+        <div class="container_skill">
+            <h1 id="reset_skills">My Skills Programmer</h1>
+
+            <div class="skill_box">
+                <span>HTML</span>
+                <div>
+                    <span class="skill_per html">
+                        <span class="tooltip">–</span>
+                    </span>
+                </div>
+            </div>
+
+            <div class="skill_box">
+                <span>CSS</span>
+                <div>
+                    <span class="skill_per css">
+                        <span class="tooltip">–</span>
+                    </span>
+                </div>
+            </div>
+
+            <div class="skill_box">
+                <span>JavaScript</span>
+                <div>
+                    <span class="skill_per javascript">
+                        <span class="tooltip">–</span>
+                    </span>
+                </div>
+            </div>
+
+            <div class="skill_box">
+                <span>NodeJS</span>
+                <div>
+                    <span class="skill_per nodejs">
+                        <span class="tooltip">–</span>
+                    </span>
+                </div>
+            </div>
+
+            <details>
+                <summary>เพิ่มเติม</summary>
+
+                <div class="skill_box">
+                    <span>Python</span>
+                    <div>
+                        <span class="skill_per python">
+                            <span class="tooltip">–</span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="skill_box">
+                    <span>C</span>
+                    <div>
+                        <span class="skill_per c">
+                            <span class="tooltip">–</span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="skill_box">
+                    <span>C++</span>
+                    <div>
+                        <span class="skill_per cpp">
+                            <span class="tooltip">–</span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="skill_box">
+                    <span>C#</span>
+                    <div>
+                        <span class="skill_per csharp">
+                            <span class="tooltip">–</span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="skill_box">
+                    <span>Go</span>
+                    <div>
+                        <span class="skill_per go">
+                            <span class="tooltip">–</span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="skill_box">
+                    <span>Java</span>
+                    <div>
+                        <span class="skill_per java">
+                            <span class="tooltip">–</span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="skill_box">
+                    <span>PHP</span>
+                    <div>
+                        <span class="skill_per php">
+                            <span class="tooltip">–</span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="skill_box">
+                    <span>SQL</span>
+                    <div>
+                        <span class="skill_per sql">
+                            <span class="tooltip">–</span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="skill_box">
+                    <span>Rudy</span>
+                    <div>
+                        <span class="skill_per ruby">
+                            <span class="tooltip">–</span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="skill_box">
+                    <span>Swift</span>
+                    <div>
+                        <span class="skill_per swift">
+                            <span class="tooltip">–</span>
+                        </span>
+                    </div>
+                </div>
+
+                ฯลฯ ขี้เกียจทำ
+                <br>
+
+                <section>
+
+                    <div>
+                        <h1>Skill Good</h1>
+                        <ul>
+                            เครื่องมือ
+                            <li>Visual Studio Code</li>
+                        </ul>
+                        <ul>
+                            <li>API</li>
+                            <li>NPM</li>
+                            <li>UX / UI</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h1>Skill Noob</h1>
+                        <ul>
+                            เครื่องมือ
+
+                            <li>Fieldset</li>
+                            <li>Git</li>
+                            <li>TailwindCSS</li>
+                            <li>NextJS</li>
+                        </ul>
+                        <ul>
+                            ปัณหา
+                            <li>ตั้งชื่อไฟร์ / ตั้งชื่อคราส</li>
+                        </ul>
+                    </div>
+
+                </section>
+
+            </details>
+        </div>
+
+        <!-- -สูตรคูณ---------------------------------------------------------------------------------------- -->
+
+        <div class="container_multiplication">
+            <div>
+                <details>
+                    <summary>รายละเอียด</summary>
+                    <p>
+                        ใส่เฉพาะเลขที่จะคูณเท่านั้น เช่น "101" จะแสดงสูตรคูณแม่ "101" อกกมา
+                        และใส่เลขได้ไม่จำกัสจำนวณครั้ง ท้าห่ากใส่เครื่องหมาย "( ) , + - ; / N * #" มันจะไม่ทำงาน
+                        แต่ท้าเป็น "." จะสามารถใช้ได้
+                    </p>
+                    <p>
+                        ทำตามนี้พ่อผมจะไม่ด่าคุณ OK, Youknow.
+                    </p>
+                    <p>// keyup
+                        <small>
+                            <li>Enter & Space Bar = Run
+                            <li>Escapc (Esc) = Reset
+                        </small>
+                    </p>
+                </details>
+                <h1><a>อัจฉริยะ สูตรคูณพ่อผม .</a></h1>
+            </div>
+            <section>
+                <input type="number" name="number" id="input" value="" placeholder="ใส่เลขมา ตรงนี้ครับน้องๆ" />
+                <button type="submit" id="run">คำนวณ <small>(Enter)</small></button>
+                <button type="reset" id="reset">รีเซ็ต <small>(Esc)</small></button>
+                <div>
+                    <h4>
+                        <p id="output">
+                            – ผลลัพธ์ –
+                        </p>
+                        >_
+                    </h4>
+                </div>
+            </section>
+        </div>
+
+        <footer>
+            <div id="all_text_title">–</div>
+            <button id="scrollToTopButton"
+                onclick="scrollToTop(); displayMessage('กำลังขึ้น...')">Top<small>(PgUp)</small></button>
+            <button id="scrollToBottomButton"
+                onclick="scrollToBottom(); displayMessage('กำลังลง...')">Bottom<small>(PgDn)</small></button>
+        </footer>
+
+</body>
+
+<script type="text/javascript" charset="utf-8">
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const skillPercentages = {
+            html: 60,
+            css: 80,
+            javascript: 50,
+            nodejs: 30,
+            python: 20,
+            c: 5,
+            cpp: 0,
+            csharp: 0,
+            go: 0,
+            java: 0,
+            php: 15,
+            sql: 10,
+            ruby: 0,
+            swift: 0,
+        };
+
+        function updateSkills() {
+            for (let skill in skillPercentages) {
+                let skillElement = document.querySelector(`.skill_per.${skill}`);
+                let tooltipElement = skillElement.querySelector('.tooltip');
+
+                // Remove existing animation classes
+                skillElement.style.animation = 'none';
+                skillElement.offsetHeight; // Trigger reflow
+                skillElement.style.animation = null; // Reset animation
+
+                // Update tooltip text
+                if (skillPercentages[skill] === 0) {
+                    skillElement.style.width = '50%';
+                    skillElement.style.background = '#FE4040';
+                    tooltipElement.textContent = 'ยังไม่เรียนครับผม';
+                } else {
+                    skillElement.style.width = skillPercentages[skill] + '%';
+                    tooltipElement.textContent = skillPercentages[skill] + '%';
+                }
+            }
+        }
+
+        document.getElementById('reset_skills').addEventListener('click', function () {
+            // รีเซ็ตความกว้างและข้อความของแถบสกิลทั้งหมดก่อนที่จะตั้งค่าใหม่
+            document.querySelectorAll('.skill_per').forEach(skillElement => {
+                skillElement.style.width = '0';
+                skillElement.querySelector('.tooltip').textContent = '%';
+                displayMessage("กำลังรีเซ็ต...");
+            });
+
+            // ตั้งเวลาในการอัพเดตแถบสกิลใหม่
+            setTimeout(updateSkills, 0);
+        });
+
+        updateSkills(); // เรียกฟังก์ชั่นครั้งแรกเพื่อกำหนดค่าเริ่มต้น
+    });
+
+    // -สูตรคูณ----------------------------------------------------------------------------------------
+
+    const numberInput = document.getElementById('input');
+    const runButton = document.getElementById('run');
+    const resetButton = document.getElementById('reset');
+    const output = document.getElementById('output');
+
+    function printMultiply() {
+        const number = Number(numberInput.value);
+        if (numberInput.value === "") {
+            output.innerHTML = "ใส่เลขมาก่อนดิ่ เดี่ยวพ่อผมตีนะ";
+        } else if (number === 0) {
+            output.innerHTML = 'พ่อผมบอก ว่า "0" คูณกับอะไรก็ได้ "0" ครับผม';
+        } else {
+            let outputHtml = "คำตอบจากพ่อผม อัจฉริยะจริงๆ ครับน้อง" + "<br>";
+            for (let พ่อ = 1; พ่อ <= 1000; พ่อ++) {
+                outputHtml += "<p>" + number + " &times; " + พ่อ + " &equals; " + (number * พ่อ) + "</p>";
+            }
+            output.innerHTML = outputHtml;
+        }
+    }
+
+    function resetFields() {
+        displayMessage("รีเซ็ต")
+        numberInput.value = "";
+        output.innerHTML = "– ผลลัพธ์ –";
+    }
+
+    // ฟังก์ชันจัดการเหตุการณ์ keyup
+    function handleKeyup(event) {
+        displayMessage("กำลังคำนวณ...")
+        if (event.key === 'Enter' || event.key === ' ') {
+            printMultiply();
+            // ถ้ากดปุ่ม 'Escape' (Esc)
+        } else if (event.key === 'Escape') {
+            displayMessage("รีเซ็ต")
+            resetFields();
+        }
+    }
+
+    // เพิ่มตัวฟังเหตุการณ์ให้กับปุ่ม run และ reset
+    runButton.addEventListener('click', printMultiply);
+    resetButton.addEventListener('click', resetFields);
+
+    // เพิ่มตัวฟังเหตุการณ์ keyup ให้กับ numberInput
+    numberInput.addEventListener('keyup', handleKeyup);
+
+    function updateTime() {
+        const now = new Date();
+
+        const hours = now.getHours();
+        const minutes = now.getMinutes();
+        const isPM = hours >= 12;
+        const formattedHours = hours % 12 || 12;
+        const formattedMinutes = minutes < 10 ? '0' + minutes : minutes;
+        const timeString = `${formattedHours}:${formattedMinutes} ${isPM ? 'PM' : 'AM'}`;
+
+        function replaceZeroWithHeart(time) {
+            return time.toString()
+                .replace(/1/g, "1")
+                .replace(/2/g, "2")
+                .replace(/3/g, "3")
+                .replace(/4/g, "4")
+                .replace(/5/g, "5")
+                .replace(/6/g, "6")
+                .replace(/7/g, "7")
+                .replace(/8/g, "8")
+                .replace(/9/g, "9")
+                .replace(/0/g, "♡");
+        }
+
+        const days = [
+            'วันอาทิตย์',
+            'วันจันทร์',
+            'วันอังคาร',
+            'วันพุธ',
+            'วันพฤหัสบดี',
+            'วันศุกร์',
+            'วันเสาร์'];
+        const months = [
+            'มกราคม',
+            'กุมภาพันธ์',
+            'มีนาคม',
+            'เมษายน',
+            'พฤษภาคม',
+            'มิถุนายน',
+            'กรกฎาคม',
+            'สิงหาคม',
+            'กันยายน',
+            'ตุลาคม',
+            'พฤศจิกายน',
+            'ธันวาคม'];
+
+        const day = days[now.getDay()];
+        const month = months[now.getMonth()];
+        const date = now.getDate();
+        const year = now.getFullYear();
+        const dayString = `${day}, ${month} ${date}, ${year}`;
+
+        document.getElementById('time').textContent = replaceZeroWithHeart(timeString);
+        document.getElementById('day').textContent = dayString;
+
+        if (hours >= 6 && hours < 19) {
+            document.body.classList.add('light_mode_time');
+            document.body.classList.remove('dark_mode_time');
+        } else {
+            document.body.classList.add('dark_mode_time');
+            document.body.classList.remove('light_mode_time');
+        }
+    }
+
+    setInterval(updateTime, 1000);
+    updateTime();
+
+</script>
+
+</html>

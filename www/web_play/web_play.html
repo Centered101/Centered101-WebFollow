@@ -1,0 +1,394 @@
+<!-- ########  ########  ###   ##  ########  ########  #######   ########  #######   ##  ########  ## -->
+<!-- ##        ##        ## #  ##     ##     ##        ##    ##  ##        ##    ##  ##  ##    ##  ## -->
+<!-- ##        ######    ##  # ##     ##     ######    #######   ######    ##    ##  ##  ##    ##  ## -->
+<!-- ##        ##        ##   ###     ##     ##        ##   ##   ##        ##    ##  ##  ##    ##  ## -->
+<!-- ########  ########  ##    ##     ##     ########  ##    ##  ########  #######   ##  ########  ## -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- สวัสดี วัยสะรุ้น Hello, World! ครับ/ค่ะ -->
+
+<head>
+
+    <title>Centered101 – Web play</title>
+    <!-- เมตาแท็กหลัก -->
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="Centered101 – Web play" />
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript,Centered101" />
+    <meta name="author" content="Centered101" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://centered101-webfollow.web.app/" />
+    <meta property="og:url" content="https://centered101-webfollow.firebaseapp.com/" />
+    <meta property="og:title" content="Centered101" />
+    <meta property="og:description" content="Centered101 – Web play" />
+    <meta property="og:image" content="/images/icon/Tes-D.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://centered101-webfollow.web.app/" />
+    <meta property="twitter:url" content="https://centered101-webfollow.firebaseapp.com/" />
+    <meta property="twitter:title" content="Centered101" />
+    <meta property="twitter:description" content="Centered101 – Web play" />
+    <meta property="twitter:image" content="/images/icon/Tes-D.png" />
+
+    <!-- รูปโปรไฟร์หัวข้อหน้าเว็บ รูปแแบบ external -->
+    <link rel="icon" type="image/png" href="/images/icon/เว็บไซต์1200x1200.png">
+
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
+
+</head>
+
+<body>
+    <button class="button_next" href="javascript:void(0)" onclick="goBack()">
+        <span class="text">กลับดิครับ</span>
+        <img src="/images/icon/arrow-left.svg" alt="">
+    </button>
+    <div class="content">
+        <div class="container">
+            <h1>Centered101 – Webplay</h1>
+            <p>Liked Songs</p>
+        </div>
+        <ul>
+
+            <br>
+            <div>
+                <iframe style="border-radius:12px"
+                    src="https://open.spotify.com/embed/playlist/26MELAgZ1NL3ez7pRVdt3v?utm_source=generator&theme=0"
+                    width="100%" height="352" frameBorder="0" allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+                </iframe>
+            </div>
+            <br>
+
+            <li onclick="playSong('/graphic/Music/กอดกัน.mp3')">
+                <img src="https://i.scdn.co/image/ab67616d0000b273cd3db014ab1e239c9cc1c807" alt="Song Cover">
+                <div class="song-details">
+                    <p class="song-title">กอดกัน</p>
+                    <p class="song-artist">K6Y, Lazyloxy, Jayrun</p>
+                </div>
+            </li>
+
+            <li onclick="playSong('/graphic/Music/ถ้าต้องเสียเธอไป.mp3')">
+                <img src="https://i.scdn.co/image/ab67616d00001e0200268a870780ff0839323208" alt="Song Cover">
+                <div class="song-details">
+                    <p class="song-title">ถ้าต้องเสียเธอไป</p>
+                    <p class="song-artist">lostbeans</p>
+                </div>
+            </li>
+
+            <li onclick="playSong('/graphic/Music/ให้ตาย....mp3')">
+                <img src="https://i.scdn.co/image/ab67616d00001e0201e0e66af1ee9ae56101d604" alt="Song Cover">
+                <div class="song-details">
+                    <p class="song-title">ให้ตาย...</p>
+                    <p class="song-artist">MaxMillor</p>
+                </div>
+            </li>
+            <li onclick="playSong('/graphic/Music/โลมีโอ.mp3')">
+                <img src="https://i.scdn.co/image/ab67616d00001e023d613e2aa9ae5ba60c76da7a" alt="Song Cover">
+                <div class="song-details">
+                    <p class="song-title">โลมีโอ</p>
+                    <p class="song-artist">Medkit.z, SYF, Lilpeet, DDay, ZOUL</p>
+                </div>
+            </li>
+
+            <li onclick="playSong('/graphic/Music/ฟ้าคงเหงาเมื่อไร้เธอ.mp3')">
+                <img src="https://i.scdn.co/image/ab67616d00001e024b2bbae1acb35f18baff6afc" alt="Song Cover">
+                <div class="song-details">
+                    <p class="song-title">ฟ้าคงเหงาเมื่อไร้เธอ</p>
+                    <p class="song-artist">VELIKA</p>
+                </div>
+            </li>
+
+            <li onclick="playSong('/graphic/Music/ยังหวังดีอยู่เสมอ.mp3')">
+                <img src="https://i.scdn.co/image/ab67616d00001e0234e7db9c20cb1590f169c1d6" alt="Song Cover">
+                <div class="song-details">
+                    <p class="song-title">ยังหวังดีอยู่เสมอ</p>
+                    <p class="song-artist">1KG, KHUNCHAY</p>
+                </div>
+            </li>
+
+            <li onclick="playSong('/graphic/Music/นานแล้วนะ.mp3')">
+                <img src="https://i.scdn.co/image/ab67616d00001e02f6231717dfc2f9e8248abcf8" alt="Song Cover">
+                <div class="song-details">
+                    <p class="song-title">นานแล้วนะ</p>
+                    <p class="song-artist">Z9, Medkit.z</p>
+                </div>
+            </li>
+
+            <li onclick="playSong('/graphic/Music/แจกันดอกไม้.mp3')">
+                <img src="https://i.scdn.co/image/ab67616d00001e02024dbc20ee856ed233e78f32" alt="Song Cover">
+                <div class="song-details">
+                    <p class="song-title">แจกันดอกไม้</p>
+                    <p class="song-artist">Z9, Blackheart, Medkit.z</p>
+                </div>
+            </li>
+
+            <li onclick="playSong('/graphic/Music/เชื่อใจฉัน.mp3')">
+                <img src="https://i.scdn.co/image/ab67616d00001e022216b21b63f0caa25c8fe033" alt="Song Cover">
+                <div class="song-details">
+                    <p class="song-title">เชื่อใจฉัน</p>
+                    <p class="song-artist">GH</p>
+                </div>
+            </li>
+
+            <li onclick="playSong('/graphic/Music/เชื่อใจฉัน - 2.mp3')">
+                <img src="https://i.scdn.co/image/ab67616d00001e02859bc47c879bfd1b2d35d6f6" alt="Song Cover">
+                <div class="song-details">
+                    <p class="song-title">เชื่อใจฉัน</p>
+                    <p class="song-artist">GH</p>
+                </div>
+            </li>
+
+            <li onclick="playSong('/graphic/Music/วอน.mp3')">
+                <img src="https://i.scdn.co/image/ab67616d00001e023696ce71cd970860ee09edfb" alt="Song Cover">
+                <div class="song-details">
+                    <p class="song-title">วอน</p>
+                    <p class="song-artist">Velika, Lazyloxy, T-Biggest</p>
+                </div>
+            </li>
+
+            <li onclick="playSong('/graphic/Music/THIS YEAR (ปีนี้).mp3')">
+                <img src="https://i.scdn.co/image/ab67616d00001e02d38beac071182c13319480dc" alt="Song Cover">
+                <div class="song-details">
+                    <p class="song-title">THIS YEAR (ปีนี้)</p>
+                    <p class="song-artist">BABYBIGBOY, Saran, BlackHeart, LIL X</p>
+                </div>
+            </li>
+
+            <li onclick="playSong('/graphic/Music/MR TELEPHONE.mp3')">
+                <img src="https://i.scdn.co/image/ab67616d00001e02876eb028a21c696e4de16fda" alt="Song Cover">
+                <div class="song-details">
+                    <p class="song-title">MR TELEPHONE</p>
+                    <p class="song-artist">BABYBIGBOY, Saran, SURE</p>
+                </div>
+            </li>
+
+            <li onclick="playSong('/graphic/Music/I miss you.mp3')">
+                <img src="https://i.scdn.co/image/ab67616d00001e023a7b27e23cd6bb36f504a35e" alt="Song Cover">
+                <div class="song-details">
+                    <p class="song-title">I miss you</p>
+                    <p class="song-artist">Blackbeans</p>
+                </div>
+            </li>
+
+            <!-- <li onclick="playSong('')">
+                <img src="" alt="Song Cover">
+                <div class="song-details">
+                    <p class="song-title"></p>
+                    <p class="song-artist"></p>
+                </div>
+            </li>
+
+            <li onclick="playSong('')">
+                <img src="" alt="Song Cover">
+                <div class="song-details">
+                    <p class="song-title"></p>
+                    <p class="song-artist"></p>
+                </div>
+            </li>
+
+            <li onclick="playSong('')">
+                <img src="" alt="Song Cover">
+                <div class="song-details">
+                    <p class="song-title"></p>
+                    <p class="song-artist"></p>
+                </div>
+            </li>
+
+            <li onclick="playSong('')">
+                <img src="" alt="Song Cover">
+                <div class="song-details">
+                    <p class="song-title"></p>
+                    <p class="song-artist"></p>
+                </div>
+            </li>
+
+            <li onclick="playSong('')">
+                <img src="" alt="Song Cover">
+                <div class="song-details">
+                    <p class="song-title"></p>
+                    <p class="song-artist"></p>
+                </div>
+            </li>
+
+            <li onclick="playSong('')">
+                <img src="" alt="Song Cover">
+                <div class="song-details">
+                    <p class="song-title"></p>
+                    <p class="song-artist"></p>
+                </div>
+            </li>
+
+            <li onclick="playSong('')">
+                <img src="" alt="Song Cover">
+                <div class="song-details">
+                    <p class="song-title"></p>
+                    <p class="song-artist"></p>
+                </div>
+            </li> -->
+
+            <br>
+            <div>
+                <iframe style="border-radius:12px"
+                    src="https://open.spotify.com/embed/playlist/37fhDtLmKczbE83lrLe0R9?utm_source=generator&theme=0"
+                    width="100%" height="352" frameBorder="0" allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+                </iframe>
+            </div>
+            <br>
+
+            <li onclick="playSong('/graphic/Music/Alone.mp3')">
+                <img src="https://i.scdn.co/image/ab67616d0000b273956043cfb058f0be93022267" alt="Song Cover">
+                <div class="song-details">
+                    <p class="song-title">Alone</p>
+                    <p class="song-artist">Marshmello</p>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+
+    <div id="song_status">
+        <img id="current_song_img" src="/images/icon/เว็บไซต์1200x1200.png" alt="Song Cover">
+        <p id="current_song_title">ไม่มีการเล่น</p>
+    </div>
+
+    <div id="audio_controls">
+        <audio id="myAudio" src="" ontimeupdate="updateProgressBar()"></audio>
+        <progress id="progress" value="0" max="1"></progress>
+
+        <div class="volume_control">
+            <div id="volume_control">
+                <input type="range" id="volume_slider" min="0" max="1" step="0.01" value="1" oninput="updateVolume()">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <h3>ขี้เกียจทำละ เยอะเกิน เอาเป็นว่าไปฟังใน Spotify ของผมดีกว่า</h3>
+    </footer>
+
+    <script>
+
+        document.getElementById('song_status').addEventListener('click', function () {
+            this.classList.toggle('active');
+            this.style.transition = '.3s';
+        });
+
+        // ตัวแปรสำหรับเก็บ Element ของเพลงและควบคุมเสียง
+        const myAudio = document.getElementById('myAudio');  // เอาไว้เล่นเพลง
+        const progress = document.getElementById('progress');  // แถบความคืบหน้าของเพลง
+        const volumeSlider = document.getElementById('volume_slider');  // แถบควบคุมระดับเสียง
+        const songStatus = document.getElementById('song_status');  // สถานะเพลงที่กำลังเล่น
+
+        // รายการเพลงที่ใช้ในเว็บไซต์
+        const songs = [
+            '/graphic/Music/กอดกัน.mp3',
+            '/graphic/Music/ถ้าต้องเสียเธอไป.mp3',
+            '/graphic/Music/ให้ตาย....mp3',
+            '/graphic/Music/โลมีโอ.mp3',
+            '/graphic/Music/ฟ้าคงเหงาเมื่อไร้เธอ.mp3',
+            '/graphic/Music/ยังหวังดีอยู่เสมอ.mp3',
+            '/graphic/Music/นานแล้วนะ.mp3',
+            '/graphic/Music/แจกันดอกไม้.mp3',
+            '/graphic/Music/เชื่อใจฉัน.mp3',
+            '/graphic/Music/เชื่อใจฉัน - 2.mp3',
+            '/graphic/Music/วอน.mp3',
+            '/graphic/Music/THIS YEAR (ปีนี้).mp3',
+            '/graphic/Music/MR TELEPHONE.mp3',
+            '/graphic/Music/i miss you.mp3',
+            '/graphic/Music/Alone.mp3',
+        ];
+
+        let currentSongIndex = 0;  // ตัวแปรเก็บลำดับเพลงที่กำลังเล่น
+
+        // เพิ่ม Event Listener เมื่อเพลงเล่นจบแล้วให้เล่นเพลงต่อไป
+        myAudio.addEventListener('ended', function () {
+            playNextSong();
+        });
+
+        // ฟังก์ชันเล่นเพลงต่อไปในรายการ
+        function playNextSong() {
+            currentSongIndex = (currentSongIndex + 1) % songs.length;
+            playSong(songs[currentSongIndex]);
+        }
+
+        // ฟังก์ชันเล่นเพลงจาก URL ที่รับเข้ามา
+        function playSong(songUrl) {
+            myAudio.src = songUrl;
+            myAudio.play();
+            updateSongStatus(songUrl);
+        }
+
+        // อัพเดทแถบความคืบหน้าของเพลงที่กำลังเล่น
+        function updateProgressBar() {
+            const progressValue = myAudio.currentTime / myAudio.duration;
+            progress.value = progressValue;
+        }
+
+        // อัพเดทระดับเสียงของเพลง
+        function updateVolume() {
+            myAudio.volume = volumeSlider.value;
+        }
+
+        // อัพเดทสถานะเพลงที่กำลังเล่น (ชื่อและรูปภาพ)
+        function updateSongStatus(songUrl) {
+            const currentSongTitle = document.getElementById('current_song_title');
+            const currentSongImg = document.getElementById('current_song_img');
+            const songDetails = getSongDetails(songUrl);
+
+            currentSongTitle.textContent = songDetails.title;
+            currentSongImg.src = songDetails.imgUrl;
+        }
+
+        // รับค่าชื่อและ URL ของเพลงแล้วคืนค่าข้อมูลเพลง
+        function getSongDetails(songUrl) {
+            // ตรวจสอบ URL และคืนค่าชื่อและ URL ของรูปภาพที่ตรงกับเพลงนั้นๆ
+            if (songUrl.includes('กอดกัน.mp3')) {
+                return { title: 'กอดกัน', imgUrl: 'https://i.scdn.co/image/ab67616d0000b273cd3db014ab1e239c9cc1c807' };
+            } else if (songUrl.includes('ถ้าต้องเสียเธอไป.mp3')) {
+                return { title: 'ถ้าต้องเสียเธอไป', imgUrl: 'https://i.scdn.co/image/ab67616d00001e0200268a870780ff0839323208' };
+            } else if (songUrl.includes('ให้ตาย....mp3')) {
+                return { title: 'ให้ตาย...', imgUrl: 'https://i.scdn.co/image/ab67616d00001e0201e0e66af1ee9ae56101d604' };
+            } else if (songUrl.includes('โลมีโอ.mp3')) {
+                return { title: 'โลมีโอ', imgUrl: 'https://i.scdn.co/image/ab67616d00001e023d613e2aa9ae5ba60c76da7a' };
+            } else if (songUrl.includes('ฟ้าคงเหงาเมื่อไร้เธอ.mp3')) {
+                return { title: 'ฟ้าคงเหงาเมื่อไร้เธอ', imgUrl: 'https://i.scdn.co/image/ab67616d00001e024b2bbae1acb35f18baff6afc' };
+            } else if (songUrl.includes('ยังหวังดีอยู่เสมอ.mp3')) {
+                return { title: 'ยังหวังดีอยู่เสมอ', imgUrl: 'https://i.scdn.co/image/ab67616d00001e0234e7db9c20cb1590f169c1d6' };
+            } else if (songUrl.includes('นานแล้วนะ.mp3')) {
+                return { title: 'นานแล้วนะ', imgUrl: 'https://i.scdn.co/image/ab67616d00001e02f6231717dfc2f9e8248abcf8' };
+            } else if (songUrl.includes('แจกันดอกไม้.mp3')) {
+                return { title: 'แจกันดอกไม้', imgUrl: 'https://i.scdn.co/image/ab67616d00001e02024dbc20ee856ed233e78f32' };
+            } else if (songUrl.includes('เชื่อใจฉัน.mp3')) {
+                return { title: 'เชื่อใจฉัน', imgUrl: 'https://i.scdn.co/image/ab67616d00001e022216b21b63f0caa25c8fe033' };
+            } else if (songUrl.includes('เชื่อใจฉัน - 2.mp3')) {
+                return { title: 'เชื่อใจฉัน', imgUrl: 'https://i.scdn.co/image/ab67616d00001e02859bc47c879bfd1b2d35d6f6' };
+            } else if (songUrl.includes('วอน.mp3')) {
+                return { title: 'วอน', imgUrl: 'https://i.scdn.co/image/ab67616d00001e023696ce71cd970860ee09edfb' };
+            } else if (songUrl.includes('THIS YEAR (ปีนี้).mp3')) {
+                return { title: 'THIS YEAR (ปีนี้)', imgUrl: 'https://i.scdn.co/image/ab67616d00001e02d38beac071182c13319480dc' };
+            } else if (songUrl.includes('MR TELEPHONE.mp3')) {
+                return { title: 'MR TELEPHONE', imgUrl: 'https://i.scdn.co/image/ab67616d00001e02876eb028a21c696e4de16fda' };
+            } else if (songUrl.includes('I miss you.mp3')) {
+                return { title: 'I miss you', imgUrl: 'https://i.scdn.co/image/ab67616d00001e023a7b27e23cd6bb36f504a35e' };
+            }
+
+
+            else if (songUrl.includes('Alone.mp3')) {
+                return { title: 'Alone', imgUrl: 'https://i.scdn.co/image/ab67616d0000b273956043cfb058f0be93022267' };
+            }
+            // ถ้าไม่พบข้อมูลเพลงในเงื่อนไขใดๆ คืนค่าเป็น Unknown พร้อม URL รูปภาพที่กำหนดไว้
+            return { title: 'Unknown', imgUrl: '/images/icon/เว็บไซต์1200x1200.png' };
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- สวัสดี วัยสะรุ้น Hello, World! ครับ/ค่ะ -->
+<head>
+    <title>Centered101 - Snake Game</title>
+    <!-- เมตาแท็กหลัก -->
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="Centered101/Snake_Game" />
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript,Centered101" />
+    <meta name="author" content="Centered101" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://centered101-webfollow.web.app/" />
+    <meta property="og:url" content="https://centered101-webfollow.firebaseapp.com/" />
+    <meta property="og:title" content="Centered101" />
+    <meta property="og:description" content="Centered101/Snake_Game" />
+    <meta property="og:image" content="/images/Tes-D.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://centered101-webfollow.web.app/" />
+    <meta property="twitter:url" content="https://centered101-webfollow.firebaseapp.com/" />
+    <meta property="twitter:title" content="Centered101" />
+    <meta property="twitter:description" content="Centered101/Snake_Game" />
+    <meta property="twitter:image" content="/images/Tes-D.png" />
+
+    <!-- รูปโปรไฟร์หัวข้อหน้าเว็บ รูปแแบบ external -->
+    <link rel="icon" type="image/png" href="/images/icon/เว็บไซต์1200x1200.png">
+
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" type="text/javascript" charset="utf-8"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="gc" class="game-canvas" width="400" height="400"></canvas>
+    </div>
+    <div class="keys">
+        <a class="up arr" onclick="Snake.action('up')">
+            <i class="chevron up"></i></a>
+        <br />
+        <a class="left arr" onclick="Snake.action('left')">
+            <i class="chevron left"></i></a>
+        <a class="down arr" onclick="Snake.action('down')">
+            <i class="chevron down"></i></a>
+        <a class="right arr" onclick="Snake.action('right')">
+            <i class="chevron right"></i></a>
+    </div>
+</body>
+</html>

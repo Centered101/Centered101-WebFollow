@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- สวัสดี วัยสะรุ้น Hello, World! ครับ/ค่ะ -->
+
+<head>
+
+    <title>Centered101 – Resume</title>
+    <!-- เมตาแท็กหลัก -->
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="Centered101/Resume" />
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript,Resume,Centered101" />
+    <meta name="author" content="Centered101" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://centered101-webfollow.web.app/" />
+    <meta property="og:url" content="https://centered101-webfollow.firebaseapp.com/" />
+    <meta property="og:title" content="Centered101" />
+    <meta property="og:description" content="Centered101/Resume" />
+    <meta property="og:image" content="/images/Tes-D.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://centered101-webfollow.web.app/" />
+    <meta property="twitter:url" content="https://centered101-webfollow.firebaseapp.com/" />
+    <meta property="twitter:title" content="Centered101" />
+    <meta property="twitter:description" content="Centered101/Resume" />
+    <meta property="twitter:image" content="/images/Tes-D.png" />
+
+    <!-- รูปโปรไฟร์หัวข้อหน้าเว็บ รูปแแบบ external -->
+    <link rel="icon" type="image/png" href="/images/icon/เว็บไซต์1200x1200.png">
+
+</head>
+
+
+<style type="text/css" media="all">
+    @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree&display=swap');
+
+    ::-moz-selection {
+        background: #000000B3;
+        color: #1ED760;
+    }
+
+    ::selection {
+        background: #000000B3;
+        color: #1ED760;
+    }
+
+    /* width */
+    ::-webkit-scrollbar {
+        width: 20px;
+    }
+
+    ::-webkit-scrollbar-button {
+        background-color: #333333;
+        border: 5px solid #333333;
+        height: 40px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: linear-gradient(320deg, #1ED760, #409EFE);
+        border: #000000 solid 5px;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: #409EFE;
+        border: #000000B3 solid 5px;
+        border-radius: 10px;
+        box-shadow: -3px -3px 8px 3px #84D4FA, 3px 3px 8px 3px #84D4FA;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #FE4040;
+        box-shadow: -3px -3px 8px 3px #FF7070, 3px 3px 8px 3px #FF7070;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border: 5px solid #000000B3;
+        border-radius: 360px;
+        box-shadow: -3px -3px 8px 3px #84D4FA, 3px 3px 8px 3px #84D4FA;
+    }
+
+
+    body {
+        font-family: 'Bai Jamjuree', sans-serif;
+        font-weight: bold;
+    }
+
+    body {
+        font-size: 100%;
+        /* ปรับขนาดฟอนต์เป็น 100% ของขนาดปกติ */
+    }
+
+    @media screen and (max-width: 768px) {
+        body {
+            font-size: 75%;
+            /* ลดขนาดฟอนต์เมื่อหน้าจอมีความกว้างไม่เกิน 768px */
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        body {
+            font-size: 50%;
+            /* ลดขนาดฟอนต์เมื่อหน้าจอมีความกว้างไม่เกิน 480px */
+        }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    a,
+    p,
+    ol,
+    li {
+        margin: 0;
+        padding: 1;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #CCCCCC;
+        border-radius: 3px;
+    }
+
+    .container header div h1 {
+        margin-right: 10px;
+    }
+
+    .container section ol li::marker {
+        content: "==> ";
+    }
+
+    .container .skills {
+        display: flex;
+    }
+
+    .container .skills section:nth-of-type(1) {
+        flex-grow: 1;
+    }
+
+    .container .skills section:nth-of-type(2) {
+        flex-grow: 1;
+    }
+
+    .container .skills section:nth-of-type(3) {
+        flex-grow: 1;
+    }
+
+    a {
+        color: #999999;
+    }
+
+    p,
+    ol,
+    li {
+        color: #666666;
+    }
+
+    small {
+        font-weight: 100;
+    }
+
+    footer {
+        align-items: center;
+        bottom: 0;
+        width: 100%;
+        position: fixed;
+        color: #CCCCCC;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+    }
+
+    button {
+        font-family: inherit;
+        font-size: 20px;
+        background: #000000;
+        color: white;
+        fill: #cccccc;
+        padding: 0.7em 1em;
+        padding-left: 0.9em;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        border: none;
+        border-radius: 15px;
+        font-weight: 1000;
+    }
+
+    button span {
+        display: block;
+        margin-left: 0.3em;
+        transition: all 0.3s ease-in-out;
+    }
+
+    button:hover {
+        background: #000000;
+    }
+
+    button:hover span {
+        opacity: 0;
+        transition: 0.5s linear;
+    }
+
+    button:active {
+        transform: scale(0.95);
+    }
+    
+</style>
+
+<body>
+    <div class="container">
+        <header>
+            <div>
+                <h1>Mr.Anonymous Genius</h1>
+                <p>
+                    Students from Thailand
+                </p>
+            </div>
+            <div>
+                <h2>Contact me</h2>
+                <p>
+                    Email: <a href="mailto:36887@PRANARAI.AC.TH">36887@PRANARAI.AC.TH</a><br />
+                    Phone: <a href="tel:*499228">none</a><br />
+                    LinkedIn: <a href="https://linkedin.com/in/centered101/">linkedin.com/in/centered101</a>
+                </p>
+            </div>
+        </header>
+        <section>
+            <h2>Summary</h2>
+            <!-- สรุปโดยย่อเกี่ยวกับภูมิหลังทางวิชาชีพ ทักษะ และเป้าหมายทางอาชีพของคุณ -->
+            <p>
+                Studying Computer Science involves learning about software design and development, working with
+                digital data, analyzing and solving problems using computers, and understanding principles and
+                technologies related to various aspects of computing.
+            </p>
+            <ol>
+                <li>Theory and Principles</li>
+                <li>Programming Skills</li>
+                <li>Computer and Network Fundamentals</li>
+                <li>Related Technologies</li>
+                <li>Hands-On and Extracurricular Activities</li>
+                <li>Skill Development</li>
+            </ol>
+        </section>
+        <section>
+            <h2>Education</h2>
+            <subsection>
+                <h3>Degree, Major</h3>
+                <p>
+                    School/University, Location
+                </p>
+                <p>
+                    Graduation Year
+                </p>
+            </subsection>
+            <!-- เพิ่มรายการการศึกษาเพิ่มเติมตามความจำเป็น -->
+        </section>
+        <section>
+            <h2>Experience</h2>
+            <subsection>
+                <p>
+                    Company, Location
+                </p>
+                <p>
+                    Date Range
+                </p>
+                <ul type="circle">
+                    <li>Responsibility/Achievement 1</li>
+                    <li>Responsibility/Achievement 2</li>
+                    <!-- เพิ่มความรับผิดชอบ/ความสำเร็จเพิ่มเติมตามความจำเป็น -->
+                </ul>
+            </subsection>
+            <!-- เพิ่มรายการประสบการณ์เพิ่มเติมตามความจำเป็น -->
+        </section>
+        <div class="Skills">
+            <section>
+                <h2>Skills</h2>
+                <ul type="circle">
+                    <li>C <small>(Basic)</small></li>
+                    <li>HTML / CSS</li>
+                    <li>JavasCript</li>
+                    <li>Python <small>(Basic)</small></li>
+                    <li>PHP <small>(Basic)</small></li>
+                    <li>NodeJS <small>(Basic)</small></li>
+                    <li>MySQL <small>(Basic)</small></li>
+                </ul>
+            </section>
+            <section>
+                <h2>Tools</h2>
+                <ul type="circle">
+                    <li>Visual Studio Code <small>(VS Code)</small></li>
+                    <li>Fieldset</li>
+                    <li>Git</li>
+                    <li>API</li>
+                    <li>NPM</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Language</h2>
+                <ul type="circle">
+                    <li>Thailand <small>(Native)</small></li>
+                    <li>English <small>(A2)</small></li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <footer>
+        <button id="print">
+            <span>Print.PDF</span>
+        </button>
+
+    </footer>
+    <div id="all_text_title">–</div>
+</body>
+
+<script type="text/javascript" charset="utf-8">
+
+// ดึงปุ่มด้วย ID
+var printButton = document.getElementById('print');
+
+// เพิ่ม event listener สำหรับคลิกที่ปุ่ม
+printButton.addEventListener('click', function () {
+    try {
+        // ใช้ฟังก์ชัน window.print() เพื่อปริ้นหน้าเว็บ
+        window.print();
+    } catch (err) {
+        console.error('ไม่สามารถปริ้นได้: ', err);
+        displayMessage(`ไม่สามารถปริ้นได้: ${err.message}`);
+    }
+});
+
+// ฟังก์ชันเพื่อแสดงข้อความใน
+function displayMessage(message) {
+    const allTextTitle = document.getElementById('all_text_title');
+    allTextTitle.innerHTML = message;
+    allTextTitle.style.display = 'block';
+
+    setTimeout(() => {
+        allTextTitle.style.display = 'none';
+    }, 3000);
+}
+
+</script>
+
+</html>

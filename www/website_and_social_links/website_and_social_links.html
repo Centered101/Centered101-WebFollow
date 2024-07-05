@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- สวัสดี วัยสะรุ้น Hello, World! ครับ/ค่ะ -->
+
+<head>
+
+    <title>Centered101 – เว็บไซต์และลิงก์ทางโซเชียล</title>
+    <!-- เมตาแท็กหลัก -->
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="Centered101 – เว็บไซต์และลิงก์ทางโซเชียล" />
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript,Centered101" />
+    <meta name="author" content="Centered101" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://centered101-webfollow.web.app/" />
+    <meta property="og:url" content="https://centered101-webfollow.firebaseapp.com/" />
+    <meta property="og:title" content="Centered101" />
+    <meta property="og:description" content="Centered101 – เว็บไซต์และลิงก์ทางโซเชียล" />
+    <meta property="og:image" content="/images/icon/Tes-D.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://centered101-webfollow.web.app/" />
+    <meta property="twitter:url" content="https://centered101-webfollow.firebaseapp.com/" />
+    <meta property="twitter:title" content="Centered101" />
+    <meta property="twitter:description" content="Centered101 – เว็บไซต์และลิงก์ทางโซเชียล" />
+    <meta property="twitter:image" content="graphic/img/icon/Tes-D.png" />
+
+    <!-- รูปโปรไฟร์หัวข้อหน้าเว็บ รูปแแบบ external -->
+    <link rel="icon" type="image/png" href="/images/icon/เว็บไซต์1200x1200.png">
+
+    <link rel="stylesheet" href="./style.css">
+
+    <link rel="stylesheet" href="/www/style.css">
+    <script src="/www/script.js"></script>
+
+    <script src="/www/countbown/script.js" type="text/javascript" charset="utf-8"></script>
+
+    <audio id="welcomeSound">
+        <source src="/graphic/Music/Alone.mp3" type="audio/mp3">
+    </audio>
+
+    <audio id="audio" src="/graphic/Audio/m_fixed_bBp6dW2.mp3"></audio>
+
+    <audio id="birthdaySound">
+        <source src="/graphic/Music/วันเกิดฉันปีนี้ (HBD to me).mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- donate button-->
+    <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
+        data-id="Centered101" data-description="Support me on Buy me a coffee!" data-message="บริจากทุน ให้หน่อยดิ๊"
+        data-color="#409EFE" data-position="Right" data-x_margin="10" data-y_margin="10">
+        </script>
+</head>
+
+<body id="color_change">
+
+    <header>
+        <a class="baning" onclick="resetWindow()">
+            <img class="img-baning" src="/images/icon/เว็บไซต์1200x1200.png">
+            Centered101
+        </a>
+
+        <label class="switch">
+            <input type="checkbox" id="modeSwitch" onclick="toggleMode()">
+            <span class="slider"></span>
+        </label>
+
+    </header>
+
+    <div class="progress">
+        <progress id="welcomeProgress" value="0" max="1"></progress>
+        <progress id="audioProgress" value="0" max="1"></progress>
+        <progress id="birthdayProgress" value="0" max="1"></progress>
+    </div>
+
+    <div class="content">
+        <div class="container">
+
+            <div class="container_photos" id="muteButton">
+                <img class="photos" src="/images/Test-Dหนึ่งวันครับ1500x1500.png" onclick="randomColor()" id="playImage"
+                    alt="Test-Dหนึ่งวันครับ" />
+            </div>
+
+            <br />
+            <details>
+                <summary>รายละเอียด</summary>
+                <p>
+                    แท็บสีเขียวคือ หัวข้อ เด้อจะ ส่วน ปุ่มสีฟ้าคือ ปุ่มนำไปสู่เว็บไซต์ต่างๆ<br>
+                    <small>(อย่ากดผิดดิ เห็นกดผิดหลายคนละ ผมออกแบบไม่ดีขนาดนั้นเลยหรอ)<br>
+                        //- ถ้าคุณกดที่รูป มันจะมีอะไรบ้างอย่างเกิดขึ้น --></small>
+                </p>
+            </details>
+
+            <h3 class="h3">เว็บไซต์และลิงก์ทางโซเชียล</h3>
+
+            <div class="bt" onclick="displayMessage('กำลังไปหน้าถัดไป...')">
+                <a target="" href="/index.html">
+                    <img class="icon" target="" src="/images/icon/เว็บไซต์1200x1200.png"></a>
+                <a class="button" target="" href="/index.html">
+                    หน้าหลัก
+                </a>
+            </div>
+
+            <div class="bt" onclick="displayMessage('กำลังไปหน้าถัดไป...')">
+                <a target="" href="/www/web_play/web_play.html">
+                    <img class="icon" target="" src="/images/icon/เว็บไซต์1200x1200.png"></a>
+                <a class="button" target="" href="/www/web_play/web_play.html">
+                    Web play
+                </a>
+            </div>
+
+            <div class="bt" onclick="displayMessage('กำลังไปหน้าถัดไป...')">
+                <a target="" href="/www/aboutweb/aboutweb.html">
+                    <img class="icon" target="" src="/images/icon/เว็บไซต์1200x1200.png"></a>
+                <a class="button" target="" href="/www/aboutweb/aboutweb.html">
+                    เกี่ยวกับเว็บ / ผู้พัฒนา
+                </a>
+            </div>
+
+            <div class="bt" onclick="displayMessage('กำลังไปหน้าถัดไป...')">
+                <a target="" href="/www/tic_tac_tor_game/tic_tac_tor_game.html">
+                    <img class="icon" target="" src="/images/icon/เว็บไซต์1200x1200.png"></a>
+                <a class="button" target="" href="/www/tic_tac_tor_game/tic_tac_tor_game.html">
+                    Tic-Tac-Toe กันเปล่า
+                </a>
+            </div>
+
+            <div class="bt" onclick="displayMessage('กำลังไปหน้าถัดไป...')">
+                <a target="" href="/www/snake_game/snake_game.html">
+                    <img class="icon" target="" src="/images/icon/เว็บไซต์1200x1200.png"></a>
+                <a class="button" target="" href="/www/snake_game/snake_game.html">
+                    Snake Game
+                </a>
+            </div>
+
+            <div class="bt" onclick="displayMessage('กำลังไปหน้าถัดไป...')">
+                <a target="" href="/www/other/resume.html">
+                    <img class="icon" target="" src="/images/icon/เว็บไซต์1200x1200.png"></a>
+                <a class="button" target="" href="/www/other/resume.html">
+                    Resume ผม
+                </a>
+            </div>
+
+            <div class="bt" onclick="displayMessage('กำลังไปหน้าถัดไป...')">
+                <a target="" href="/www//other/kuy.htm">
+                    <img class="icon" target="" src="/images/icon/เว็บไซต์1200x1200.png"></a>
+                <a class="button" target="" href="/www/other/kuy.htm">
+                    ตารางเรียน ผม เด้อจะ
+                </a>
+            </div>
+
+            <h3 class="br"></h3>
+
+            <div class="bt" onclick="displayMessage('กำลังไปหน้าถัดไป...')">
+                <a target="" href="https://bsky.app/profile/centered101.bsky.social">
+                    <img class="icon" src="/images/icon/globe.svg"></a>
+                <a class="button" target="_blank" href="https://bsky.app/profile/centered101.bsky.social">
+                    Bluesky
+                </a>
+            </div>
+
+            <div class="bt" onclick="displayMessage('กำลังไปหน้าถัดไป...')">
+                <a target="" href="https://www.facebook.com/Centered101?mibextid=ZbWKwL">
+                    <img class="icon" src="/images/icon/facebook.svg"></a>
+                <a class="button" target="_blank" href="https://www.facebook.com/Centered101?mibextid=ZbWKwL">
+                    Facebook
+                </a>
+            </div>
+
+            <div class="bt" onclick="displayMessage('กำลังไปหน้าถัดไป...')">
+                <a target="" href="https://instagram.com/centered101?igshid=YmMyMTA2M2Y=">
+                    <img class="icon" src="/images/icon/instagram.svg"></a>
+                <a class="button" target="_blank" href="https://instagram.com/centered101?igshid=YmMyMTA2M2Y=">
+                    Instagram
+                </a>
+            </div>
+
+            <div class="bt" onclick="displayMessage('กำลังไปหน้าถัดไป...')">
+                <a target="" href="https://line.me/ti/p/CMkfnDYD1q">
+                    <img class=" icon" src="/images/icon/line.svg"></a>
+                <a class="button" target="_blank" href="https://line.me/ti/p/CMkfnDYD1q">
+                    Line
+                </a>
+            </div>
+
+            <div class="bt" onclick="displayMessage('กำลังไปหน้าถัดไป...')">
+                <a target="" href="https://www.linkedin.com/in/centered101">
+                    <img class="icon" src="/images/icon/linkedin.png"></a>
+                <a class="button" target="_blank" href="https://www.linkedin.com/in/centered101">
+                    Linkedin
+                </a>
+            </div>
+
+            <div class="bt" onclick="displayMessage('กำลังไปหน้าถัดไป...')">
+                <a target="" href="https://nostr.band/npub1srv8l3u7v3h958wkn9um6rvmr3fg5l7ddspz742gppq49dcd60ls2rh5k4">
+                    <img class="icon" src="/images/icon/globe.svg"></a>
+                <a class="button" target="_blank"
+                    href="https://nostr.band/npub1srv8l3u7v3h958wkn9um6rvmr3fg5l7ddspz742gppq49dcd60ls2rh5k4">
+                    Openvibe
+                </a>
+            </div>
+
+            <div class="bt" onclick="displayMessage('กำลังไปหน้าถัดไป...')">
+                <a target="" href="https://pin.it/1LOdYQbOf">
+                    <img class="icon" src="/images/icon/pinterest.svg"></a>
+                <a class="button" target="_blank" href="https://pin.it/1LOdYQbOf">
+                    Pinterest
+                </a>
+            </div>
+
+            <div class="bt" onclick="displayMessage('กำลังไปหน้าถัดไป...')">
+                <a target="" href="https://m.me/Centered101">
+                    <img class="icon" src="/images/icon/facebook-messenger.svg"></a>
+                <a class="button" target="_blank" href="https://m.me/Centered101">
+                    Messenger
+                </a>
+            </div>
+
+            <div class="bt" onclick="displayMessage('กำลังไปหน้าถัดไป...')">
+                <a target="" href="https://open.spotify.com/user/31dbwfksoxguthngb2cs27m2pl64?si=b757b0060ee44e76">
+                    <img class="icon" src="/images/icon/spotify.svg"></a>
+                <a class="button" target="_blank"
+                    href="https://open.spotify.com/user/31dbwfksoxguthngb2cs27m2pl64?si=b757b0060ee44e76">
+                    Spotify
+                </a>
+            </div>
+
+            <div class="bt" onclick="displayMessage('กำลังไปหน้าถัดไป...')">
+                <a target="" href="https://t.me/centered101">
+                    <img class="icon" src="/images/icon/telegram.png"></a>
+                <a class="button" target="_blank" href="https://t.me/centered101">
+                    Telegram
+                </a>
+            </div>
+
+            <div class="bt" onclick="displayMessage('กำลังไปหน้าถัดไป...')">
+                <a target="" href="https://www.threads.net/@centered101">
+                    <img class="icon" src="/images/icon/threads.svg"></a>
+                <a class="button" target="_blank" href="https://www.threads.net/@centered101">
+                    Threads
+                </a>
+            </div>
+
+            <div class="bt" onclick="displayMessage('กำลังไปหน้าถัดไป...')">
+                <a target="" href="https://www.tiktok.com/@centered101">
+                    <img class="icon" src="/images/icon/tik-tok.svg"></a>
+                <a class="button" target="_blank" href="https://www.tiktok.com/@centered101">
+                    Tiktok
+                </a>
+            </div>
+
+            <div class="bt" onclick="displayMessage('กำลังไปหน้าถัดไป...')">
+                <a target="" href="https://www.twitch.tv/centered101">
+                    <img class="icon" src="/images/icon/twitch.svg"></a>
+                <a class="button" target="_blank" href="https://www.twitch.tv/centered101">
+                    Twitch
+                </a>
+            </div>
+
+            <div class="bt" onclick="displayMessage('กำลังไปหน้าถัดไป...')">
+                <a target="" href="https://X.com/Centered101">
+                    <img class="icon" src="/images/icon/twitter-alt-circle.svg"></a>
+                <a class="button" target="_blank" href="https://X.com/Centered101">
+                    X / Twitter
+                </a>
+            </div>
+
+            <div class="bt" onclick="displayMessage('กำลังไปหน้าถัดไป...')">
+                <a target="" href="https://youtube.com/@centered101">
+                    <img class="icon" src="/images/icon/youtube.svg"></a>
+                <a class="button" target="_blank" href="https://youtube.com/@centered101">
+                    Youtube
+                </a>
+            </div>
+
+            <h3 class="br"></h3>
+
+            <div class="bt">
+                <a href="#" target="_blank" rel="noopener noreferrer">
+                    <img class="icon" src="/images/icon/discord.svg">
+                </a>
+                <div onclick="copyText()" class="button">
+                    <span style="text-decoration: none;" class="text">
+                        <br><img class="icon_on_text" src="/images/img-png/L.png">
+                        <br>
+                        <p>ชื่อที่แสดง : Critter</p>
+                        <p>ชื่อผู้ใช้ :</p>
+                        <p id="textToCopy">centered101</p>
+                    </span>
+                    <span>Discord – account</span>
+                </div>
+            </div>
+
+            <h3 class="h3">โดเนท มาดิ๊... 🥺</h3>
+
+            <div class="bt" onclick="displayMessage('กำลังไปหน้าถัดไป...')">
+                <a target="" href="https://www.buymeacoffee.com/Centered101">
+                    <img class="icon" src="/images/icon/buy_me_a_coffee.png"></a>
+                <a class="button" target="_blank" href="https://www.buymeacoffee.com/Centered101">
+                    Buy Me a Coffee
+                </a>
+            </div>
+
+            <div class="bt" onclick="displayMessage('กำลังไปหน้าถัดไป...')">
+                <a target="" href="https://ko-fi.com/centered101">
+                    <img class="icon" src="/images/icon/ko_fi.png"></a>
+                <a class="button" target="_blank" href="https://ko-fi.com/centered101">
+                    Ko-fi
+                </a>
+            </div>
+
+            <h3 class="h3">เกม</h3>
+
+            <div class="bt" onclick="displayMessage('กำลังไปหน้าถัดไป...')">
+                <a target="" href="https://store.epicgames.com/u/c72e2965024f47439e5966c8443b09bf">
+                    <img class="icon" src="/images/icon/epic_games.png"></a>
+                <a class="button" target="_blank" href="https://store.epicgames.com/u/c72e2965024f47439e5966c8443b09bf">
+                    Epic Game
+                </a>
+            </div>
+
+            <div class="bt" onclick="displayMessage('กำลังไปหน้าถัดไป...')">
+                <a target="" href="https://s.team/p/hrnk-qhhm/FDPKWHTG">
+                    <img class="icon" src="/images/icon/steam.png"></a>
+                <a class="button" target="_blank" target="_blank" href="https://s.team/p/hrnk-qhhm/FDPKWHTG">
+                    Steam
+                </a>
+            </div>
+
+            <h3 class="h3">ฮื่นๆ</h3>
+
+            <div class="bt" onclick="displayMessage('กำลังไปหน้าถัดไป...')">
+                <a target="" href="https://github.com/Centered101">
+                    <img class="icon" src="/images/icon/github.svg"></a>
+                <a class="button" target="_blank" href="https://github.com/Centered101">
+                    GitHub
+                </a>
+            </div>
+
+            <div class="bt" onclick="displayMessage('กำลังไปหน้าถัดไป...')">
+                <a target="" href="https://medium.com/@centered101">
+                    <img class="icon" src="/images/icon/medium.svg"></a>
+                <a class="button" target="_blank" href="https://medium.com/@centered101">
+                    Medium
+                </a>
+            </div>
+
+            <div class="bt" onclick="displayMessage('กำลังไปหน้าถัดไป...')">
+                <a target="" href="https://uiverse.io/profile/Centered101">
+                    <img class="icon" target="_blank" src="/images/icon/user-interface.png">
+                </a>
+                <a class="button" target="_blank" href="https://uiverse.io/profile/Centered101">
+                    Open-Source UI
+                </a>
+            </div>
+
+            <div class="bt" onclick="displayMessage('กำลังไปหน้าถัดไป...')">
+                <a target="" href="https://tmn.app.link/e4Aw4rschGb">
+                    <img class="icon" target="_blank" src="/images/icon/google.svg">
+                </a>
+                <a class="button" target="_blank" href="https://developers.google.com/profile/u/110777883095312059641">
+                    Google for developers
+                </a>
+            </div>
+
+            <h3 class="br"></h3>
+
+            <div class="bt">
+                <a target="" href="https://ngl.link/centered101">
+                    <img class="icon" target="" src="/images/icon/ngl.png"></a>
+                <a class="button" target="" href="https://ngl.link/centered101">
+                    https://ngl.link/centered101
+                </a>
+            </div>
+
+            <h3 class="br"></h3>
+
+        </div>
+    </div>
+    <button class="button_next" href="javascript:void(0)" onclick="goBack()">
+        <span class="text">กลับดิครับ</span>
+        <img src="/images/icon/arrow-left.svg" alt="">
+    </button>
+    <footer>
+        <div id="all_text_title">–</div>
+        <button id="scrollToTopButton"
+            onclick="scrollToTop(); displayMessage('กำลังขึ้น...')">Top<small>(PgUp)</small></button>
+        <button id="scrollToBottomButton"
+            onclick="scrollToBottom(); displayMessage('กำลังลง...')">Bottom<small>(PgDn)</small></button>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,304 @@
+/* font จาก google fonts */
+/* font-family: 'Press Start 2P', system-ui; */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+/* font-family: 'Bai Jamjuree', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree&display=swap');
+/* font-family: "Indie Flower", cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+::-moz-selection {
+    background: #000000B3;
+    color: #1ED760;
+}
+
+::selection {
+    background: #000000B3;
+    color: #1ED760;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+::-webkit-scrollbar-button {
+    background-color: #333;
+    border: 5px solid #333;
+    height: 34px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: linear-gradient(320deg, #1ED760, #409EFE);
+    border: #000 solid 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #409EFE;
+    border: #000000B3 solid 5px;
+    border-radius: 10px;
+    box-shadow: -3px -3px 8px 3px #84D4FA, 3px 3px 8px 3px #84D4FA;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #FE4040;
+    box-shadow: -3px -3px 8px 3px #FF7070, 3px 3px 8px 3px #FF7070;
+}
+
+::-webkit-scrollbar-thumb {
+    border: 5px solid #000000B3;
+    border-radius: 360px;
+    box-shadow: -3px -3px 8px 3px #84D4FA, 3px 3px 8px 3px #84D4FA;
+}
+
+body {
+    user-select: none;
+    animation: จางหาย 1s ease-in-out;
+    /* background-image: url('https://...'); */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: .7em;
+
+    background: #f1f1f1;
+    background-image: linear-gradient(90deg, transparent 50px, #ffb4b8 50px, #ffb4b8 52px, transparent 52px),
+        linear-gradient(#e1e1e1 0.1em, transparent 0.1em);
+    background-size: 100% 30px;
+}
+
+@keyframes จางหาย {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+#all_text_title {
+    background: #f5f5f5b3;
+    box-shadow: 4px 4px 8px 4px #000000b3;
+    border: solid #333333 1px;
+    border-radius: 3px;
+    color: #000000;
+    position: fixed;
+    left: 50%;
+    bottom: 80px;
+    transform: translateX(-50%);
+    transition: .5s;
+    text-align: center;
+    padding: 10px;
+    display: none;
+    z-index: 1000;
+}
+
+header {
+    align-items: center;
+    background-color: #F5F5F5B3;
+    box-shadow: 4px 4px 8px 4px #000000B3;
+    display: flex;
+    /* แบบอื่นๆ เช่น space-around, space-evenly ก็ได้ตามความต้องการ */
+    justify-content: space-between;
+    /* จัดให้แนวตั้งตรงกันกับ logo ถ้ามี */
+    padding: 5px;
+    position: fixed;
+    margin-bottom: 80px;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.baning {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    font-family: 'Press Start 2P', system-ui;
+    font-size: 14px;
+}
+
+@keyframes หมุน {
+    0% {
+        transform: rotate(-360deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.img-baning {
+    animation: หมุน 500ms infinite;
+    margin-right: 10px;
+    width: 24px;
+}
+
+h1 {
+    font-family: "Indie Flower", cursive;
+    color: #333333;
+    line-height: 1em;
+    margin-bottom: 0;
+    padding-bottom: 5px;
+    font-size: 2.8em;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+h2 {
+    color: #333333;
+    font-size: 1.3em;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+
+}
+
+h3 {
+    color: #333333;
+    font-size: 1.1em;
+    /* text-decoration: underline; */
+    text-decoration-style: dashed;
+    padding: 0;
+    margin: 30px 0;
+}
+
+table {
+    margin: 5% auto;
+    border-collapse: collapse;
+}
+
+#table_game {
+    position: relative;
+    font-size: 120px;
+    margin: 5% auto;
+    border-collapse: collapse;
+}
+
+.td_game {
+    font-family: "Indie Flower", cursive;
+    border: 4px solid #666666;
+    width: 120px;
+    height: 120px;
+    padding: 0;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.fixed {
+    width: 120px;
+    height: 120px;
+    line-height: 90px;
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.td_list {
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.th_list {
+    font-size: 1.3em;
+    font-weight: bold;
+    text-align: center;
+    /* text-decoration: underline; */
+}
+
+#restart {
+    font-family: "Indie Flower", cursive;
+    font-size: 6em;
+    width: 1em;
+    height: 0.9em;
+    cursor: pointer;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.x {
+    color: #333333;
+    /* color: #FF7070; */
+    position: relative;
+    top: -8px;
+    font-size: 1.4em;
+    cursor: default;
+}
+
+.o {
+    color: #333333;
+    /* color: #00CC4F; */
+    position: relative;
+    top: -7px;
+    font-size: 1.2em;
+    cursor: default;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.modal-content {
+    color: #333333;
+    font-size: 2em;
+    font-weight: bold;
+    margin: 30% auto;
+    padding: 20px;
+    border: solid #333333 1px;
+    border-radius: 3px;
+    width: 380px;
+    max-width: 100%;
+
+    background: #f1f1f1;
+    background-image: linear-gradient(90deg, transparent 50px, #ffb4b8 50px, #ffb4b8 52px, transparent 52px),
+        linear-gradient(#e1e1e1 0.1em, transparent 0.1em);
+    background-size: 100% 30px;
+}
+
+.modal-content p {
+    margin: 0;
+    padding: 0;
+}
+
+.close {
+    color: #333333;
+    float: right;
+    position: relative;
+    top: -25px;
+    right: -10px;
+    font-size: 34px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #333333;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.win-color {
+    background: #999999;
+}
+
+#okBtn {
+    margin: 20px 0 0 0;
+    border-radius: 3px;
+    width: 100px;
+    height: 30px;
+    background: #f1f1f1;
+}
