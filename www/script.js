@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // อัปเดตแถบความคืบหน้าของเสียงต้อนรับ
   welcomeSound.addEventListener("timeupdate", function () {
-    welcomeProgress.value = welcomeSound.currentTime / welcomeSound.duration;
+    audioProgress.value = welcomeSound.currentTime / welcomeSound.duration;
   });
 
   var audio = document.getElementById("audio");

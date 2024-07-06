@@ -17,11 +17,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const imageUrls = [
         "/images/",
         "/images/คนหล่อนมผง.png",
-        "/images/P1010452.JPG",
-        "/images/P1010425.JPG",
+        // "/images/P1010452.JPG",
+        // "/images/P1010425.JPG",
         "/images/หนุ่มเทคนิคลพบุรี.png",
         "/images/เด็กเรียนครับ.png",
-        "/images/หนุ่มasia.png",
+        // "/images/หนุ่มasia.png",
         "/images/HBD/0.png",
         // "/images/HBD/1.png",
         //"/images/HBD/2.png",
@@ -166,13 +166,18 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("countdownMinutes").innerHTML = formatTime(minutes);
         document.getElementById("countdownSeconds").innerHTML = formatTime(seconds);
         document.getElementById("countdown").innerHTML = `${replaceZeroWithHeart(formatTime(days))} วัน ${replaceZeroWithHeart(formatTime(hours))} ชั่วโมง ${replaceZeroWithHeart(formatTime(minutes))} นาที ${replaceZeroWithHeart(formatTime(seconds))} วินาที`;
-        document.getElementById("daysSinceBirthday").innerHTML = `วันเกิดกำลังมาแล้ว: ${replaceZeroWithHeart(formatTime(days))} วัน ${replaceZeroWithHeart(formatTime(hours))} ชั่วโมง ${replaceZeroWithHeart(formatTime(minutes))} นาที ${replaceZeroWithHeart(formatTime(seconds))} วินาที`;
+        document.getElementById("daysSinceBirthday").innerHTML = `นับถอยหลัง: ${replaceZeroWithHeart(formatTime(days))} วัน ${replaceZeroWithHeart(formatTime(hours))} ชั่วโมง ${replaceZeroWithHeart(formatTime(minutes))} นาที ${replaceZeroWithHeart(formatTime(seconds))} วินาที`;
 
         // คำนวณวันตั้งแต่เกิดและแสดงผล
-        const dob = new Date("2007-08-27");
+        const dob = new Date("2007-08-27"); // ใส่วันเกิดของคุณที่นี่
         const currentDate = new Date();
         const timeDiff = currentDate.getTime() - dob.getTime();
+
         const daysDiff = Math.floor(timeDiff / (1000 * 3600 * 24));
+        const hoursDiff = Math.floor((timeDiff % (1000 * 3600 * 24)) / (1000 * 3600));
+        const minutesDiff = Math.floor((timeDiff % (1000 * 3600)) / (1000 * 60));
+        const secondsDiff = Math.floor((timeDiff % (1000 * 60)) / 1000);
+
         const yearsDiff = currentDate.getFullYear() - dob.getFullYear();
         const monthsDiff = currentDate.getMonth() - dob.getMonth();
         const daysInMonthDiff = currentDate.getDate() - dob.getDate();
@@ -185,14 +190,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // แปลงจำนวนเดือนให้อยู่ในช่วง 0-11
         let ageMonths = monthsDiff < 0 ? 12 + monthsDiff : monthsDiff;
+        if (daysInMonthDiff < 0) {
+            ageMonths--;
+        }
 
         // แปลงจำนวนวันให้อยู่ในช่วง 0-30
         let ageDays = daysInMonthDiff < 0 ? new Date(currentDate.getFullYear(), currentDate.getMonth(), 0).getDate() + daysInMonthDiff : daysInMonthDiff;
 
-        document.getElementById("all_day_hbd").innerHTML =
-            `ผมอยู่บนโลกนี้มาแล้ว: ${replaceZeroWithHeart(daysDiff)} วัน; 
-        ` + `<br>` + `อายุของผมคือ: ${replaceZeroWithHeart(ageYears)} ปี ${replaceZeroWithHeart(ageMonths)} เดือน ${replaceZeroWithHeart(ageDays)} วัน;`;
+        const daysText = replaceZeroWithHeart(daysDiff);
+        const hoursText = replaceZeroWithHeart(hoursDiff);
+        const minutesText = replaceZeroWithHeart(minutesDiff);
+        const secondsText = replaceZeroWithHeart(secondsDiff);
 
+        const ageYearsText = replaceZeroWithHeart(ageYears);
+        const ageMonthsText = replaceZeroWithHeart(ageMonths);
+        const ageDaysText = replaceZeroWithHeart(ageDays);
+
+        document.getElementById("all_day_hbd").innerHTML =
+            `อยู่บนโลกนี้มาแล้ว: ${daysText} วัน ${hoursText} ชั่วโมง ${minutesText} นาที ${secondsText} วินาที;` + `<br>` +
+            `อายุของผมคือ: ${ageYearsText} ปี ${ageMonthsText} เดือน ${ageDaysText} วัน;`;
 
         // เล่นเสียงเพลงวันเกิดถ้าห่างจากวันเกิดไม่เกิน 28 วินาที
         if (difference <= 48 * 1000 && difference > 0) {
@@ -205,8 +221,8 @@ document.addEventListener("DOMContentLoaded", function () {
             clearInterval(interval);
             document.getElementById("countdownDays").innerHTML = "🎂";
             document.getElementById("countdownHours").innerHTML = "🎉";
-            document.getElementById("countdownMinutes").innerHTML = "♥️";
-            document.getElementById("countdownSeconds").innerHTML = "🎧";
+            document.getElementById("countdownMinutes").innerHTML = "❤";
+            document.getElementById("countdownSeconds").innerHTML = "🎧🎶";
             document.getElementById("countdown").innerHTML = "Happy Birthday ครับสุดหล่อ🎉";
 
             document.getElementById("countdown").style.fontSize = "18px";
