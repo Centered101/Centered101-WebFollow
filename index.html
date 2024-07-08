@@ -58,6 +58,7 @@
     <audio id="audio" src="#"></audio>
 
 </head>
+
 <body id="color_change">
 
     <header>
@@ -83,6 +84,7 @@
         </a>
         <div class="container_profile">
             <img class="profile" src="/images/Tes-Dee.png" alt="Tes-D1200x1200">
+            <span class="tooltiptext">Tes-Dee.png</span>
             <p>Centered101</p>
         </div>
         <label class="container_muteButton">
@@ -555,24 +557,24 @@
             'วันศุกร์',
             'วันเสาร์'];
         const months = [
-            'มกราคม',
-            'กุมภาพันธ์',
-            'มีนาคม',
-            'เมษายน',
-            'พฤษภาคม',
-            'มิถุนายน',
-            'กรกฎาคม',
-            'สิงหาคม',
-            'กันยายน',
-            'ตุลาคม',
-            'พฤศจิกายน',
-            'ธันวาคม'];
+            'มกราคม 01',
+            'กุมภาพันธ์ 02',
+            'มีนาคม 03',
+            'เมษายน 04',
+            'พฤษภาคม 05',
+            'มิถุนายน 06',
+            'กรกฎาคม 07',
+            'สิงหาคม 08',
+            'กันยายน 09',
+            'ตุลาคมb 10',
+            'พฤศจิกายน 11',
+            'ธันวาคม 12'];
 
         const day = days[now.getDay()];
         const month = months[now.getMonth()];
         const date = now.getDate();
         const year = now.getFullYear();
-        const dayString = `${day}, ${month} ${date}, ${year}`;
+        const dayString = `${day}, ${month} / ${date} / ${year}`;
 
         document.getElementById('time').textContent = replaceZeroWithHeart(timeString);
         document.getElementById('day').textContent = dayString;

@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const imageUrls = [
         "/images/",
         "/images/คนหล่อนมผง.png",
-        // "/images/P1010452.JPG",
+        "images/P1010452.JPG",
         // "/images/P1010425.JPG",
         "/images/หนุ่มเทคนิคลพบุรี.png",
         "/images/เด็กเรียนครับ.png",
