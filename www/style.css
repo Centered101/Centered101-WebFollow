@@ -149,8 +149,7 @@ button {
 
 /* -index--------------------------------------------------------------------------------------------- */
 
-.dark_mode,
-.dark_mode .container_profile {
+.dark_mode {
   background: #333333;
 }
 
