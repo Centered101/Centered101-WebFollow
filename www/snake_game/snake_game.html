@@ -3,7 +3,7 @@
 
 <!-- สวัสดี วัยสะรุ้น Hello, World! ครับ/ค่ะ -->
 <head>
-    <title>Centered101 - Snake Game</title>
+    <title>Centered101 – Snake Game</title>
     <!-- เมตาแท็กหลัก -->
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="description" content="Centered101/Snake_Game" />
@@ -29,7 +29,7 @@
     <meta property="twitter:image" content="/images/Tes-D.png" />
 
     <!-- รูปโปรไฟร์หัวข้อหน้าเว็บ รูปแแบบ external -->
-    <link rel="icon" type="image/png" href="/images/icon/เว็บไซต์1200x1200.png">
+    <link id="favicon" rel="icon" type="image/png" href="/images/icon/เว็บไซต์1200x1200.png">
 
     <link rel="stylesheet" href="./style.css">
     <script src="./script.js" type="text/javascript" charset="utf-8"></script>
@@ -38,6 +38,14 @@
 
 </head>
 <body>
+
+    <div class="preloader">
+        <div class="pattern-1">
+            <div class="pattern-1-shade"></div>
+        </div>
+        <div class="pattern-2"></div>
+    </div>
+
     <div id="game-container">
         <canvas id="gc" class="game-canvas" width="400" height="400"></canvas>
     </div>

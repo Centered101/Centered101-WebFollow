@@ -37,7 +37,7 @@
     <meta property="twitter:image" content="/images/icon/Tes-D.png" />
 
     <!-- รูปโปรไฟร์หัวข้อหน้าเว็บ รูปแแบบ external -->
-    <link rel="icon" type="image/png" href="/images/icon/เว็บไซต์1200x1200.png">
+    <link id="favicon" rel="icon" type="image/png" href="/images/icon/เว็บไซต์1200x1200.png">
 
     <link rel="stylesheet" href="/www/style-index.css">
     <link rel="stylesheet" href="/www/style.css" type="text/css" media="all" />
@@ -47,7 +47,7 @@
 
     <!-- เพิ่มอิลิเมนต์ audio -->
     <audio id="welcomeSound">
-        <source src="#" type="audio/mp3">
+        <source src="/graphic/Music/ecstacy (slowed).mp3" type="audio/mp3">
     </audio>
 
     <!-- HTML สำหรับแสดง Player เสียง -->
@@ -60,6 +60,13 @@
 </head>
 
 <body id="color_change">
+
+    <div class="preloader">
+        <div class="pattern-1">
+            <div class="pattern-1-shade"></div>
+        </div>
+        <div class="pattern-2"></div>
+    </div>
 
     <header>
         <a class="baning" onclick="resetWindow()">
@@ -242,36 +249,33 @@
                 </div>
             </div>
 
-            <details>
-                <summary>เพิ่มเติม</summary>
-
-                <div class="skill_box">
-                    <span>Python</span>
-                    <div>
-                        <span class="skill_per python">
-                            <span class="tooltip">–</span>
-                        </span>
-                    </div>
+            <div class="skill_box">
+                <span>Python</span>
+                <div>
+                    <span class="skill_per python">
+                        <span class="tooltip">–</span>
+                    </span>
                 </div>
-
-                <div class="skill_box">
-                    <span>C</span>
-                    <div>
-                        <span class="skill_per c">
-                            <span class="tooltip">–</span>
-                        </span>
-                    </div>
+            </div>
+            
+            <div class="skill_box">
+                <span>C</span>
+                <div>
+                    <span class="skill_per c">
+                        <span class="tooltip">–</span>
+                    </span>
                 </div>
-
-                <div class="skill_box">
-                    <span>C++</span>
-                    <div>
-                        <span class="skill_per cpp">
-                            <span class="tooltip">–</span>
-                        </span>
-                    </div>
+            </div>
+            
+            <div class="skill_box">
+                <span>C++</span>
+                <div>
+                    <span class="skill_per cpp">
+                        <span class="tooltip">–</span>
+                    </span>
                 </div>
-
+                </div>
+                
                 <div class="skill_box">
                     <span>C#</span>
                     <div>
@@ -280,7 +284,7 @@
                         </span>
                     </div>
                 </div>
-
+                
                 <div class="skill_box">
                     <span>Go</span>
                     <div>
@@ -289,6 +293,9 @@
                         </span>
                     </div>
                 </div>
+                
+                <details>
+                    <summary>เพิ่มเติม</summary>
 
                 <div class="skill_box">
                     <span>Java</span>
@@ -345,8 +352,17 @@
                         <ul>
                             เครื่องมือ
                             <li>Visual Studio Code</li>
+                            <li>Microsoft Visual Studio 2022</li>
+                            <li>CodeBlocks</li>
+                            <li>Arduino IDE</li>
                         </ul>
+                        <br>
                         <ul>
+                             <li>XAMPP</li>
+                            <li>GitHub</li>
+                            <li>Git CLI, GitHub Desktop</li>
+                            <li>Fieldset</li>
+                            <li>Bootstrap</li>
                             <li>API</li>
                             <li>NPM</li>
                             <li>UX / UI</li>
@@ -358,14 +374,13 @@
                         <ul>
                             เครื่องมือ
 
-                            <li>Fieldset</li>
-                            <li>Git</li>
                             <li>TailwindCSS</li>
                             <li>NextJS</li>
                         </ul>
+                        <br>
                         <ul>
                             ปัณหา
-                            <li>ตั้งชื่อไฟร์ / ตั้งชื่อคราส</li>
+                            <li>ตั้งชื่อไฟร์, ตั้งชื่อคราส</li>
                         </ul>
                     </div>
 
@@ -430,9 +445,9 @@
             css: 80,
             javascript: 50,
             nodejs: 30,
-            python: 20,
+            python: 25,
             c: 30,
-            cpp: 10,
+            cpp: 35,
             csharp: 10,
             go: 0,
             java: 5,

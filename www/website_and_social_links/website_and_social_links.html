@@ -31,7 +31,7 @@
     <meta property="twitter:image" content="graphic/img/icon/Tes-D.png" />
 
     <!-- รูปโปรไฟร์หัวข้อหน้าเว็บ รูปแแบบ external -->
-    <link rel="icon" type="image/png" href="/images/icon/เว็บไซต์1200x1200.png">
+    <link id="favicon" rel="icon" type="image/png" href="/images/icon/เว็บไซต์1200x1200.png">
 
     <link rel="stylesheet" href="./style.css">
 
@@ -58,6 +58,13 @@
 </head>
 
 <body id="color_change">
+
+    <div class="preloader">
+        <div class="pattern-1">
+            <div class="pattern-1-shade"></div>
+        </div>
+        <div class="pattern-2"></div>
+    </div>
 
     <header>
         <a class="baning" onclick="resetWindow()">
@@ -142,7 +149,15 @@
                 <a target="" href="/www/other/resume.html">
                     <img class="icon" target="" src="/images/icon/เว็บไซต์1200x1200.png"></a>
                 <a class="button" target="" href="/www/other/resume.html">
-                    Resume ผม
+                    Resume ผม (EH)
+                </a>
+            </div>
+
+            <div class="bt" onclick="displayMessage('กำลังไปหน้าถัดไป...')">
+                <a target="" href="/www/other/th-TH/resume.html">
+                    <img class="icon" target="" src="/images/icon/เว็บไซต์1200x1200.png"></a>
+                <a class="button" target="" href="/www/other/th-TH/resume.html">
+                    Resume ผม (TH)
                 </a>
             </div>
 

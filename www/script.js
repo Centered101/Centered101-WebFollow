@@ -46,6 +46,11 @@ function displayMessage(message) {
 
 // -goBack-goForward-----------------------------------------------------------------------------------
 
+document.addEventListener('contextmenu', function(event) {
+  event.preventDefault(); // ป้องกันเมนูคลิกขวาจากการแสดง
+  window.history.back(); // ย้อนกลับไปหน้าเดิม
+});
+
 function goBack() {
   window.history.back();
   displayMessage("กำลังกลับไปหน้าก่อนหน้า...");
@@ -102,7 +107,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // อัปเดตแถบความคืบหน้าของเสียงต้อนรับ
   welcomeSound.addEventListener("timeupdate", function () {
-    audioProgress.value = welcomeSound.currentTime / welcomeSound.duration;
+    welcomeProgress.value = welcomeSound.currentTime / welcomeSound.duration;
   });
 
   var audio = document.getElementById("audio");
@@ -151,15 +156,29 @@ function resetWindow() {
   displayMessage("กำลังโหลดหน้าเว็บใหม่...");
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+  const preloader = document.querySelector(".preloader");
+  const content = document.querySelector(".color_change");
+
+  preloader.style.display = "none";
+  content.style.display = "block";
+});
+
 // -name-tab-----------------------------------------------------------------------------------------
 
-let tab = document.title;
+let originalTitle = document.title;
+let favicon = document.getElementById("favicon");
+let originalFavicon = favicon.href;
+let blurredFavicon = "/images/Tes-D.png"; // Replace with the path to your blurred favicon image
+
 window.addEventListener("blur", () => {
-  document.title = "อ่านทำมั้ย กลับมาก่อนดิ๊";
+  document.title = "Centered101";
+  favicon.href = blurredFavicon;
 });
 
 window.addEventListener("focus", () => {
-  document.title = tab;
+  document.title = originalTitle;
+  favicon.href = originalFavicon;
 });
 
 // -เปลี่ยนสี------------------------------------------------------------------------------------------

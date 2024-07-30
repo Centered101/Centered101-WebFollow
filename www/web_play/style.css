@@ -15,6 +15,7 @@ button {
 }
 
 @media screen and (max-width: 768px) {
+
   body,
   input,
   button {
@@ -24,11 +25,64 @@ button {
 }
 
 @media screen and (max-width: 480px) {
+
   body,
   input,
   button {
     font-size: 70%;
     /* ลดขนาดฟอนต์เมื่อหน้าจอมีความกว้างไม่เกิน 480px */
+  }
+}
+
+.preloader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #84d4fa;
+  padding: 100%;
+}
+
+.preloader .pattern-1 {
+  position: absolute;
+  background-color: #ff4c5a;
+  width: 200px;
+  height: 200px;
+  clip-path: polygon(0 10%, 70% 90%, 40% 90%, 0 45%);
+}
+
+.preloader .pattern-2 {
+  position: absolute;
+  background-color: #ff4c5a;
+  width: 220px;
+  height: 190px;
+  clip-path: polygon(100% 10%, 100% 45%, 83% 65%, 55% 65%);
+}
+
+.preloader .pattern-1 .pattern-1-shade {
+  position: absolute;
+  transform: translateX(-20px);
+  opacity: 0.7;
+  z-index: 10;
+  width: 100%;
+  background-color: #ffffff;
+  width: 20px;
+  height: 200px;
+  animation: shiny 1s infinite;
+}
+
+@keyframes shiny {
+  0% {
+      transform: translateX(-20px);
+  }
+  100% {
+      transform: translateX(140px);
   }
 }
 
@@ -78,7 +132,7 @@ button {
   width: 20px;
 }
 
-.button_next:hover > img {
+.button_next:hover>img {
   animation: slide-in-left 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 

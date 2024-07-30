@@ -1,3 +1,43 @@
+// -รีเซ็ตweb------------------------------------------------------------------------------------------
+
+function resetWindow() {
+    // เปิดหน้าเว็บใหม่
+    // ให้โหลดหน้าเว็บใหม่จากริเควสเตอร์
+    window.location.reload(true);
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    const preloader = document.querySelector(".preloader");
+    const content = document.querySelector("body");
+  
+    preloader.style.display = "none";
+    content.style.display = "block";
+  });
+
+// -name-tab-----------------------------------------------------------------------------------------
+
+let originalTitle = document.title;
+let favicon = document.getElementById("favicon");
+let originalFavicon = favicon.href;
+let blurredFavicon = "/images/Tes-D.png"; // Replace with the path to your blurred favicon image
+
+window.addEventListener("blur", () => {
+    document.title = "Centered101";
+    favicon.href = blurredFavicon;
+});
+
+window.addEventListener("focus", () => {
+    document.title = originalTitle;
+    favicon.href = originalFavicon;
+});
+
+// -goBack-goForward-----------------------------------------------------------------------------------
+
+document.addEventListener('contextmenu', function(event) {
+    event.preventDefault(); // ป้องกันเมนูคลิกขวาจากการแสดง
+    window.history.back(); // ย้อนกลับไปหน้าเดิม
+  });
+
 var Snake = (function () {
 
     const INITIAL_TAIL = 4; // ความยาวเริ่มต้นของหางงู

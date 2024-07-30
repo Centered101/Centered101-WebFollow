@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree&display=swap");
+
+::-moz-selection {
+    background: #000000b3;
+    color: #1ed760;
+}
+
+::selection {
+    background: #000000b3;
+    color: #1ed760;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+::-webkit-scrollbar-button {
+    background-color: #333333;
+    border: 5px solid #333333;
+    height: 40px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: linear-gradient(320deg, #1ed760, #409efe);
+    border: #000000 solid 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #409efe;
+    border: #000000b3 solid 5px;
+    border-radius: 10px;
+    box-shadow: -3px -3px 8px 3px #84d4fa, 3px 3px 8px 3px #84d4fa;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #fe4040;
+    box-shadow: -3px -3px 8px 3px #ff7070, 3px 3px 8px 3px #ff7070;
+}
+
+::-webkit-scrollbar-thumb {
+    border: 5px solid #000000b3;
+    border-radius: 360px;
+    box-shadow: -3px -3px 8px 3px #84d4fa, 3px 3px 8px 3px #84d4fa;
+}
+
+.preloader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #84d4fa;
+    padding: 100%;
+}
+
+.preloader .pattern-1 {
+    position: absolute;
+    background-color: #ff4c5a;
+    width: 200px;
+    height: 200px;
+    clip-path: polygon(0 10%, 70% 90%, 40% 90%, 0 45%);
+}
+
+.preloader .pattern-2 {
+    position: absolute;
+    background-color: #ff4c5a;
+    width: 220px;
+    height: 190px;
+    clip-path: polygon(100% 10%, 100% 45%, 83% 65%, 55% 65%);
+}
+
+.preloader .pattern-1 .pattern-1-shade {
+    position: absolute;
+    transform: translateX(-20px);
+    opacity: 0.7;
+    z-index: 10;
+    width: 100%;
+    background-color: #ffffff;
+    width: 20px;
+    height: 200px;
+    animation: shiny 1s infinite;
+}
+
+@keyframes shiny {
+    0% {
+        transform: translateX(-20px);
+    }
+
+    100% {
+        transform: translateX(140px);
+    }
+}
+
+body {
+    font-family: "Bai Jamjuree", sans-serif;
+    font-weight: bold;
+}
+
+body {
+    font-size: 100%;
+    /* ปรับขนาดฟอนต์เป็น 100% ของขนาดปกติ */
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 75%;
+        /* ลดขนาดฟอนต์เมื่อหน้าจอมีความกว้างไม่เกิน 768px */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 50%;
+        /* ลดขนาดฟอนต์เมื่อหน้าจอมีความกว้างไม่เกิน 480px */
+    }
+}
+
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+ol,
+li {
+    margin: 0;
+    padding: 1;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+}
+
+.container header div h1 {
+    margin-right: 10px;
+}
+
+.container section ol li::marker {
+    content: "==> ";
+}
+
+.container .skills {
+    display: flex;
+}
+
+.container .skills section:nth-of-type(1) {
+    flex-grow: 1;
+}
+
+.container .skills section:nth-of-type(2) {
+    flex-grow: 1;
+}
+
+.container .skills section:nth-of-type(3) {
+    flex-grow: 1;
+}
+
+a {
+    color: #999999;
+}
+
+p,
+ol,
+li {
+    color: #666666;
+}
+
+small {
+    font-weight: 100;
+    font-size: 10px;
+}
+
+footer {
+    align-items: center;
+    bottom: 0;
+    width: 100%;
+    position: fixed;
+    color: #cccccc;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    font-family: inherit;
+    font-size: 20px;
+    background: #000000;
+    color: white;
+    fill: #cccccc;
+    padding: 0.7em 1em;
+    padding-left: 0.9em;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    border-radius: 15px;
+    font-weight: 1000;
+}
+
+button span {
+    display: block;
+    margin-left: 0.3em;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background: #000000;
+}
+
+button:hover span {
+    opacity: 0;
+    transition: 0.5s linear;
+}
+
+button:active {
+    transform: scale(0.95);
+}

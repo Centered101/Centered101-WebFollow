@@ -1,4 +1,17 @@
+document.addEventListener("DOMContentLoaded", function () {
+  const preloader = document.querySelector(".preloader");
+  const content = document.querySelector(".color_change");
+
+  preloader.style.display = "none";
+  content.style.display = "block";
+});
+
 // -goBack-goForward-----------------------------------------------------------------------------------
+
+document.addEventListener('contextmenu', function(event) {
+  event.preventDefault(); // ป้องกันเมนูคลิกขวาจากการแสดง
+  window.history.back(); // ย้อนกลับไปหน้าเดิม
+});
 
 function goBack() {
   window.history.back();
@@ -21,4 +34,21 @@ document.addEventListener("keydown", function (event) {
     goForward();
     displayMessage("กำลังไปหน้าถัดไป...");
   }
+});
+
+// -name-tab-----------------------------------------------------------------------------------------
+
+let originalTitle = document.title;
+let favicon = document.getElementById("favicon");
+let originalFavicon = favicon.href;
+let blurredFavicon = "/images/Tes-D.png"; // Replace with the path to your blurred favicon image
+
+window.addEventListener("blur", () => {
+    document.title = "Centered101";
+    favicon.href = blurredFavicon;
+});
+
+window.addEventListener("focus", () => {
+    document.title = originalTitle;
+    favicon.href = originalFavicon;
 });
