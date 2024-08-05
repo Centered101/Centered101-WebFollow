@@ -1,17 +1,3 @@
-    // Get the button by ID
-    var printButton = document.getElementById("print");
-
-    // Add event listener for button click
-    printButton.addEventListener("click", function () {
-      try {
-        // Use window.print() function to print the webpage
-        window.print();
-      } catch (err) {
-        console.error("Cannot print: ", err);
-        displayMessage(`Cannot print: ${err.message}`);
-      }
-    });
-
     // Function to display message
     function displayMessage(message) {
       const allTextTitle = document.getElementById("all_text_title");
