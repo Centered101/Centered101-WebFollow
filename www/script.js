@@ -46,7 +46,7 @@ function displayMessage(message) {
 
 // -goBack-goForward-----------------------------------------------------------------------------------
 
-document.addEventListener('contextmenu', function(event) {
+document.addEventListener("contextmenu", function (event) {
   event.preventDefault(); // ป้องกันเมนูคลิกขวาจากการแสดง
   window.history.back(); // ย้อนกลับไปหน้าเดิม
 });
@@ -233,8 +233,14 @@ function clearCookies() {
 document.addEventListener("keyup", keyup);
 
 function keyup(event) {
-  if (event.key === "g") {
+  if (
+    event.key === "g" ||
+    event.key === "G" ||
+    event.key === "เ" ||
+    event.key === "ฌ"
+  ) {
     randomColor();
+    displayMessage("เปลี่ยนสี");
   }
 }
 
@@ -245,14 +251,12 @@ function randomColor() {
   body.style.backgroundColor = newColor; // เปลี่ยนสีพื้นหลังของ body
 }
 
-// ฟังก์ชันสำหรับสร้างสีสุ่ม
-function getRandomColor() {
-  var letters = "0123456789ABCDEF";
-  var color = "#";
-  for (var i = 0; i < 6; i++) {
-    color += letters[Math.floor(Math.random() * 16)];
-  }
-  return color;
+// ฟังก์ชันเพื่อเปลี่ยนสีพื้นหลังเป็นสีสุ่ม
+function randomColor() {
+  // สร้างค่าสีสุ่ม
+  const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+  // เปลี่ยนสีพื้นหลังของหน้าเว็บ
+  document.body.style.backgroundColor = randomColor;
 }
 
 // -scrolltotop----------------------------------------------------------------------------------------
@@ -327,6 +331,7 @@ function showScrollToTopButton() {
   } else {
     // ซ่อนปุ่มเมื่ออยู่ด้านบน
     button.style.display = "none";
+    button.style.transform = "1";
   }
 }
 

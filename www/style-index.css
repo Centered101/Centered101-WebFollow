@@ -78,8 +78,8 @@ body {
 
 .main_content_profile .container_profile:hover {
     transform: scale(1.2);
-    border: solid 5px #FFFFFF;
-    border-radius: 7px 7px 90px 7px;
+    background-color: none;
+    border: solid 0 #FFFFFF;
     margin-bottom: 50px;
     transition: all .5s ease-in-out 0s;
 }
@@ -97,7 +97,7 @@ body {
 }
 
 .main_content_profile .container_profile:hover .profile {
-    border: solid 5px #FFFFFF;
+    border: solid 0 #FFFFFF;
     object-position: 0px 0px;
 }
 
@@ -155,8 +155,8 @@ body {
 .main_content_profile .container_profile:hover>.icon_profile {
     animation: หมุน 1s infinite;
     border-radius: 50%;
-    margin-top: 195px;
-    margin-left: -38px;
+    margin-top: 130px;
+    margin-left: 20px;
     padding: 5px;
     width: 35px;
 }

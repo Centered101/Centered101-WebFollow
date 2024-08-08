@@ -96,18 +96,15 @@ button {
 
 /* -all--------------------------------------------------------------------------------------------- */
 
-.dark_mode {
+.dark_mode,
+.dark_mode .preloader,
+.dark_mode .button_next {
   transition: background-color 1s;
   background: #333333;
 }
 
 .dark_mode .content .container {
   background: #666666;
-}
-
-.dark_mode .button_next {
-  transition: background-color 1s;
-  background: #333333;
 }
 
 .dark_mode .button_next .text {
