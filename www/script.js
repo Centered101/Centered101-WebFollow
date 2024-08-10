@@ -164,6 +164,26 @@ document.addEventListener("DOMContentLoaded", function () {
   content.style.display = "block";
 });
 
+function startProgressBar() {
+  const progressBar = document.getElementById('progress');
+  progressBar.style.opacity = '1';
+  progressBar.style.width = '0%';
+
+  setTimeout(() => {
+      progressBar.style.width = '100%';
+
+      setTimeout(() => {
+          progressBar.style.display = 'none';
+      }, 500);
+
+  }, 100);
+}
+
+document.addEventListener('DOMContentLoaded', (event) => {
+  startProgressBar();
+});
+
+
 // -name-tab-----------------------------------------------------------------------------------------
 
 let originalTitle = document.title;

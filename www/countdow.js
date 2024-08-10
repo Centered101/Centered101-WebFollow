@@ -167,19 +167,25 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("countdownMinutes").innerHTML = formatTime(minutes);
     document.getElementById("countdownSeconds").innerHTML = formatTime(seconds);
     document.getElementById("countdown").innerHTML = `${replaceZeroWithHeart(
+
       formatTime(days)
     )} วัน ${replaceZeroWithHeart(
+
       formatTime(hours)
     )} ชั่วโมง ${replaceZeroWithHeart(
+
       formatTime(minutes)
     )} นาที ${replaceZeroWithHeart(formatTime(seconds))} วินาที`;
     document.getElementById(
       "daysSinceBirthday"
     ).innerHTML = `นับถอยหลัง: ${replaceZeroWithHeart(
+
       formatTime(days)
     )} วัน ${replaceZeroWithHeart(
+
       formatTime(hours)
     )} ชั่วโมง ${replaceZeroWithHeart(
+
       formatTime(minutes)
     )} นาที ${replaceZeroWithHeart(formatTime(seconds))} วินาที`;
 
@@ -215,10 +221,10 @@ document.addEventListener("DOMContentLoaded", function () {
     let ageDays =
       daysInMonthDiff < 0
         ? new Date(
-            currentDate.getFullYear(),
-            currentDate.getMonth(),
-            0
-          ).getDate() + daysInMonthDiff
+          currentDate.getFullYear(),
+          currentDate.getMonth(),
+          0
+        ).getDate() + daysInMonthDiff
         : daysInMonthDiff;
 
     // แก้ไขกรณีที่เป็น -1 ให้เป็น 0
@@ -240,13 +246,69 @@ document.addEventListener("DOMContentLoaded", function () {
       `<br>` +
       `อายุของผมคือ: ${ageYearsText} ปี ${ageMonthsText} เดือน ${ageDaysText} วัน;`;
 
-    // เล่นเสียงเพลงวันเกิดถ้าห่างจากวันเกิดไม่เกิน 28 วินาที
     if (difference <= 48 * 1000 && difference > 0) {
       playBirthdaySound();
+
+      const header = document.querySelector('header')
+      const footer = document.querySelector('footer')
+      const goForward = document.querySelector('nav');
+      const containerTime = document.querySelector('.container_time');
+      const containerHBD = document.querySelector('.container_hbd');
+      const containerSkill = document.querySelector('.container_skill');
+      const containerMultiplication = document.querySelector('.container_multiplication');
+      const toggleContainerButton = document.getElementById('toggleContainerButton');
+
+      if (header) {header.style.display = 'none';}
+      if (footer) {footer.style.display = 'none';}
+      if (goForward) {goForward.style.display = 'none';}
+      if (containerTime) {containerTime.style.display = 'none';}
+      if (containerHBD) {containerHBD.style.width = '800px';}
+      if (containerSkill) {containerSkill.style.display = 'none';}
+      if (containerMultiplication) {containerMultiplication.style.display = 'none';}
+      toggleContainerButton.style.display = 'block';
     }
 
     // เมื่อถึงวันเกิด
     if (difference <= 0) {
+      const header = document.querySelector('header')
+      const footer = document.querySelector('footer')
+      const goForward = document.querySelector('nav');
+      const containerTime = document.querySelector('.container_time');
+      const containerHBD = document.querySelector('.container_hbd');
+      const containerSkill = document.querySelector('.container_skill');
+      const containerMultiplication = document.querySelector('.container_multiplication');
+      const toggleContainerButton = document.getElementById('toggleContainerButton');
+
+      if (header) {header.style.display = 'none';}
+      if (footer) {footer.style.display = 'none';}
+      if (goForward) {goForward.style.display = 'none';}
+      if (containerTime) {containerTime.style.display = 'none';}
+      if (containerHBD) {containerHBD.style.width = '800px';}
+      if (containerSkill) {containerSkill.style.display = 'none';}
+      if (containerMultiplication) {containerMultiplication.style.display = 'none';}
+      toggleContainerButton.style.display = 'block';
+
+      // ฟังก์ชันสำหรับแสดง/ซ่อนคอนเทนเนอร์เมื่อคลิกปุ่ม
+      document.getElementById('toggleContainerButton').addEventListener('click', function () {
+        const header = document.querySelector('header');
+        const footer = document.querySelector('footer');
+        const goForward = document.querySelector('nav');
+        const containerTime = document.querySelector('.container_time');
+        const containerSkill = document.querySelector('.container_skill');
+        const containerMultiplication = document.querySelector('.container_multiplication');
+        const containerHBD = document.querySelector('.container_hbd');
+
+        if (header) header.style.display = 'flex';
+        if (footer) footer.style.display = 'flex';
+        if (goForward) goForward.style.display = 'flex';
+        if (containerTime) containerTime.style.display = 'block';
+        if (containerSkill) containerSkill.style.display = 'block';
+        if (containerMultiplication) containerMultiplication.style.display = 'block';
+        if (containerHBD) containerHBD.style.width = '400px';
+
+        this.style.display = 'none';
+      });
+
       // หยุดการนับถอยหลัง
       clearInterval(interval);
       document.getElementById("countdownDays").innerHTML = "🎂";
