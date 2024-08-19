@@ -58,8 +58,7 @@
           <a href="https://linkedin.com/in/centered101/" target="_blank"
             rel="noopener noreferrer">linkedin.com/in/centered101</a><br />
           GitHub:
-          <a href="https://github.com/Centered101" target="_blank"
-            rel="noopener noreferrer">github.com/Centered101</a>
+          <a href="https://github.com/Centered101" target="_blank" rel="noopener noreferrer">github.com/Centered101</a>
         </p>
       </div>
     </header>
@@ -125,6 +124,7 @@
           <li>Arduino IDE</li>
           <li>PyCharm</li>
           <li>XAMPP</li>
+          <li>Figma</li>
           <li>GitHub</li>
           <li>Git CLI, GitHub Desktop</li>
           <li>Fieldset</li>
@@ -147,5 +147,20 @@
     </button>
   </footer>
 </body>
+<script>
+  // Get the button by ID
+  var printButton = document.getElementById("print");
+
+  // Add event listener for button click
+  printButton.addEventListener("click", function () {
+    try {
+      // Use window.print() function to print the webpage
+      window.print();
+    } catch (err) {
+      console.error("Cannot print: ", err);
+      displayMessage(`Cannot print: ${err.message}`);
+    }
+  });
+</script>
 
 </html>

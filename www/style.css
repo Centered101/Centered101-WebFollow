@@ -54,6 +54,12 @@
   box-shadow: -3px -3px 8px 3px #84d4fa, 3px 3px 8px 3px #84d4fa;
 }
 
+* {
+  cursor: url("/images/img-png/curser.png"), pointer;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   animation: จางหาย 1.5s ease-in-out;
   background: #84d4fa;
@@ -92,6 +98,76 @@ button {
     font-size: 70%;
     /* ลดขนาดฟอนต์เมื่อหน้าจอมีความกว้างไม่เกิน 480px */
   }
+}
+
+small {
+  color: #000000;
+  font-size: 80%;
+}
+
+@media screen and (max-width: 768px) {
+  small {
+    font-size: 60%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  small {
+    font-size: 50%;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+ol,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+summary {
+  cursor: pointer;
+  text-align: end;
+}
+
+body .color_change {
+  color: #fe4040;
+}
+
+.progress {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.progress progress {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+#all_text_title {
+  color: #333333;
+  background-color: #f5f5f5;
+  border-radius: 3px;
+  box-shadow: 1px 1px 16px 1px #000000b3;
+  border: solid #333333 1px;
+  padding: 10px 20px;
+  position: fixed;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.5s;
+  text-align: center;
+  display: none;
+  z-index: 2000;
 }
 
 /* -all--------------------------------------------------------------------------------------------- */
@@ -148,76 +224,6 @@ button {
 
 .dark_mode {
   background: #333333;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-a,
-p,
-ol,
-ul,
-li {
-  margin: 0;
-  padding: 0;
-}
-
-small {
-  color: #000000;
-  font-size: 80%;
-}
-
-@media screen and (max-width: 768px) {
-  small {
-    font-size: 60%;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  small {
-    font-size: 50%;
-  }
-}
-
-summary {
-  cursor: pointer;
-  text-align: end;
-}
-
-body .color_change {
-  color: #fe4040;
-}
-
-.progress {
-  display: flex;
-  justify-content: center;
-  margin-top: 50px;
-}
-
-.progress progress {
-  margin: 0;
-  padding: 0;
-  user-select: none;
-}
-
-#all_text_title {
-  color: #333333;
-  background-color: #f5f5f5;
-  border-radius: 3px;
-  box-shadow: 1px 1px 16px 1px #000000b3;
-  border: solid #333333 1px;
-  padding: 10px 20px;
-  position: fixed;
-  bottom: 80px;
-  left: 50%;
-  transform: translateX(-50%);
-  transition: 0.5s;
-  text-align: center;
-  display: none;
-  z-index: 2000;
 }
 
 .preloader {
