@@ -55,7 +55,7 @@
 }
 
 * {
-  cursor: url("/images/img-png/curser.png"), pointer;
+  /* cursor: url("/images/img-png/curser.png"), pointer; */
   margin: 0;
   padding: 0;
 }
