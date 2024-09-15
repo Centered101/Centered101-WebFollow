@@ -170,11 +170,11 @@ function startProgressBar() {
   progressBar.style.width = '0%';
 
   setTimeout(() => {
-      progressBar.style.width = '100%';
+    progressBar.style.width = '100%';
 
-      setTimeout(() => {
-          progressBar.style.display = 'none';
-      }, 500);
+    setTimeout(() => {
+      progressBar.style.display = 'none';
+    }, 500);
 
   }, 100);
 }
@@ -201,54 +201,61 @@ window.addEventListener("focus", () => {
   favicon.href = originalFavicon;
 });
 
-// -เปลี่ยนสี------------------------------------------------------------------------------------------
+// ฟังก์ชันเพื่อตรวจสอบโหมดของผู้ใช้งาน
+function applyTheme(theme) {
+  var body = document.body;
+  if (theme === 'dark') {
+    body.classList.add('dark_mode');
+    body.style.backgroundColor = "#333333";
+  } else {
+    body.classList.remove('dark_mode');
+    body.style.backgroundColor = "#84D4FA";
+  }
+}
+
+// ตรวจสอบการตั้งค่าโหมดสีของผู้ใช้งาน
+const userPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+
+// ตั้งค่าโหมดตามการตั้งค่าของผู้ใช้งานหรือจากคุกกี้
+function initializeMode() {
+  var mode = getCookie("mode") || (userPrefersDark.matches ? 'dark' : 'light');
+  applyTheme(mode);
+  document.getElementById("modeSwitch").checked = (mode === "dark");
+}
 
 // ฟังก์ชันเปลี่ยนโหมดและบันทึกข้อมูลในคุกกี้
 function toggleMode() {
-  var body = document.body;
-  var modeSwitch = document.getElementById("modeSwitch");
-  var isDarkMode = modeSwitch.checked;
-
-  if (isDarkMode) {
-    body.classList.add("dark_mode");
-    var body = document.body;
-    body.style.backgroundColor = "#333333";
-    displayMessage("โหมดมืด");
-  } else {
-    body.classList.remove("dark_mode");
-    var body = document.body;
-    body.style.backgroundColor = "#84D4FA";
-    displayMessage("โหมดสว่าง");
-  }
+  var isDarkMode = document.getElementById("modeSwitch").checked;
+  var theme = isDarkMode ? "dark" : "light";
+  
+  applyTheme(theme);
+  displayMessage(isDarkMode ? "โหมดมืด" : "โหมดสว่าง");
 
   // บันทึกสถานะในคุกกี้
-  document.cookie = `mode=${
-    isDarkMode ? "dark" : "light"
-  }; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/`;
+  document.cookie = `mode=${theme}; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/`;
 }
 
-// โหลดโหมดจากคุกกี้เมื่อเริ่มต้น
-window.onload = function () {
-  var cookies = document.cookie
-    .split(";")
-    .map((cookie) => cookie.trim().split("="));
-  var modeCookie = cookies.find((cookie) => cookie[0] === "mode");
-  var mode = modeCookie ? modeCookie[1] : "light"; // ถ้ามีคุกกี้ mode ให้ใช้ค่าจากคุกกี้ ไม่มีก็ใช้โหมด Light Mode เป็นค่าเริ่มต้น
-  var modeSwitch = document.getElementById("modeSwitch");
+// โหลดคุกกี้
+function getCookie(name) {
+  var cookies = document.cookie.split(";").map(cookie => cookie.trim().split("="));
+  var cookie = cookies.find(cookie => cookie[0] === name);
+  return cookie ? cookie[1] : null;
+}
 
-  if (mode === "dark") {
-    document.body.classList.add("dark_mode");
-    modeSwitch.checked = true;
-  } else {
-    document.body.classList.remove("dark_mode");
-    modeSwitch.checked = false;
-  }
-};
-
-// ฟังก์ชันเคลียร์คุกกี้
+// ลบคุกกี้
 function clearCookies() {
-  document.cookie = "mode=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/"; // ลบคุกกี้ mode
+  document.cookie = "mode=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/"; 
 }
+
+// ฟังค์ชันที่รับการเปลี่ยนแปลงเมื่อผู้ใช้เปลี่ยนการตั้งค่าโหมดสีในระบบ
+userPrefersDark.addEventListener('change', (event) => {
+  if (!getCookie("mode")) {
+    applyTheme(event.matches ? 'dark' : 'light');
+  }
+});
+
+// เริ่มต้นการตั้งค่าเมื่อโหลดหน้าเว็บ
+window.onload = initializeMode;
 
 document.addEventListener("keyup", keyup);
 

@@ -8,50 +8,56 @@
 
 /* Code for Firefox */
 ::-moz-selection {
-  background: #000000b3;
+  background: #000000B3;
   color: #1ed760;
 }
 
 ::selection {
-  background: #000000b3;
+  background: #000000B3;
   color: #1ed760;
 }
 
-/* width */
 ::-webkit-scrollbar {
   width: 20px;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 ::-webkit-scrollbar-button {
+  cursor: pointer;
   background-color: #333333;
-  border: 1px solid #000000;
-  height: 34px;
+  border:solid #000000 1px;
+  height: 30px;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+::-webkit-scrollbar-button:hover {
+  background-color: #FF7070;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
+  cursor: pointer;
   background: linear-gradient(320deg, #1ed760, #409efe);
-  border: #000000 solid 5px;
+  border: solid#000000 2px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
+  cursor: grab;
   background: #409efe;
-  border: #000000b3 solid 5px;
-  border-radius: 10px;
+  border: solid #000000B3 3px;
+  border-radius: 8px;
   box-shadow: -3px -3px 8px 3px #84d4fa, 3px 3px 8px 3px #84d4fa;
+}
+
+::-webkit-scrollbar-thumb:active {
+  cursor: grabbing;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #fe4040;
   box-shadow: -3px -3px 8px 3px #ff7070, 3px 3px 8px 3px #ff7070;
-}
-
-::-webkit-scrollbar-thumb {
-  border: 5px solid #000000b3;
-  border-radius: 360px;
-  box-shadow: -3px -3px 8px 3px #84d4fa, 3px 3px 8px 3px #84d4fa;
 }
 
 * {
@@ -157,7 +163,7 @@ body .color_change {
   color: #333333;
   background-color: #f5f5f5;
   border-radius: 3px;
-  box-shadow: 1px 1px 16px 1px #000000b3;
+  box-shadow: 1px 1px 16px 1px #000000B3;
   border: solid #333333 1px;
   padding: 10px 20px;
   position: fixed;
@@ -213,6 +219,7 @@ body .color_change {
 }
 
 /* -about--------------------------------------------------------------------------------------------- */
+
 .dark_mode .container_message,
 .dark_mode .container_about,
 .dark_mode .container_color {
@@ -306,7 +313,7 @@ header {
   user-select: none;
   align-items: center;
   background: #f5f5f5b3;
-  box-shadow: 4px 4px 8px 4px #000000b3;
+  box-shadow: 4px 4px 8px 4px #000000B3;
   display: flex;
   /* แบบอื่นๆ เช่น space-around, space-evenly ก็ได้ตามความต้องการ */
   justify-content: space-between;
@@ -396,7 +403,7 @@ header input:checked+.slider:before {
 .h3 {
   user-select: none;
   background: linear-gradient(320deg, #00cc4f, #84d4fa);
-  border: #000000b3 solid 1px;
+  border: #000000B3 solid 1px;
   border-radius: 1.5rem;
   box-shadow: -3px -3px 8px 3px #409efe, 3px 3px 8px 3px #00cc4f;
   color: #000000;
@@ -422,7 +429,7 @@ header input:checked+.slider:before {
   border: solid #f5f5f5b3 3px;
   border-radius: 0 3px 3px 0;
   background: #409efe;
-  box-shadow: 4px -1px 8px #000000b3, -8px 8px 16px #ffffff80;
+  box-shadow: 4px -1px 8px #000000B3, -8px 8px 16px #ffffff80;
   position: fixed;
   bottom: 40px;
   transform: translateX(-8%);
@@ -444,7 +451,7 @@ header input:checked+.slider:before {
   height: 100%;
   font-weight: bold;
   box-shadow: inset 2px 5px 10px #000000;
-  text-shadow: 5px 2px 3px #000000b3;
+  text-shadow: 5px 2px 3px #000000B3;
   display: flex;
   border-radius: 3px;
   align-items: center;
@@ -478,7 +485,7 @@ footer {
   align-items: center;
   background-color: #f5f5f5b3;
   bottom: 0;
-  box-shadow: 4px 4px 8px 4px #000000b3;
+  box-shadow: 4px 4px 8px 4px #000000B3;
   display: flex;
   font-family: "Bai Jamjuree", sans-serif;
   font-weight: bold;
@@ -515,7 +522,7 @@ footer #scrollToBottomButton {
 footer #scrollToTopButton:hover,
 footer #scrollToBottomButton:hover {
   background: linear-gradient(320deg, #fe4040, #ff7070);
-  box-shadow: 4px 4px 8px 4px #000000b3;
+  box-shadow: 4px 4px 8px 4px #000000B3;
 }
 
 footer #scrollToTopButton:active,
@@ -525,7 +532,7 @@ footer #scrollToBottomButton:active {
 
 footer #scrollToTopButton:focus,
 footer #scrollToBottomButton:focus {
-  box-shadow: inset 2px 5px 10px #000000b3;
+  box-shadow: inset 2px 5px 10px #000000B3;
 }
 
 /* -ฟังชันcss-------------------------------------------------------------------------------------------- */
