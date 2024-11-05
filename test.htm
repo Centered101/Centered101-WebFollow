@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header translate="no">
+        <div>
+            <script>
+                function resetWindow() {
+                    document.body.style.backgroundColor = "#121212";
+                    // document.querySelector("header").style.display = "none";
+                    // document.querySelector("footer").style.display = "none";
+                    // document.querySelectorAll("section").forEach(function (section) {
+                    //     section.style.display = "none";
+                    // });
+                    // document.querySelector(".sticky").style.display = "none";
+                    // document.getElementById("loader").style.display = "flex";
+                    window.location.reload(true);
+                }
+
+                document.write('<a title="Reload this page" onclick="resetWindow()">Centered101</a>');
+            </script>
+        </div>
+    </header>
+</body>
+
+<style>
+    /* font จาก google fonts */
+    @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree&display=swap");
+
+    * {
+        margin: 0;
+        padding: 0;
+        outline: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background: #84d4fa;
+        font-family: "Bai Jamjuree", sans-serif;
+    }
+
+    header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1.25rem;
+        user-select: none;
+        backdrop-filter: blur(12px);
+        background-color: #000000;
+        color: #FFFFFF;
+        border-block: solid 1px #FFFFFF;
+        padding: 10px;
+        z-index: 50;
+    }
+
+    header div a {
+        display: flex;
+        align-items: center;
+        font-family: 'Press Start 2P';
+        font-size: 1.25rem;
+        line-height: 1rem;
+        font-weight: 900;
+        letter-spacing: .05em;
+        text-transform: uppercase;
+        text-decoration: none;
+        position: relative;
+    }
+
+    /* เพิ่ม Animation การหมุน */
+    @keyframes spin {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    header div a::before {
+        content: '';
+        display: inline-block;
+        background-image: url("/images/icon.ico");
+        background-size: cover;
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-right: .5rem;
+        animation: spin 2s linear infinite;
+    }
+</style>
+
+</html>

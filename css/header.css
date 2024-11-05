@@ -1,0 +1,89 @@
+
+
+header {
+    user-select: none;
+    align-items: center;
+    background: #f5f5f5b3;
+    box-shadow: 4px 4px 8px 4px #000000B3;
+    display: flex;
+    /* แบบอื่นๆ เช่น space-around, space-evenly ก็ได้ตามความต้องการ */
+    justify-content: space-between;
+    /* จัดให้แนวตั้งตรงกันกับ logo ถ้ามี */
+    padding: 5px;
+    position: fixed;
+    margin-bottom: 80px;
+    width: 100%;
+    top: 0;
+    z-index: 2;
+}
+
+header .baning {
+    user-select: none;
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    font-family: "Press Start 2P", system-ui;
+    font-size: 14px;
+}
+
+header .img-baning {
+    user-select: none;
+    animation: หมุน 500ms infinite;
+    margin-right: 10px;
+    width: 24px;
+}
+
+header .switch {
+    user-select: none;
+    font-size: 11px;
+    position: relative;
+    display: inline-block;
+    margin: 10px 10px 0 0;
+    width: 3.5em;
+    height: 1em;
+    box-shadow: inset 2px 5px 10px #000000;
+}
+
+header .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    margin: 10px 0 0 0;
+}
+
+header .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid #000000;
+    transition: 0.4s;
+    border-radius: 1px;
+}
+
+header .slider:before {
+    position: absolute;
+    content: "";
+    height: 1.3em;
+    width: 1.2em;
+    border-radius: 2px;
+    left: 0.2em;
+    bottom: 0.3em;
+    background: #ffffff;
+    border: 2px solid #000000;
+    transition: 0.2s;
+}
+
+header input:checked+.slider {
+    background: #333333;
+}
+
+header input:focus+.slider {
+    box-shadow: 0 0 1px #2196f3;
+}
+
+header input:checked+.slider:before {
+    transform: translateX(1.3em);
+}

@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- สวัสดี วัยสะรุ้น Hello, World! ครับ/ค่ะ -->
+
+<head>
+
+    <title>Centered101 – Web About</title>
+    <!-- เมตาแท็กหลัก -->
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="Centered101 – Web About" />
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript,Centered101" />
+    <meta name="author" content="Centered101" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://centered101-webfollow.web.app/" />
+    <meta property="og:url" content="https://centered101-webfollow.firebaseapp.com/" />
+    <meta property="og:title" content="Centered101" />
+    <meta property="og:description" content="Centered101 – Web About" />
+    <meta property="og:image" content="/images/icon/Tes-D.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://centered101-webfollow.web.app/" />
+    <meta property="twitter:url" content="https://centered101-webfollow.firebaseapp.com/" />
+    <meta property="twitter:title" content="Centered101" />
+    <meta property="twitter:description" content="Centered101 – Web About" />
+    <meta property="twitter:image" content="/images/icon/Tes-D.png" />
+
+    <!-- รูปโปรไฟร์หัวข้อหน้าเว็บ รูปแแบบ external -->
+    <link id="favicon" rel="icon" type="image/png" href="/images/icon/เว็บไซต์1200x1200.png">
+
+    <link rel="stylesheet" href="/css/style.css" type="text/css" media="all" />
+
+    <link rel="stylesheet" href="./style.css" type="text/css" media="all" />
+
+    <audio id="welcomeSound">
+        <source src="/graphic/Music/ecstacy (slowed).mp3" type="audio/mp3">
+    </audio>
+    <audio id="birthdaySound">
+        <source src="/graphic/Music/วันเกิดฉันปีนี้ (HBD to me).mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- donate button-->
+    <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
+        data-id="Centered101" data-description="Support me on Buy me a coffee!" data-message="บริจากทุน ให้หน่อยดิ๊"
+        data-color="#409EFE" data-position="Right" data-x_margin="10" data-y_margin="10">
+        </script>
+
+</head>
+<style>
+    body {
+  transition: background-color 1s;
+  background-image: url("https://github.githubassets.com/assets/profile-first-repo-dark-25579720acb4.svg");
+  background: #84d4fa;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: "Bai Jamjuree", sans-serif;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+/* -main----------------------------------------------------------------------------------------------- */
+
+.content {
+  max-width: 800px;
+  margin: 50px auto 80px auto;
+}
+
+.content .container {
+  background: #f5f5f5b3;
+  border: #ffffff80 solid 5px;
+  border-radius: 12px 40px 12px 12px;
+  box-shadow: 4px 4px 8px 4px #000000b3;
+  margin: 20px;
+  padding: 20px;
+  transition: all 0.5s;
+}
+
+.br,
+.h3 {
+  background: linear-gradient(320deg, #00cc4f, #84d4fa);
+  border: #000000b3 solid 1px;
+  border-radius: 1.5rem;
+  box-shadow: -3px -3px 8px 3px #409efe, 3px 3px 8px 3px #00cc4f;
+  color: #000000;
+  padding: 5px 5px;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.h3 {
+  border: none;
+}
+
+/* ------------------------------------------------------------------------------------------------ */
+
+/*------ Settings ------*/
+.container_muteButton {
+  --color: #666666;
+  --size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  font-size: var(--size);
+  user-select: none;
+  fill: var(--color);
+  margin: 0;
+  padding: 0;
+}
+
+.container_muteButton .mute_muteButton {
+  position: absolute;
+  animation: keyframes-fill 0.5s;
+}
+
+.container_muteButton .voice_muteButton {
+  position: absolute;
+  display: none;
+  animation: keyframes-fill 0.5s;
+}
+
+/* ------ On check event ------ */
+.container_muteButton input:checked ~ .mute_muteButton {
+  display: none;
+}
+
+.container_muteButton input:checked ~ .voice_muteButton {
+  display: block;
+}
+
+/* ------ Hide the default checkbox ------ */
+.container_muteButton input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* -container_message----------------------------------------------------------------------------------------------- */
+
+.container_message {
+  background: #ffffff;
+  border: solid 1px #000000;
+  border-radius: 7px;
+  cursor: pointer;
+  display: flex;
+  height: 500px;
+  justify-content: center;
+  margin: 20px 0;
+  overflow: hidden;
+  perspective: 100000px;
+  position: relative;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  width: 100%;
+  transition: 1s;
+}
+
+.container_message .img {
+  user-select: none;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.container_message:hover .img {
+  scale: 0;
+}
+
+.container_message .content {
+  box-sizing: border-box;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  position: absolute;
+  transform: rotateX(-90deg);
+  transform-origin: bottom;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  width: 100%;
+}
+
+.container_message:hover .content {
+  transform: rotateX(0deg);
+}
+
+.container_message .content .title {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333333;
+  font-weight: 700;
+}
+
+.container_message .content .bt .button {
+  user-select: none;
+  align-items: center;
+  background: linear-gradient(320deg, #409efe, #84d4fa);
+  border-radius: 3px;
+  color: #000000;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  text-decoration: none;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  padding: 5px 15px;
+  position: relative;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.container_message .content .bt:hover > .button {
+  background: linear-gradient(320deg, #fe4040, #ff7070);
+  box-shadow: 4px 4px 8px 4px #000000b3;
+  text-decoration: underline;
+}
+
+.container_message .content .bt .button:focus {
+  box-shadow: inset 2px 5px 10px #000000b3;
+}
+
+.container_message .content .bt a .icon {
+  position: absolute;
+  margin-top: -4px;
+  user-select: none;
+  cursor: pointer;
+  float: left;
+  width: 24px;
+  padding: 5px;
+  text-decoration: none;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  z-index: 1;
+}
+
+.container_message .content .bt:hover > a .icon {
+  position: flex;
+  animation: เด้ง 0.4s linear;
+}
+
+@keyframes เด้ง {
+  40% {
+    transform: scale(1.4);
+  }
+
+  60% {
+    transform: scale(0.8);
+  }
+
+  80% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* -container_about--------------------------------------------------------------------------------------------- */
+
+.container_about {
+  position: relative;
+  margin: 20px 0;
+  padding: 20px;
+  height: 50px;
+  background: #f5f5f5;
+  border-radius: 7px;
+  color: #333333;
+  border: 1px solid #000000;
+  transition: all 0.5s ease-in-out;
+  overflow: hidden;
+}
+
+.container_about:hover {
+  height: 850px;
+}
+
+.container_about .title {
+  text-decoration: underline;
+  position: absolute;
+  bottom: 1rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+  transition: transform 0.25s ease-out;
+}
+
+.container_about:hover .title {
+  transform: translateY(250%);
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.container_about .card {
+  display: flex;
+  transform: translateY(250%);
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: transform 0.5s ease-in, opacity 0.3s ease-in;
+  opacity: 0;
+}
+
+.container_about:hover .card {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.container_about .card .text {
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin: 15px 0 5px 0;
+  padding: 5px;
+  background-color: #000000b3;
+  color: #1ed760;
+  border-radius: 3px;
+}
+
+.container_about .card .text_in {
+  font-size: 12px;
+  color: #666666;
+}
+
+.container_about .card ul li::marker {
+  content: "- ";
+}
+
+.container_about .card ul li {
+  color: #333333;
+}
+
+.container_about .card a {
+  color: #999999;
+}
+
+small{
+    color: #999999;
+}
+
+/* -container_color--------------------------------------------------------------------------------------------- */
+
+.container_color {
+  border-radius: 7px;
+  padding: 20px;
+  transition: all 0.5s;
+}
+
+.container_color div {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.container_color div .palette {
+  border: solid #000000 1px;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 800px;
+  width: 400px;
+  overflow: hidden;
+  margin: 5px;
+}
+
+.container_color div .palette .color {
+  user-select: none;
+  align-items: center;
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  flex: 1;
+  height: 100%;
+  justify-content: center;
+  letter-spacing: 1px;
+  transition: all 0.1s ease-out;
+}
+
+.container_color div .palette .color span {
+  opacity: 0;
+  transition: opacity 0.1s linear;
+}
+
+.container_color div .palette .color:nth-child(1) {
+  background: #ffffff;
+  color: #000000;
+}
+
+.container_color div .palette .color:nth-child(2) {
+  background: #84d4fa;
+  color: #000000;
+}
+
+.container_color div .palette .color:nth-child(3) {
+  background: #409efe;
+  color: #000000;
+}
+
+.container_color div .palette .color:nth-child(4) {
+  background: #926aff;
+  color: #000000;
+}
+
+.container_color div .palette .color:nth-child(5) {
+  background: #3a4b8a;
+  color: #000000;
+}
+
+.container_color div .palette .color:nth-child(6) {
+  background: #fbb9b6;
+  color: #000000;
+}
+
+.container_color div .palette .color:nth-child(7) {
+  background: #ff7070;
+  color: #000000;
+}
+
+.container_color div .palette .color:nth-child(8) {
+  background: #fe4040;
+  color: #000000;
+}
+
+.container_color div .palette .color:nth-child(9) {
+  background: #00cc4f;
+  color: #000000;
+}
+
+.container_color div .palette .color:nth-child(10) {
+  background: #1ed706;
+  color: #000000;
+}
+
+.container_color div .palette .color:nth-child(11) {
+  background: #e8d600;
+  color: #000000;
+}
+
+.container_color div .palette .color:nth-child(12) {
+  background: #cccccc;
+  color: #000000;
+}
+
+.container_color div .palette .color:nth-child(13) {
+  background: #999999;
+}
+
+.container_color div .palette .color:nth-child(14) {
+  background: #777777;
+}
+
+.container_color div .palette .color:nth-child(15) {
+  background: #666666;
+}
+
+.container_color div .palette .color:nth-child(16) {
+  background: #333333;
+}
+
+.container_color div .palette .color:nth-child(17) {
+  background: #0e1822;
+}
+
+.container_color div .palette .color:nth-child(18) {
+  background: #0d1120;
+}
+
+.container_color div .palette .color:nth-child(19) {
+  background: #000000;
+}
+
+.container_color div .palette .color:nth-child(20) {
+  background: #ffffff80;
+  color: #000000;
+}
+
+.container_color div .palette .color:nth-child(21) {
+  background: #f5f5f5b3;
+  color: #000000;
+}
+
+.container_color div .palette .color:nth-child(22) {
+  background: #00cc4fb3;
+  color: #000000;
+}
+
+.container_color div .palette .color:nth-child(23) {
+  background: #000000b3;
+}
+
+.container_color div .palette .color:hover {
+  flex: 2;
+  box-shadow: #000000b3 0px 10px 30px 0px;
+  transform: scale(1.1);
+}
+
+.container_color div .palette .color:hover span {
+  opacity: 1;
+}
+
+</style>
+<body id="color_change">
+
+    <div role="progressbar" aria-hidden="true" class="progress-container">
+        <div id="progress" class="progress-bar"></div>
+    </div>
+    <div class="preloader">
+        <div class="pattern-1">
+            <div class="pattern-1-shade"></div>
+        </div>
+        <div class="pattern-2"></div>
+    </div>
+
+    <header>
+        <a class="baning" onclick="resetWindow()">
+            <img class="img-baning" src="/images/icon/เว็บไซต์1200x1200.png">
+            Centered101
+        </a>
+        <label class="switch">
+            <input type="checkbox" id="modeSwitch" onclick="toggleMode()">
+            <span class="slider"></span>
+        </label>
+    </header>
+
+    <div class="progress">
+        <progress id="welcomeProgress" value="0" max="1"></progress>
+        <progress id="audioProgress" value="0" max="1"></progress>
+        <progress id="birthdayProgress" value="0" max="1"></progress>
+    </div>
+
+    <div class="content">
+        <div class="container">
+
+            <label class="container_muteButton">
+                <input id="muteButton" checked="checked_muteButton" type="checkbox">
+                <svg viewBox="0 0 576 512" height="1em" xmlns="http://www.w3.org/2000/svg" class="mute_muteButton">
+                    <path
+                        d="M301.1 34.8C312.6 40 320 51.4 320 64V448c0 12.6-7.4 24-18.9 29.2s-25 3.1-34.4-5.3L131.8 352H64c-35.3 0-64-28.7-64-64V224c0-35.3 28.7-64 64-64h67.8L266.7 40.1c9.4-8.4 22.9-10.4 34.4-5.3zM425 167l55 55 55-55c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-55 55 55 55c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-55-55-55 55c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l55-55-55-55c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z">
+                    </path>
+                </svg>
+                <svg viewBox="0 0 448 512" height="1em" xmlns="http://www.w3.org/2000/svg" class="voice_muteButton">
+                    <path
+                        d="M301.1 34.8C312.6 40 320 51.4 320 64V448c0 12.6-7.4 24-18.9 29.2s-25 3.1-34.4-5.3L131.8 352H64c-35.3 0-64-28.7-64-64V224c0-35.3 28.7-64 64-64h67.8L266.7 40.1c9.4-8.4 22.9-10.4 34.4-5.3zM412.6 181.5C434.1 199.1 448 225.9 448 256s-13.9 56.9-35.4 74.5c-10.3 8.4-25.4 6.8-33.8-3.5s-6.8-25.4 3.5-33.8C393.1 284.4 400 271 400 256s-6.9-28.4-17.7-37.3c-10.3-8.4-11.8-23.5-3.5-33.8s23.5-11.8 33.8-3.5z">
+                    </path>
+                </svg>
+            </label>
+
+            <div class="container_message">
+                <img class="img" src="/images/Tes-Dee.png" alt="">
+                <div class="content">
+                    <p class="title">
+                        มีอะไรจะบอกลึ...เปล่าครับน้องงง!!...???
+                    </p>
+                    <div class="bt">
+                        <a target="" href="https://ngl.link/centered101">
+                            <img class="icon" target="" src="/images/icon/ngl.png"></a>
+                        <a class="button" target="" href="https://ngl.link/centered101">
+                            https://ngl.link/centered101
+                        </a>
+                    </div>
+                    <p>
+                    </p>
+                </div>
+            </div>
+            <h3 class="br"></h3>
+            <div class="container_about">
+                <p class="title">เรียน</p>
+                <div class="card">
+                    <ul>
+                        <p class="text">ศิษย์เก่าโรงเรียน</p><br>
+                        <li>ขอโทดครับผมลืมครับ <br>
+                            <p class="text_in">
+                                ปี : 2009 - 2011 : 2 ปี <br>
+                                ช่วงอายุ : <br>
+                                &#8195;- เตรียมอนุบาล 3 - 5 ขวบ
+                            </p>
+                        </li>
+                        <br>
+                        <li>โรงเรียนศรีเทพบาล <br>
+                            <p class="text_in">
+                                ห้องเรียน : ปกติ <br>
+                                ปี : 2011 - 2020 : 9 ปี <br>
+                                ช่วงอายุ : <br>
+                                &#8195;- อนุบาล 5 - 7 ขวบ , <br>
+                                &#8195;- ประถมศึกษา 7 - 12 ขวบ
+                            </p>
+                        </li>
+                        <br>
+                        <li>โรงเรียนพระนารายณ์ <br>
+                            <p class="text_in">
+                                ห้องเรียน : ปกติ <br>
+                                ปี : 2020 - 2023 : 3 ปี <br>
+                                ช่วงอายุ : <br>
+                                &#8195;- มัธยมศึกษาตอนต้น 12 - 15 ขวบ
+                            </p>
+                        </li>
+                        <br>
+                        <li>วิทยาลัยเทคนิคลพบุรี <br>
+                            <p class="text_in">
+                                สาขา : ช่างกลโรงงาน <br>
+                                ปี : 2023 : พฤษภาคม 15, 2023 - สิงหาคม 16, 2023 : <br>
+                                &#8195;- 3 เดือน 1 วัน , 94 วัน <br>
+                                ช่วงอายุ : <br>
+                                &#8195;- ระดับประกาศนียบัตรวิชาชีพ 15 ขวบ
+                            </p>
+                        </li>
+                    </ul>
+                    <ul>
+                        <p class="text">ปัจจุบันเรียนที่</p><br>
+                        <li>ไม่บอกความลับ ผมเรียนอยู่ <br>
+                            <p class="text_in">
+                                สาขา : วิทยาศาสตร์คอมพิวเตอร์ <br>
+                                ปี : พฤษภาคม 27, 2024 -
+                                <script>
+                                    var months = ["มกราคม", "กุมภาพันธ์", "มีนาคม", "เมษายน", "พฤษภาคม", "มิถุนายน", "กรกฎาคม", "สิงหาคม", "กันยายน", "ตุลาคม", "พฤศจิกายน", "ธันวาคม"];
+                                    var currentDate = new Date();
+                                    var thaiMonth = months[currentDate.getMonth()];
+
+                                    var dateDisplay = thaiMonth + " " + currentDate.getDate() + ", " + currentDate.getFullYear();
+
+                                    document.write(dateDisplay);
+                                </script>
+                                <br>
+                                ช่วงอายุ : <br>
+                                &#8195;-
+                                <script>
+                                    document.write('ระดับประกาศนียบัตรวิชาชีพ 16 - ' + (new Date().getFullYear() - 2007) + ' ขวบ');
+                                </script>
+                            </p>
+                        </li>
+                        <p class="text">คือผมอยากเรียนมหาลัยละ</p><br>
+                        <li>
+                            เอก, โท, ตรี computerscience มหาลัยจุฬาจบ
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container_about">
+                <p class="title">ชอบ</p>
+                <div class="card">
+                    <ul>
+                        <p class="text">อาชีพ : <small>(ที่คิอย่ากจะเป็น)</small></p>
+                        <li>ตำรวจ <small>(แค้เป็นตำรวจอยู่เฉยๆ ก็ด่า)</small></li>
+                        <li>หมอ</li>
+                        <li>ครู, อาจายร์</li>
+                        <li>นักบิน, นักบินอวกาศ</li>
+                        <li>นักวิทยาศาสตร์</li>
+                        <li>นักวิทยาศาสตร์คอมพิวเตอร์</li>
+                        <li>นักวิเคราะห์และออกแบบระบบคอมพิวเตอร์</li>
+                        <li>ผู้พัฒนาซอฟต์แวร์ หรือ โปรแกรมเมอร์ <small>(ความฟันต้อน ป.6 กับเพื่ยน)</small></li>
+                        <li>ผู้ดูแลระบบเครือข่ายคอมพิวเตอร์</li>
+                        <li>ผู้ออกแบบ พัฒนา และดูแลระบบฐานข้อมูล</li>
+                        <li>นักออกแบบ UX / UI</li>
+                        <li>ไซเบอร์ซีคิวริตี้ หรือ แฮกเกอร์</li>
+                        <li>นักพัฒนาเว็บไชต์</li>
+                        <li>นักวิทยาศาสตร์ข้อมูล</li>
+                        <li>นักนวัตกรด้านปัญญาประดิษฐ์</li>
+                    </ul>
+                    <ul>
+                        <p class="text">วิชา</p>
+                        <li>วิทยาศาสตร์คอมพิวเตอร์</li>
+                        <li>วิทยาศาสตร์</li>
+                        <li>คณิตศาสตร์</li>
+                        <li>ว่ายน้ำ</li>
+                    </ul>
+                    <ul>
+                        <p class="text">ไอดอล</p>
+                        <li>9arm</li>
+                        <li>Aimmuno</li>
+                        <li>Elon Musk</li>
+                        <li>Mark Rober <small>(คิดแบบวิศวกร)</small></li>
+                        <li>Stephen Curry</li>
+                        <li>Techcast</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 class="br"></h3>
+
+            <div class="container_about">
+                <p class="title">เกี่ยวกับเว็บ</p>
+                <div class="card">
+                    <p class="text">ภาษาที่ใช้เขียนเว็บ</p>
+                    <ul>
+                        <li>HTML <small>(เป็นโครงสร้างเว็บ)</small></li>
+                        <li>CSS <small>(ใช้ตกแต่หน้าเว็บ)</small></li>
+                        <li>JavaScript <small>(เป็นภาษาโปรแกรม)</small></li>
+                        <!-- <li>PHP <small>(เป็นภาษาโปรแกรม)</small></li> -->
+                        <!-- <li>SQL <small>(เป็นภาษาโปรแกรม สำหลับจัดเก็บและประมวลผลข้อมุลในฐานข้อมุล)</small></li> -->
+                    </ul>
+                    <!-- <ul> -->
+                    <!-- <li>C <small>(อันนี้ใส่มาเฉยๆ)</small></li> -->
+                    <!-- <li>Python <small>(อันนี้ก็ใส่มาเฉยๆ)</small></li> -->
+                    <!-- </ul> -->
+                    <p class="text">คอนเท้นบางคอนเท้นผมก็ไม่ไดคิดเอง แหลงที่มาหลักๆ ก็จะมี ดังนี้</p>
+                    <ul>
+                        <li>Google</li>
+                        <li>ChatGPT</li>
+                        <li>GitHub</li>
+                        <li>BorntoDev</li>
+                        <li>CodeDiv</li>
+                    </ul>
+                    <p class="text">ขโมยโค้ดคนอื่น </p>
+                    <ul>
+                        <li><a href="https://github.com/KCCHDEV" target="_blank" rel="noopener noreferrer">Yuichan</a>
+                        </li>
+                        <li><a href="https://www.instagram.com/yok_3124/" target="_blank"
+                                rel="noopener noreferrer">Yok_3124</a></li>
+                        <li><a href="https://github.com/yandeu" target="_blank" rel="noopener noreferrer">Yannick</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container_about">
+                <p class="title">สีทั้งหมดขอเว็บนี้</p>
+                <div class="card">
+                    <div class="container_color">
+                        <div>
+                            <div class="palette">
+                                <div class="color">
+                                    <span>#FFFFFF</span>
+                                </div>
+                                <div class="color">
+                                    <span>#84D4FA</span>
+                                </div>
+                                <div class="color">
+                                    <span>#409EFE</span>
+                                </div>
+                                <div class="color">
+                                    <span>#926AFF</span>
+                                </div>
+                                <div class="color">
+                                    <span>#3A4B8A</span>
+                                </div>
+                                <div class="color">
+                                    <span>#FBB9B6</span>
+                                </div>
+                                <div class="color">
+                                    <span>#FF7070</span>
+                                </div>
+                                <div class="color">
+                                    <span>#FE4040</span>
+                                </div>
+                                <div class="color">
+                                    <span>#00CC4F</span>
+                                </div>
+                                <div class="color">
+                                    <span>#1ED706</span>
+                                </div>
+                                <div class="color">
+                                    <span>#E8D600</span>
+                                </div>
+                                <div class="color">
+                                    <span>#CCCCCC</span>
+                                </div>
+                                <div class="color">
+                                    <span>#999999</span>
+                                </div>
+                                <div class="color">
+                                    <span>#777777</span>
+                                </div>
+                                <div class="color">
+                                    <span>#666666</span>
+                                </div>
+                                <div class="color">
+                                    <span>#333333</span>
+                                </div>
+                                <div class="color">
+                                    <span>#0E1822</span>
+                                </div>
+                                <div class="color">
+                                    <span>#0D1120</span>
+                                </div>
+                                <div class="color">
+                                    <span>#000000</span>
+                                </div>
+                                <div class="color">
+                                    <span>#FFFFFF80</span>
+                                </div>
+                                <div class="color">
+                                    <span>#F5F5F5B3</span>
+                                </div>
+                                <div class="color">
+                                    <span>#00CC4FB3</span>
+                                </div>
+                                <div class="color">
+                                    <span>#000000B3</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h3 class="br"></h3>
+        </div>
+    </div>
+
+    <button class="button_next" href="javascript:void(0)" onclick="goBack()">
+        <span class="text">กลับดิครับ</span>
+        <img src="/images/icon/arrow-left.svg" alt="">
+    </button>
+    <div id="all_text_title">–</div>
+    <footer>
+        <button id="scrollToTopButton"
+            onclick="scrollToTop(); displayMessage('กำลังขึ้น...')">Top<small>(PgUp)</small></button>
+        <button id="scrollToBottomButton"
+            onclick="scrollToBottom(); displayMessage('กำลังลง...')">Bottom<small>(PgDn)</small></button>
+    </footer>
+</body>
+<script src="/js/script.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/countbown/script.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    document.querySelectorAll('.color').forEach(colorBlock => {
+        // เพิ่มเหตุการณ์เมื่อเมาส์ชี้ไปที่บล็อกสี
+        colorBlock.addEventListener('mouseover', function () {
+            // เก็บค่าสีพื้นหลังใหม่จากบล็อกสีที่เมาส์ชี้
+            const newColor = window.getComputedStyle(this).backgroundColor;
+            // เปลี่ยนสีพื้นหลังของ body เป็นสีใหม่
+            document.body.style.backgroundColor = newColor;
+
+            // คัดลอกรหัสสีไปยังคลิปบอร์ด
+            const colorCode = this.querySelector('span').textContent.trim();
+            navigator.clipboard.writeText(colorCode).then(() => {
+                console.log(`คัดลอกไปยังคลิปบอร์ดแล้ว: ${colorCode}`);
+                displayMessage(`คัดลอกไปยังคลิปบอร์ดแล้ว: ${colorCode}`);
+            }).catch(err => {
+                console.error('ไม่สามารถคัดลอกได้: ', err);
+                displayMessage(`ไม่สามารถคัดลอกได้: ${err}`);
+            });
+        });
+    });
+
+</script>
+
+</html>

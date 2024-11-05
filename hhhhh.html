@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered101</title>
+
+    <style>
+        /* font จาก google fonts */
+        @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+            outline: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #84d4fa;
+            font-family: 'Bai Jamjuree', sans-serif;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            backdrop-filter: blur(12px);
+            color: #FFFFFF;
+            border-block: solid #FFFFFF;
+            padding: 10px;
+            z-index: 50;
+        }
+
+        header .branding a {
+            display: flex;
+            align-items: center;
+            font-family: 'Press Start 2P';
+            font-size: 1.25rem;
+            line-height: 1rem;
+            font-weight: 900;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            text-decoration: none;
+            position: relative;
+            cursor: pointer;
+        }
+
+        header .branding a::before {
+            content: '';
+            display: inline-block;
+            background-image: url("/images/icon.ico");
+            background-size: cover;
+            width: 1.5rem;
+            height: 1.5rem;
+            margin-right: 0.5rem;
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        header nav div#menuToggle {
+            z-index: 1;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+
+        header nav div#menuToggle ul#menu {}
+
+        header nav div#menuToggle ul#menu>*+* {
+            margin-top: 1rem;
+        }
+
+        header nav div#menuToggle ul#menu li {
+            border-left: solid #FFFFFF 4px;
+            border: solid #FFFFFF 1px;
+            padding: 2px;
+            transition: color 0.3s ease;
+        }
+
+        header nav div#menuToggle ul#menu li:hover {
+            background-color: #FFFFFF;
+            border-left: solid #409EFE 4px;
+        }
+
+        header nav div#menuToggle ul#menu li:hover>a {
+            color: #000000;
+        }
+
+        header nav div#menuToggle ul#menu li a {
+            text-decoration: none;
+            color: #FFFFFF;
+        }
+
+        header nav div#menuToggle input {
+            display: block;
+            width: 40px;
+            height: 32px;
+            position: absolute;
+            top: -7px;
+            left: -5px;
+            cursor: pointer;
+            opacity: 0;
+            z-index: 2;
+            -webkit-touch-callout: none;
+        }
+
+        header nav div#menuToggle span {
+            display: block;
+            width: 33px;
+            height: 4px;
+            margin-bottom: 5px;
+            position: relative;
+            background: #FFFFFF;
+            border-radius: 3px;
+            z-index: 1;
+            transform-origin: 4px 0px;
+            transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+                background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+                opacity 0.55s ease;
+        }
+
+        nav div#menuToggle span:first-child {
+            transform-origin: 0% 0%;
+        }
+
+        nav div#menuToggle span:nth-last-child(2) {
+            transform-origin: 0% 100%;
+        }
+
+        nav div#menuToggle input:checked~span {
+            opacity: 1;
+            transform: rotate(45deg) translate(-2px, -1px);
+            /* background: #232323; */
+        }
+
+        nav div#menuToggle input:checked~span:nth-last-child(3) {
+            opacity: 0;
+            transform: rotate(0deg) scale(0.2, 0.2);
+        }
+
+        nav div#menuToggle input:checked~span:nth-last-child(2) {
+            transform: rotate(-45deg) translate(0, -1px);
+        }
+
+        header nav div#menuToggle {
+            display: block;
+            position: fixed;
+            top: 10px;
+            right: 20px;
+            z-index: 1;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+
+        header nav #menu {
+            position: absolute;
+            width: 100vh;
+            height: 100vh;
+            top: -10px;
+            right: -50px;
+            margin: 0;
+            padding: 125px 60px;
+            backdrop-filter: blur(12px);
+            background: #000000;
+            list-style-type: none;
+            transform-origin: 100% 0%;
+            /* transform: translate(100%, 0); */
+            border-inline: solid #FFFFFF;
+            transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+        }
+
+        header nav #menu::after {
+            content: 'Centered101';
+            font-family: 'Press Start 2P';
+            font-size: 1.25rem;
+            position: absolute;
+            bottom: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #FFFFFF;
+        }
+
+        header nav div#menuToggle input:checked~ul {
+            transform: translate(0, 0);
+        }
+    </style>
+</head>
+
+<body>
+    <header translate="no">
+        <div class="branding">
+            <script>
+                function resetWindow() {
+                    document.body.style.backgroundColor = "#121212";
+                    document.querySelector("header").style.display = "none";
+                    // document.querySelector("footer").style.display = "none";
+                    // document.querySelectorAll("section").forEach(function (section) {
+                    //     section.style.display = "none";
+                    // });
+                    // document.querySelector(".sticky").style.display = "none";
+                    // document.getElementById("loader").style.display = "flex";
+                    window.location.reload(true);
+                }
+
+                document.write('<a title="Reload this page" onclick="resetWindow()">Centered101</a>');
+            </script>
+        </div>
+        <nav role="navigation">
+            <div id="menuToggle">
+                <input type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+                <ul id="menu">
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#">Info</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                    <li>
+                        <a href="https://erikterwan.com/" target="_blank">Show me more</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ducimus et voluptatibus? Quibusdam illum, nemo
+    natus laborum maiores, accusantium totam voluptatem eligendi, odio iure quia. Distinctio, dolorum itaque nostrum
+    quis cum nisi quos facere eos, beatae, esse quibusdam illum quae labore? Laboriosam fugiat impedit alias rerum enim
+    eligendi amet eaque dolores provident optio saepe repellendus expedita pariatur eum incidunt, sed neque
+    necessitatibus dolore qui quis? Earum incidunt esse veniam ratione assumenda enim facilis ullam amet a quasi,
+    accusamus placeat consequuntur, ea impedit magni fugiat dolor praesentium quidem. Magni ex reiciendis voluptatum
+    magnam non quas quidem aspernatur velit, cupiditate officiis voluptatem quod dolores odit iure porro iste molestias?
+    Animi magni cumque sequi assumenda perferendis vel, perspiciatis quidem quam! Repellat nobis iste maiores officia
+    quos modi. Temporibus tempora odit, labore voluptate ullam vel doloribus animi hic voluptates aperiam blanditiis
+    cupiditate illo, quaerat quidem voluptatem, soluta doloremque dolor neque nesciunt inventore culpa a? Ducimus
+    laboriosam repellat veritatis quam at necessitatibus aspernatur enim esse ex officia atque libero, totam maxime vel
+    laborum exercitationem id facilis suscipit architecto? Nisi, maxime ad recusandae commodi natus fugiat officiis
+    repudiandae aliquam fuga ullam aspernatur molestiae aliquid culpa iste fugit! Facere ea exercitationem iure, debitis
+    vel maiores labore corporis at dolor eos, ad placeat, dignissimos eius dolore quia architecto ipsa iusto ipsam hic
+    explicabo eligendi voluptatibus culpa facilis corrupti! Praesentium in, amet fugit, iure explicabo ad consectetur
+    ea, perferendis quasi quod nisi error magnam quaerat! Et beatae dignissimos culpa sunt commodi repellat. Numquam
+    harum, velit inventore consequatur amet tempora error impedit nemo illum explicabo fugit quasi assumenda esse
+    aspernatur, consequuntur in commodi. Id iusto voluptatem dolores odit. Rerum veritatis incidunt dolores, doloribus
+    eum officiis minima repellendus deleniti temporibus, soluta impedit, enim esse quia consequatur. Beatae accusantium
+    blanditiis aut distinctio id quis modi, facere neque ad. Corporis harum quam, rem eligendi, quisquam nam, voluptates
+    nostrum quae veritatis enim magnam exercitationem! Officia veniam sapiente molestias. Magnam fugiat eius
+    consequuntur error iure est perspiciatis minus magni sit, eos facere vero tempore aperiam laboriosam exercitationem!
+    Aut consectetur doloremque minima inventore illum voluptatibus nobis eum, explicabo corporis iusto? Nam perspiciatis
+    reprehenderit dolore, ducimus illo tenetur molestiae dolor incidunt ut quaerat rerum accusantium quod doloremque,
+    autem eligendi, consectetur culpa a accusamus. Quam, ullam. Voluptate tenetur ut, ipsum distinctio rerum maxime,
+    error aut minima aliquid debitis autem dolorem voluptas at architecto soluta fugit mollitia! Necessitatibus eveniet
+    fuga iusto illum aut labore expedita deleniti numquam voluptatum? Quis blanditiis temporibus autem minus est nam
+    quam quidem. Qui magnam cum amet nesciunt, error aliquid similique aliquam laudantium eos consequuntur. Dolore
+    suscipit labore amet optio, pariatur architecto nemo facilis error explicabo obcaecati voluptas blanditiis, delectus
+    doloribus id et corporis voluptate? Deserunt delectus recusandae nobis vitae explicabo voluptatibus, vero, sed vel
+    animi magni illo, reprehenderit eum. Saepe, harum aut. Doloremque velit nobis ipsam excepturi accusantium modi qui
+    culpa quo. Deserunt pariatur doloribus sint fugit quisquam quaerat voluptas repellendus tempore voluptates illum,
+    inventore distinctio. Tenetur repellat nisi consequuntur dolor, inventore voluptatum numquam eaque recusandae
+    consequatur officiis ut omnis possimus totam doloremque temporibus.
+</body>
+
+</html>

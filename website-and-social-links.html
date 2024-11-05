@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="th">
+<!-- สวัสดี วัยสะรุ้น Hello, World! ครับ/ค่ะ -->
+
+<head>
+    <meta name="theme-color" content="#409EFE" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript,Centered101" />
+    <meta name="author" content="Centered101" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-compatible" content="IE=edge" />
+
+    <!-- Primary Meta Tags -->
+    <title>Portfolio — Centered101</title>
+    <meta name="title" content="Portfolio" />
+    <meta name="description" content="portfolio — Centered101" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://centered101.netlify.app" />
+    <meta property="og:title" content="Portfolio" />
+    <meta property="og:description" content="portfolio — Centered101" />
+    <meta property="og:image" content="/images/icon.ico" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://centered101.netlify.app" />
+    <meta property="twitter:title" content="Portfolio" />
+    <meta property="twitter:description" content="portfolio — Centered101" />
+    <meta property="twitter:image" content="/images/icon.ico" />
+
+    <link id="favicon" rel="icon" type="image/png" href="/images/icon.ico" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- รูปโปรไฟร์หัวข้อหน้าเว็บ รูปแแบบ external -->
+    <link id="favicon" rel="icon" type="image/png" href="/images/icon.ico">
+
+    <link rel="stylesheet" href="./style.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <audio id="welcomeSound">
+        <source src="/graphic/Music/Alone.mp3" type="audio/mp3">
+    </audio>
+
+    <audio id="audio" src="/graphic/Audio/m_fixed_bBp6dW2.mp3"></audio>
+
+    <audio id="birthdaySound">
+        <source src="/graphic/Music/วันเกิดฉันปีนี้ (HBD to me).mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- donate button-->
+    <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
+        data-id="Centered101" data-description="Support me on Buy me a coffee!" data-message="บริจากทุน ให้หน่อยดิ๊"
+        data-color="#409EFE" data-position="Right" data-x_margin="10" data-y_margin="10">
+        </script>
+</head>
+
+<body id="color_change">
+
+    <div role="progressbar" aria-hidden="true" class="progress-container">
+        <div id="progress" class="progress-bar"></div>
+    </div>
+    <div class="preloader">
+        <div class="pattern-1">
+            <div class="pattern-1-shade"></div>
+        </div>
+        <div class="pattern-2"></div>
+    </div>
+
+    <div class="progress">
+        <progress id="welcomeProgress" value="0" max="1"></progress>
+        <progress id="audioProgress" value="0" max="1"></progress>
+        <progress id="birthdayProgress" value="0" max="1"></progress>
+    </div>
+
+    <div class="content">
+        <div class="container">
+
+
+            <div class="container_photos" id="muteButton">
+                <img class="photos" src="/images/Test-Dหนึ่งวันครับ1500x1500.png" onclick="randomColor()" id="playImage"
+                    alt="Test-Dหนึ่งวันครับ" />
+            </div>
+
+            <marquee>
+                <h1>
+                    Centered101
+                </h1>
+            </marquee>
+            <details>
+                <summary>รายละเอียด</summary>
+                <p>
+                    แท็บสีเขียวคือ หัวข้อ เด้อจะ ส่วน ปุ่มสีฟ้าคือ ปุ่มนำไปสู่เว็บไซต์ต่างๆ<br>
+                    <small>(อย่ากดผิดดิ เห็นกดผิดหลายคนละ ผมออกแบบไม่ดีขนาดนั้นเลยหรอ)<br>
+                        //- ถ้าคุณกดที่รูป มันจะมีอะไรบ้างอย่างเกิดขึ้น --></small>
+                </p>
+            </details>
+
+            <h3 class="h3">ลิงก์ทางเว็บไซต์ Centered101</h3>
+
+            <div class="bt" onclick="displayMessage('กำลังไปหน้าถัดไป...')">
+                <a target="" href="/index.html">
+                    <img class="icon" target="" src="/images/icon.ico"></a>
+                <a class="button" target="" href="/index.html">
+                    Home / หน้าหลัก
+                </a>
+            </div>
+
+            <div class="bt" onclick="displayMessage('กำลังไปหน้าถัดไป...')">
+                <a target="" href="/www/aboutweb/aboutweb.html">
+                    <img class="icon" target="" src="/images/icon.ico"></a>
+                <a class="button" target="" href="/www/aboutweb/aboutweb.html">
+                    เกี่ยวกับเว็บไซต์ & ผู้พัฒนา
+                </a>
+            </div>
+
+            <div class="bt" onclick="displayMessage('กำลังไปหน้าถัดไป...')">
+                <a target="" href="/www/other/resume.html">
+                    <img class="icon" target="" src="/images/icon.ico"></a>
+                <a class="button" target="" href="/www/other/resume.html">
+                    Resume ผม (EN)
+                </a>
+            </div>
+
+            <div class="bt" onclick="displayMessage('กำลังไปหน้าถัดไป...')">
+                <a target="" href="/www/other/th/resume.html">
+                    <img class="icon" target="" src="/images/icon.ico"></a>
+                <a class="button" target="" href="/www/other/th/resume.html">
+                    Resume ผม (TH)
+                </a>
+            </div>
+
+            <h3 class="h3">ความบันเทิง & เกมภายในเว็บไซต์</h3>
+
+            <div class="bt" onclick="displayMessage('กำลังไปหน้าถัดไป...')">
+                <a target="" href="/www/web_play/web_play.html">
+                    <img class="icon" target="" src="/images/icon.ico"></a>
+                <a class="button" target="" href="/www/web_play/web_play.html">
+                    Centered101 – Web play
+                </a>
+            </div>
+
+            <div class="bt" onclick="displayMessage('กำลังไปหน้าถัดไป...')">
+                <a target="" href="/www/tic_tac_tor_game/tic_tac_tor_game.html">
+                    <img class="icon" target="" src="/images/icon.ico"></a>
+                <a class="button" target="" href="/www/tic_tac_tor_game/tic_tac_tor_game.html">
+                    Tic Tac Toe Game กันเปล่า
+                </a>
+            </div>
+
+            <div class="bt" onclick="displayMessage('กำลังไปหน้าถัดไป...')">
+                <a target="" href="/www/snake_game/snake_game.html">
+                    <img class="icon" target="" src="/images/icon.ico"></a>
+                <a class="button" target="" href="/www/snake_game/snake_game.html">
+                    หรือจะ Snake Game
+                </a>
+            </div>
+
+            <h3 class="h3">เว็บไซต์และลิงก์ทางโซเชียล</h3>
+
+            <div class="bt" onclick="displayMessage('กำลังไปหน้าถัดไป...')">
+                <a target="" href="https://bsky.app/profile/centered101.bsky.social">
+                    <img class="icon" src="/images/icon/globe.svg"></a>
+                <a class="button" target="_blank" href="https://bsky.app/profile/centered101.bsky.social">
+                    Bluesky
+                </a>
+            </div>
+
+            <div class="bt" onclick="displayMessage('กำลังไปหน้าถัดไป...')">
+                <a target="" href="https://www.facebook.com/Centered101?mibextid=ZbWKwL">
+                    <img class="icon" src="/images/icon/facebook.svg"></a>
+                <a class="button" target="_blank" href="https://www.facebook.com/Centered101?mibextid=ZbWKwL">
+                    Facebook
+                </a>
+            </div>
+
+            <div class="bt" onclick="displayMessage('กำลังไปหน้าถัดไป...')">
+                <a target="" href="https://instagram.com/centered101?igshid=YmMyMTA2M2Y=">
+                    <img class="icon" src="/images/icon/instagram.svg"></a>
+                <a class="button" target="_blank" href="https://instagram.com/centered101?igshid=YmMyMTA2M2Y=">
+                    Instagram
+                </a>
+            </div>
+
+            <div class="bt" onclick="displayMessage('กำลังไปหน้าถัดไป...')">
+                <a target="" href="https://line.me/ti/p/CMkfnDYD1q">
+                    <img class=" icon" src="/images/icon/line.svg"></a>
+                <a class="button" target="_blank" href="https://line.me/ti/p/CMkfnDYD1q">
+                    Line
+                </a>
+            </div>
+
+            <div class="bt" onclick="displayMessage('กำลังไปหน้าถัดไป...')">
+                <a target="" href="https://www.linkedin.com/in/centered101">
+                    <img class="icon" src="/images/icon/linkedin.png"></a>
+                <a class="button" target="_blank" href="https://www.linkedin.com/in/centered101">
+                    Linkedin
+                </a>
+            </div>
+
+            <div class="bt" onclick="displayMessage('กำลังไปหน้าถัดไป...')">
+                <a target="" href="https://nostr.band/npub1srv8l3u7v3h958wkn9um6rvmr3fg5l7ddspz742gppq49dcd60ls2rh5k4">
+                    <img class="icon" src="/images/icon/globe.svg"></a>
+                <a class="button" target="_blank"
+                    href="https://nostr.band/npub1srv8l3u7v3h958wkn9um6rvmr3fg5l7ddspz742gppq49dcd60ls2rh5k4">
+                    Openvibe
+                </a>
+            </div>
+
+            <div class="bt" onclick="displayMessage('กำลังไปหน้าถัดไป...')">
+                <a target="" href="https://pin.it/1LOdYQbOf">
+                    <img class="icon" src="/images/icon/pinterest.svg"></a>
+                <a class="button" target="_blank" href="https://pin.it/1LOdYQbOf">
+                    Pinterest
+                </a>
+            </div>
+
+            <div class="bt" onclick="displayMessage('กำลังไปหน้าถัดไป...')">
+                <a target="" href="https://m.me/Centered101">
+                    <img class="icon" src="/images/icon/facebook-messenger.svg"></a>
+                <a class="button" target="_blank" href="https://m.me/Centered101">
+                    Messenger
+                </a>
+            </div>
+
+            <div class="bt" onclick="displayMessage('กำลังไปหน้าถัดไป...')">
+                <a target="" href="https://open.spotify.com/user/31dbwfksoxguthngb2cs27m2pl64?si=b757b0060ee44e76">
+                    <img class="icon" src="/images/icon/spotify.svg"></a>
+                <a class="button" target="_blank"
+                    href="https://open.spotify.com/user/31dbwfksoxguthngb2cs27m2pl64?si=b757b0060ee44e76">
+                    Spotify
+                </a>
+            </div>
+
+            <div class="bt" onclick="displayMessage('กำลังไปหน้าถัดไป...')">
+                <a target="" href="https://t.me/centered101">
+                    <img class="icon" src="/images/icon/telegram.png"></a>
+                <a class="button" target="_blank" href="https://t.me/centered101">
+                    Telegram
+                </a>
+            </div>
+
+            <div class="bt" onclick="displayMessage('กำลังไปหน้าถัดไป...')">
+                <a target="" href="https://www.threads.net/@centered101">
+                    <img class="icon" src="/images/icon/threads.svg"></a>
+                <a class="button" target="_blank" href="https://www.threads.net/@centered101">
+                    Threads
+                </a>
+            </div>
+
+            <div class="bt" onclick="displayMessage('กำลังไปหน้าถัดไป...')">
+                <a target="" href="https://www.tiktok.com/@centered101">
+                    <img class="icon" src="/images/icon/tik-tok.svg"></a>
+                <a class="button" target="_blank" href="https://www.tiktok.com/@centered101">
+                    Tiktok
+                </a>
+            </div>
+
+            <div class="bt" onclick="displayMessage('กำลังไปหน้าถัดไป...')">
+                <a target="" href="https://www.twitch.tv/centered101">
+                    <img class="icon" src="/images/icon/twitch.svg"></a>
+                <a class="button" target="_blank" href="https://www.twitch.tv/centered101">
+                    Twitch
+                </a>
+            </div>
+
+            <div class="bt" onclick="displayMessage('กำลังไปหน้าถัดไป...')">
+                <a target="" href="https://X.com/Centered101">
+                    <img class="icon" src="/images/icon/twitter-alt-circle.svg"></a>
+                <a class="button" target="_blank" href="https://X.com/Centered101">
+                    X / Twitter
+                </a>
+            </div>
+
+            <div class="bt" onclick="displayMessage('กำลังไปหน้าถัดไป...')">
+                <a target="" href="https://youtube.com/@centered101">
+                    <img class="icon" src="/images/icon/youtube.svg"></a>
+                <a class="button" target="_blank" href="https://youtube.com/@centered101">
+                    Youtube
+                </a>
+            </div>
+
+            <h3 class="br"></h3>
+
+            <div class="bt">
+                <a href="#" target="_blank" rel="noopener noreferrer">
+                    <img class="icon" src="/images/icon/discord.svg">
+                </a>
+                <div onclick="copyText()" class="button">
+                    <span style="text-decoration: none;" class="text">
+                        <br><img class="icon_on_text" src="/images/img-png/L.png">
+                        <br>
+                        <p>ชื่อที่แสดง : Critter</p>
+                        <p>ชื่อผู้ใช้ :</p>
+                        <p id="textToCopy">centered101</p>
+                    </span>
+                    <span>Discord account</span>
+                </div>
+            </div>
+
+            <h3 class="h3">โดเนท ค่าเทอมมาดิ๊... 🥺</h3>
+
+            <div class="bt" onclick="displayMessage('กำลังไปหน้าถัดไป...')">
+                <a target="" href="https://www.buymeacoffee.com/Centered101">
+                    <img class="icon" src="/images/icon/buy_me_a_coffee.png"></a>
+                <a class="button" target="_blank" href="https://www.buymeacoffee.com/Centered101">
+                    Buy Me a Coffee
+                </a>
+            </div>
+
+            <div class="bt" onclick="displayMessage('กำลังไปหน้าถัดไป...')">
+                <a target="" href="https://ko-fi.com/centered101">
+                    <img class="icon" src="/images/icon/ko_fi.png"></a>
+                <a class="button" target="_blank" href="https://ko-fi.com/centered101">
+                    Ko-fi
+                </a>
+            </div>
+
+            <h3 class="h3">Account เกม</h3>
+
+            <div class="bt" onclick="displayMessage('กำลังไปหน้าถัดไป...')">
+                <a target="" href="https://store.epicgames.com/u/c72e2965024f47439e5966c8443b09bf">
+                    <img class="icon" src="/images/icon/epic_games.png"></a>
+                <a class="button" target="_blank" href="https://store.epicgames.com/u/c72e2965024f47439e5966c8443b09bf">
+                    Epic Game
+                </a>
+            </div>
+
+            <div class="bt" onclick="displayMessage('กำลังไปหน้าถัดไป...')">
+                <a target="" href="https://s.team/p/hrnk-qhhm/FDPKWHTG">
+                    <img class="icon" src="/images/icon/steam.png"></a>
+                <a class="button" target="_blank" target="_blank" href="https://s.team/p/hrnk-qhhm/FDPKWHTG">
+                    Steam
+                </a>
+            </div>
+
+            <h3 class="h3">ฮื่นๆ</h3>
+
+            <div class="bt" onclick="displayMessage('กำลังไปหน้าถัดไป...')">
+                <a target="" href="https://project-test-submission.web.app/">
+                    <img class="icon" target="" src="/images/icon.ico"></a>
+                <a class="button" target="" href="https://project-test-submission.web.app/">
+                    project-test-submission
+                </a>
+            </div>
+
+            <div class="bt" onclick="displayMessage('กำลังไปหน้าถัดไป...')">
+                <a target="" href="https://github.com/Centered101">
+                    <img class="icon" src="/images/icon/github.svg"></a>
+                <a class="button" target="_blank" href="https://github.com/Centered101">
+                    GitHub
+                </a>
+            </div>
+
+            <div class="bt" onclick="displayMessage('กำลังไปหน้าถัดไป...')">
+                <a target="" href="https://medium.com/@centered101">
+                    <img class="icon" src="/images/icon/medium.svg"></a>
+                <a class="button" target="_blank" href="https://medium.com/@centered101">
+                    Medium
+                </a>
+            </div>
+
+            <div class="bt" onclick="displayMessage('กำลังไปหน้าถัดไป...')">
+                <a target="" href="https://uiverse.io/profile/Centered101">
+                    <img class="icon" target="_blank" src="/images/icon/user-interface.png">
+                </a>
+                <a class="button" target="_blank" href="https://uiverse.io/profile/Centered101">
+                    Open-Source UI
+                </a>
+            </div>
+
+            <div class="bt" onclick="displayMessage('กำลังไปหน้าถัดไป...')">
+                <a target="" href="https://tmn.app.link/e4Aw4rschGb">
+                    <img class="icon" target="_blank" src="/images/icon/google.svg">
+                </a>
+                <a class="button" target="_blank" href="https://developers.google.com/profile/u/110777883095312059641">
+                    Google for developers
+                </a>
+            </div>
+
+            <h3 class="br"></h3>
+
+            <div class="bt">
+                <a target="" href="https://ngl.link/centered101">
+                    <img class="icon" target="" src="/images/icon/ngl.png"></a>
+                <a class="button" target="" href="https://ngl.link/centered101">
+                    https://ngl.link/centered101
+                </a>
+            </div>
+
+            <h3 class="br"></h3>
+
+        </div>
+    </div>
+    <button class="button_next" href="javascript:void(0)" onclick="goBack()">
+        <span class="text">กลับดิครับ</span>
+        <img src="/images/icon/arrow-left.svg" alt="">
+    </button>
+    <footer>
+        <div id="all_text_title">–</div>
+        <button id="scrollToTopButton"
+            onclick="scrollToTop(); displayMessage('กำลังขึ้น...')">Top<small>(PgUp)</small></button>
+        <button id="scrollToBottomButton"
+            onclick="scrollToBottom(); displayMessage('กำลังลง...')">Bottom<small>(PgDn)</small></button>
+    </footer>
+</body>
+<script src="/js/script.js"></script>
+<script src="/js/countbown/script.js" type="text/javascript" charset="utf-8"></script>
+
+</html>
+
+<style>
+    /* ########  ########  ###   ##  ########  ########  #######   ########  #######   ##  ########  ## */
+    /* ##        ##        ## #  ##     ##     ##        ##    ##  ##        ##    ##  ##  ##    ##  ## */
+    /* ##        ######    ##  # ##     ##     ######    #######   ######    ##    ##  ##  ##    ##  ## */
+    /* ##        ##        ##   ###     ##     ##        ##   ##   ##        ##    ##  ##  ##    ##  ## */
+    /* ########  ########  ##    ##     ##     ########  ##    ##  ########  #######   ##  ########  ## */
+
+    body {
+        animation: จางหาย 1s ease-in-out;
+        background-image: url('https://github.githubassets.com/assets/profile-first-repo-dark-25579720acb4.svg');
+        background: #84d4fa;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        font-family: 'Bai Jamjuree', sans-serif;
+        font-weight: bold;
+        margin: 0;
+        padding: 0;
+    }
+
+    .content {
+        padding: 0 20px;
+    }
+
+    .content .container {
+        background: #f5f5f5b3;
+        border: #fffffc80 solid 5px;
+        border-radius: 12px 40px 12px 1px;
+        box-shadow: 4px 4px 8px 4px #000000b3;
+        padding: 20px 20px 1px 20px;
+        transition: 1s;
+        margin: 30px auto 80px auto;
+        max-width: 400px;
+    }
+
+    .content .container .container_photos {
+        user-select: none;
+        display: flex;
+        justify-content: center;
+    }
+
+    .content .container .container_photos .photos {
+        user-select: none;
+        max-width: 400px;
+        max-height: 400px;
+        width: 100%;
+        border-radius: 12px 2.2rem 12px 12px;
+        /* background-image: linear-gradient(#409EFE 0%, #fe4040 100%); */
+        cursor: pointer;
+        transition: all 1s cubic-bezier(0.68, 0.55, 0.265, 1.55);
+    }
+
+    /* .content .container .photos:hover {
+    box-shadow:
+        -5px -5px 10px 5px #84d4fa, 5px 5px 10px 5px #1ED760;
+} */
+
+    .content .container .bt .button {
+        user-select: none;
+        align-items: center;
+        background: linear-gradient(320deg, #409EFE, #84d4fa);
+        border-radius: 3px;
+        color: #000000;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        text-decoration: none;
+        margin-bottom: 10px;
+        margin-right: 10px;
+        padding: 5px 15px;
+        position: relative;
+        transition: all .2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    .content .container .bt .button:focus {
+        box-shadow: inset 2px 5px 10px #000000B3;
+    }
+
+    .content .container .bt a .icon {
+        position: absolute;
+        margin-top: -4px;
+        user-select: none;
+        cursor: pointer;
+        float: left;
+        width: 24px;
+        padding: 5px;
+        text-decoration: none;
+        transition: all .2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        z-index: 1;
+    }
+
+    .content .container .bt:hover>a .icon {
+        position: flex;
+        animation: เด้ง 0.4s linear;
+    }
+
+    @keyframes เด้ง {
+        40% {
+            transform: scale(1.4);
+        }
+
+        60% {
+            transform: scale(0.8);
+        }
+
+        80% {
+            transform: scale(1.2);
+        }
+
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    .content .container .bt .button .text .icon_on_text {
+        user-select: none;
+        background-color: #333333;
+        border-radius: 2.2rem;
+        box-shadow: #333333 0px 0px 10px 10px;
+        height: 40px;
+        margin: 0px 0px 10px 0px;
+    }
+
+    .content .container .bt .button .text {
+        border-radius: 3px;
+        box-shadow: 4px 4px 8px 4px #000000b3;
+        margin-left: 10px;
+        opacity: 0;
+        padding: 10px 75px 20px 75px;
+        pointer-events: none;
+        position: absolute;
+        text-align: center;
+        top: 0;
+        /* transition: all 0.5s cubic-bezier(-10, 2); */
+        /* -webkit-transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55); */
+        /* -webkit-box-shadow: 4px 4px 8px 4px #000000b3; */
+        width: 30%;
+    }
+
+    .content .container .bt .button .text::before {
+        transform: translate(-50%) rotate(45deg);
+        -ms-transform: translate(-50%) rotate(45deg);
+        -webkit-transform: translate(-50%) rotate(45deg);
+    }
+
+    .content .container .bt:hover>.button .text {
+        opacity: 1;
+        z-index: 1;
+        top: -55px;
+    }
+
+    img:hover>span,
+    img:hover>.text {
+        text-shadow: 0px -1px 0px #000000b3;
+    }
+
+    .content .container .bt:hover>.button,
+    .content .container .bt:hover>.button .text,
+    .content .container .bt:hover>.button .text::before {
+        background: linear-gradient(320deg, #fe4040, #ff7070);
+        box-shadow: 4px 4px 8px 4px #000000b3;
+        text-decoration: underline;
+    }
+</style>

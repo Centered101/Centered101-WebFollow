@@ -1,0 +1,54 @@
+footer {
+    user-select: none;
+    align-items: center;
+    background-color: #f5f5f5b3;
+    bottom: 0;
+    box-shadow: 4px 4px 8px 4px #000000B3;
+    display: flex;
+    font-family: "Bai Jamjuree", sans-serif;
+    font-weight: bold;
+    left: 0;
+    height: 30px;
+    /* แบบอื่นๆ เช่น space-around, space-evenly ก็ได้ตามความต้องการ */
+    justify-content: space-between;
+    margin-top: 80px;
+    padding: 5px;
+    position: fixed;
+    margin-top: 80px;
+    right: 0;
+    width: 100%;
+    z-index: 2;
+    justify-content: space-evenly;
+    align-items: normal;
+  }
+  
+  footer #scrollToTopButton,
+  footer #scrollToBottomButton {
+    background: linear-gradient(320deg, #409efe, #84d4fa);
+    border: none;
+    cursor: pointer;
+    border-radius: 7px;
+    color: #000000;
+    font-family: "Bai Jamjuree", sans-serif;
+    font-weight: bold;
+    padding: 1px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  footer #scrollToTopButton:hover,
+  footer #scrollToBottomButton:hover {
+    background: linear-gradient(320deg, #fe4040, #ff7070);
+    box-shadow: 4px 4px 8px 4px #000000B3;
+  }
+  
+  footer #scrollToTopButton:active,
+  footer #scrollToBottomButton:active {
+    transform: scale(0.97);
+  }
+  
+  footer #scrollToTopButton:focus,
+  footer #scrollToBottomButton:focus {
+    box-shadow: inset 2px 5px 10px #000000B3;
+  }
